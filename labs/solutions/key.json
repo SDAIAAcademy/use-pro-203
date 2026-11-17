@@ -1,0 +1,495 @@
+{
+ "answers": {
+  "revenue_oct": 2949030.0,
+  "expenses_oct": 2487783.0,
+  "expense_accounts": 14,
+  "a2_stated": 2478783.0,
+  "largest_expense": "رواتب وأجور",
+  "largest_share_pct": 53.8,
+  "salary_change_pct": 3.2,
+  "non_payroll_expenses": 666010.0,
+  "a6_stated": 1149898.0,
+  "a6_accounts_included": 13,
+  "non_payroll_accounts": 11,
+  "classification": {
+   "A1": "computed",
+   "A2": "generated",
+   "A3": "computed",
+   "A4": "generated",
+   "A5": "generated",
+   "A6": "computed"
+  },
+  "figure_right": {
+   "A1": true,
+   "A2": false,
+   "A3": true,
+   "A4": true,
+   "A5": false,
+   "A6": false
+  },
+  "a5_changed_rows": [
+   3,
+   8,
+   19
+  ],
+  "a5_cleaning_run_1": 8,
+  "a5_cleaning_run_2": 10
+ },
+ "recon": {
+  "opening_balance": 2350000.0,
+  "bank_lines": 594,
+  "ledger_lines": 606,
+  "bank_sum": -577301.66,
+  "ledger_sum": -863944.63,
+  "matched_pairs": 587,
+  "matched_sum": -634011.66,
+  "amount_difference": {
+   "reference": "TRF-299101",
+   "bank": -43500.0,
+   "ledger": -45300.0
+  },
+  "outstanding_payments": {
+   "count": 9,
+   "sum": -221667.82
+  },
+  "deposits_in_transit": {
+   "count": 4,
+   "sum": 198748.9
+  },
+  "duplicates": {
+   "count": 5,
+   "sum": -161714.05,
+   "references": [
+    "CHQ-260456",
+    "TRF-260387",
+    "TRF-260796",
+    "TRF-261205",
+    "TRF-261712"
+   ]
+  },
+  "bank_only": {
+   "count": 6,
+   "sum": 100210.0
+  },
+  "bank_closing": 1772698.34,
+  "ledger_closing": 1486055.37,
+  "adjusted_balance": 1749779.42,
+  "messy_references": 8,
+  "same_amount_pairs": 6
+ },
+ "budget": {
+  "faulty_total_L15": 23296196.0,
+  "correct_total_L15": 33759380.64,
+  "faulty_sum_of_divisions": 25186996.0,
+  "hand_cases": {
+   "CC-101": {
+    "row": 3,
+    "expected": {
+     "F": 5200,
+     "G": 3893760.0,
+     "H": 467251.2,
+     "J": 432600.0,
+     "L": 4793611.2
+    },
+    "model_before": {
+     "F": 4000,
+     "G": 2995200.0,
+     "H": 359424.0,
+     "J": 432600.0,
+     "L": 3787224.0
+    }
+   },
+   "CC-105": {
+    "row": 7,
+    "expected": {
+     "F": 9600,
+     "G": 2156544.0,
+     "H": 258785.28,
+     "J": 412000.0,
+     "L": 2787329.28
+    },
+    "model_before": {
+     "F": 7500,
+     "G": 1684800.0,
+     "H": 0.0,
+     "J": 400000,
+     "L": 2124800.0
+    }
+   },
+   "CC-112": {
+    "row": 14,
+    "expected": {
+     "F": 18500,
+     "G": 2077920.0,
+     "H": 249350.4,
+     "J": 206000.0,
+     "L": 2533270.4
+    },
+    "model_before": {
+     "F": 15000,
+     "G": 1684800.0,
+     "H": 0.0,
+     "J": 206000.0,
+     "L": 1890800.0
+    }
+   }
+  },
+  "faults": [
+   {
+    "n": 1,
+    "where": "Budget!F3:F14",
+    "what": "lookup returns column 2 (basic salary), the specification asks for column 3"
+   },
+   {
+    "n": 2,
+    "where": "Budget!H4:H14",
+    "what": "relative reference Assumptions!B3 drifts when copied down"
+   },
+   {
+    "n": 3,
+    "where": "Budget!J7",
+    "what": "a typed number over the formula"
+   },
+   {
+    "n": 4,
+    "where": "Budget!L3:L14",
+    "what": "recoveries are added, the specification subtracts them"
+   },
+   {
+    "n": 5,
+    "where": "Budget!L15",
+    "what": "SUM(L3:L13) leaves CC-112 out"
+   }
+  ]
+ },
+ "variance": {
+  "cells": {
+   "C4": 310000,
+   "D4": 334800,
+   "E4": 24800,
+   "F4": 0.08,
+   "C5": 228000,
+   "D5": 262900,
+   "E5": 34900,
+   "F5": 0.15307,
+   "C6": 196000,
+   "D6": 191300,
+   "E6": -4700,
+   "F6": -0.02398,
+   "C7": 236000,
+   "D7": 277300,
+   "E7": 41300,
+   "F7": 0.175,
+   "C8": 181000,
+   "D8": 189500,
+   "E8": 8500,
+   "F8": 0.046961,
+   "C9": 143000,
+   "D9": 139800,
+   "E9": -3200,
+   "F9": -0.022378,
+   "C10": 402000,
+   "D10": 455600,
+   "E10": 53600,
+   "F10": 0.133333,
+   "C11": 97000,
+   "D11": 99100,
+   "E11": 2100,
+   "F11": 0.021649,
+   "C12": 71000,
+   "D12": 93400,
+   "E12": 22400,
+   "F12": 0.315493,
+   "C13": 118000,
+   "D13": 89700,
+   "E13": -28300,
+   "F13": -0.239831,
+   "C14": 84000,
+   "D14": 80200,
+   "E14": -3800,
+   "F14": -0.045238,
+   "C15": 152000,
+   "D15": 154900,
+   "E15": 2900,
+   "F15": 0.019079,
+   "C16": 2218000,
+   "D16": 2368500,
+   "E16": 150500,
+   "F16": 0.067854
+  },
+  "material": [
+   "CC-102",
+   "CC-104",
+   "CC-107",
+   "CC-109",
+   "CC-110"
+  ],
+  "with_evidence": [
+   "CC-104",
+   "CC-107",
+   "CC-110"
+  ],
+  "to_confirm": [
+   "CC-102",
+   "CC-109"
+  ],
+  "above_amount_below_percent": [
+   "CC-101"
+  ],
+  "draft": {
+   "tagged_figures": 10,
+   "tags_that_match": 7,
+   "tags_that_do_not_match": 3,
+   "untagged_figures": 1,
+   "commented_below_rule": [
+    "CC-101"
+   ],
+   "material_centres_missing": [
+    "CC-109"
+   ],
+   "causes_without_evidence": [
+    "CC-102"
+   ]
+  }
+ },
+ "sample": {
+  "population": {
+   "count": 5000,
+   "sum": 39569567.37
+  },
+  "key_items": {
+   "threshold": 100000,
+   "count": 38,
+   "sum": 10390750.49
+  },
+  "remainder": {
+   "count": 4962,
+   "sum": 29178816.88
+  },
+  "seed": 20261031,
+  "size": 60,
+  "interval": 82,
+  "start": 26,
+  "sample_ids": [
+   "INV-000026",
+   "INV-000111",
+   "INV-000195",
+   "INV-000277",
+   "INV-000360",
+   "INV-000442",
+   "INV-000524",
+   "INV-000608",
+   "INV-000692",
+   "INV-000774",
+   "INV-000856",
+   "INV-000938",
+   "INV-001022",
+   "INV-001105",
+   "INV-001187",
+   "INV-001271",
+   "INV-001353",
+   "INV-001435",
+   "INV-001518",
+   "INV-001601",
+   "INV-001683",
+   "INV-001765",
+   "INV-001847",
+   "INV-001929",
+   "INV-002012",
+   "INV-002095",
+   "INV-002177",
+   "INV-002260",
+   "INV-002342",
+   "INV-002426",
+   "INV-002509",
+   "INV-002591",
+   "INV-002676",
+   "INV-002758",
+   "INV-002840",
+   "INV-002922",
+   "INV-003005",
+   "INV-003087",
+   "INV-003169",
+   "INV-003251",
+   "INV-003334",
+   "INV-003416",
+   "INV-003499",
+   "INV-003581",
+   "INV-003663",
+   "INV-003746",
+   "INV-003828",
+   "INV-003910",
+   "INV-003992",
+   "INV-004075",
+   "INV-004158",
+   "INV-004240",
+   "INV-004322",
+   "INV-004405",
+   "INV-004487",
+   "INV-004570",
+   "INV-004652",
+   "INV-004735",
+   "INV-004818",
+   "INV-004901"
+  ],
+  "sample_sum": 431650.95,
+  "planted": {
+   "duplicate": [
+    [
+     "INV-000572",
+     "INV-000608"
+    ],
+    [
+     "INV-000543",
+     "INV-000559"
+    ],
+    [
+     "INV-001487",
+     "INV-001514"
+    ],
+    [
+     "INV-002291",
+     "INV-002328"
+    ],
+    [
+     "INV-003722",
+     "INV-003759"
+    ],
+    [
+     "INV-004557",
+     "INV-004591"
+    ]
+   ],
+   "missing_po": [
+    "INV-001601",
+    "INV-003416",
+    "INV-000145",
+    "INV-000604",
+    "INV-002549",
+    "INV-004640",
+    "INV-002786",
+    "INV-001781",
+    "INV-003564"
+   ],
+   "split": [
+    [
+     "INV-004322",
+     "INV-004323"
+    ],
+    [
+     "INV-003712",
+     "INV-003713"
+    ],
+    [
+     "INV-000430",
+     "INV-000431"
+    ],
+    [
+     "INV-001505",
+     "INV-001506"
+    ]
+   ],
+   "cut_off": [
+    "INV-004819",
+    "INV-004816",
+    "INV-004761",
+    "INV-004842",
+    "INV-004728"
+   ]
+  },
+  "flags_in_tested_items": {
+   "duplicate": [
+    "INV-000608"
+   ],
+   "missing_po": [
+    "INV-001601",
+    "INV-003416"
+   ],
+   "split_under_limit": [
+    "INV-004322"
+   ],
+   "cut_off": [
+    "INV-004819"
+   ]
+  },
+  "prose_answer": {
+   "listed": 60,
+   "not_in_population": 3,
+   "in_first_1000": 41,
+   "seed_stated": false
+  }
+ },
+ "data_rules": {
+  "F1": {
+   "public_assistant": false,
+   "raqeem": true,
+   "local_tools": true
+  },
+  "F2": {
+   "public_assistant": false,
+   "raqeem": true,
+   "local_tools": true
+  },
+  "F3": {
+   "public_assistant": false,
+   "raqeem": false,
+   "local_tools": true
+  },
+  "F4": {
+   "public_assistant": false,
+   "raqeem": true,
+   "local_tools": true
+  },
+  "F5": {
+   "public_assistant": false,
+   "raqeem": true,
+   "local_tools": true
+  },
+  "F6": {
+   "public_assistant": true,
+   "raqeem": true,
+   "local_tools": true
+  },
+  "F7": {
+   "public_assistant": false,
+   "raqeem": false,
+   "local_tools": true
+  },
+  "F8": {
+   "public_assistant": false,
+   "raqeem": true,
+   "local_tools": true
+  }
+ },
+ "redesign": {
+  "statement": {
+   "lines": 58,
+   "balance": 266754.73
+  },
+  "ledger": {
+   "lines": 57,
+   "balance": 238081.25
+  },
+  "difference": 28673.48,
+  "items": {
+   "not_booked_invoice": "SI-31990",
+   "not_booked_credit_note": "CN-00412",
+   "payment_booked_twice": "PAY-7031",
+   "amount_difference": {
+    "document": "SI-31120",
+    "statement": 19185.59,
+    "ledger": 20085.59
+   }
+  },
+  "baseline_minutes": [
+   44,
+   49,
+   46
+  ],
+  "baseline_errors": [
+   2,
+   1,
+   3
+  ]
+ }
+}
