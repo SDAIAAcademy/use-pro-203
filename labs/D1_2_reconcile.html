@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.2 · المطابقة بمجاميع رقابية · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_2_reconcile.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.2</span>
+<h1>المطابقة بمجاميع رقابية</h1>
+<p>تطابق كشف بنك شركة ظِلال مع دفتر الأستاذ، 1,200 سطر، برموز يولّدها المساعد أو بالدفتر المعدّ، وتثبت الناتج بمجاميع رقابية. وتكشف بالمجاميع نفسها ما أضاعه برنامج نصي أول يبدو سليمًا.</p>
+<div class="meta"><span>30 دقيقة</span><span>اليوم 1</span><span>الجلسة 2: رموز مولَّدة تقرؤها وتثبتها</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>مطابقة كشف بنك شركة ظِلال مع دفتر الأستاذ لأكتوبر 2026، نفّذتها رموز برمجية قرأتَها أو الدفتر المعدّ مسبقًا.</li>
+    <li>جدول مجاميع رقابية يثبت أن كل سطر من الأسطر الـ1,200 حُسب مرة واحدة: لا سطر ضاع ولا سطر تكرر.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/bank_statement_oct.csv" download><b>bank_statement_oct.csv</b><span>كشف الحساب الجاري لأكتوبر. الموجب مقبوضات والسالب مدفوعات.</span></a>
+  <a href="files/ledger_cash_oct.csv" download><b>ledger_cash_oct.csv</b><span>حساب النقد لدى البنك في دفتر الأستاذ، للشهر نفسه.</span></a>
+  <a href="files/opening_balance.txt" target="_blank"><b>opening_balance.txt</b><span>الرصيد الافتتاحي، واتجاه الإشارة في الملفين.</span></a>
+  <a href="files/generated/reconcile_first_try.py" target="_blank"><b>reconcile_first_try.py</b><span>البرنامج النصي الأول: ما يكتبه مساعد طُلب منه «طابق الملفين». مكتوب باليد، وليس مخرج نموذج.</span></a>
+  <a href="files/notebooks/reconcile.ipynb" download><b>reconcile.ipynb</b><span>الدفتر المعدّ مسبقًا: يعمل في <span class="en">JupyterLab</span> أو في خدمة دفاتر مستضافة مجانية، ويكتب سجل تشغيل.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي في هذا المختبر: مسموح كاملًا، وكل رقم يُعاد حسابه. الملفان مصنفان «مقيد» في سجل أدوات الشركة: يدخلان المساعد المعتمد «رقيم» ولا يدخلان مساعدًا عامًّا. في القاعة بياناتنا اصطناعية، فاستخدم المساعد المتاح لك.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · المجاميع الرقابية قبل أي معالجة <span class="min">5 د</span></h3>
+  <p>افتح الملفين في جدول البيانات. لكل ملف سجّل رقمين: عدد الأسطر دون سطر العناوين، ومجموع عمود المبلغ. هذه أربعة أرقام لا يكتبها المساعد: تحسبها أنت بدالة عدّ ودالة جمع.</p>
+  <table>
+    <tr><th></th><th>عدد الأسطر</th><th>مجموع المبالغ</th></tr>
+    <tr><td>كشف البنك</td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>دفتر الأستاذ</td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>2 · اقرأ البرنامج النصي الأول واكشف ما أضاعه <span class="min">8 د</span></h3>
+  <p>افتح <code>reconcile_first_try.py</code>. لا تحتاج إلى أن تكتب مثله: اقرأه سطرًا سطرًا وأجب عن ثلاثة أسئلة. ما الملفان اللذان يقرؤهما؟ ما <b>مفتاح الربط</b> بين السطرين؟ ما الذي يفعله بالأسطر قبل الربط؟</p>
+  <p>حين شُغّل على الملفين طبع:</p>
+  <pre class="code">Reconciliation complete.
+{"matched_pairs": 579, "bank_unmatched": 15, "ledger_unmatched": 22}</pre>
+  <p>اجمع: المتطابق وغير المتطابق في جهة الدفتر. هل يساوي عدد أسطر الدفتر الذي سجّلته في الخطوة 1؟ كم سطرًا اختفى، وأي سطر في البرنامج أخفاه؟</p>
+</div>
+
+<div class="step">
+  <h3>3 · طابق برموز تطلبها أنت، أو بالدفتر المعدّ <span class="min">10 د</span></h3>
+  <p>ارفع الملفين إلى مساعد يشغّل الرموز البرمجية واطلب ما كان ينقص البرنامج الأول:</p>
+  <div class="prompt" data-tool="مساعد يشغّل الرموز البرمجية + الملفان">طابق كشف البنك مع دفتر الأستاذ بالرموز البرمجية. مفتاح الربط هو المرجع بعد حذف المسافات وتوحيد حالة الحروف، ثم المبلغ. كل سطر يُستخدم مرة واحدة فقط، ولا تحذف أي سطر مكرر: السطر الذي لا يجد شريكًا يبقى في قائمة غير المتطابق. اطبع قبل المطابقة عدد أسطر كل ملف ومجموعه، وبعدها عدد الأزواج المتطابقة ومجموعها وعدد غير المتطابق في كل جهة. اعرض الرموز ومخرجها كما هو.</div>
+  <p>لا مساعد يشغّل الرموز؟ افتح <code>reconcile.ipynb</code> وشغّل خلاياه بالترتيب، حتى نهاية القسم 2. في خدمة دفاتر مستضافة: ارفع الملفين بجوار الدفتر أولًا.</p>
+</div>
+
+<div class="step">
+  <h3>4 · أثبت الناتج بالمجاميع الرقابية <span class="min">7 د</span></h3>
+  <p>املأ الجدول من مخرج الرموز، ثم افحصه بأرقامك من الخطوة 1. الفحص ينجح حين يتساوى السطر الأخير مع الخطوة 1 في العدد وفي المبلغ، للجهتين.</p>
+  <table>
+    <tr><th></th><th>البنك: عدد</th><th>البنك: مجموع</th><th>الدفتر: عدد</th><th>الدفتر: مجموع</th></tr>
+    <tr><td>أزواج متطابقة</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>غير متطابق</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>المجموع</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+  <p class="small">احفظ مخرج الرموز أو ملف <code>run_log.csv</code> الذي كتبه الدفتر: هذا أثر الاستخدام الذي يُطلب في المراجعة.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي: المطابقة بالمبلغ وحده</h3>
+  <p>اطلب من المساعد مطابقة بالمبلغ دون المرجع. في الملفين ستة أزواج من مدفوعات مختلفة لها المبلغ نفسه. كم زوجًا ربطه خطأً؟ وهل كشفت المجاميع الرقابية ذلك؟ لماذا؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم زوجًا متطابقًا، وكم سطرًا غير متطابق في كل جهة؟</li>
+  <li>البرنامج الأول أخطأ مرتين. أي خطأ كشفته المجاميع الرقابية، وأي خطأ لم يكشفه إلا قراءة مفتاح الربط؟</li>
+  <li>لماذا تحسب مجاميع الخطوة 1 بنفسك ولا تأخذها من مخرج المساعد؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل: <code>labs/solutions/D1_2_reconcile.md</code>. التحقق: <code>uv run labs/solutions/check.py 1.2</code>، وهو يشغّل البرنامجين النصيين والدفتر فعلًا.</li>
+    <li>الخطوة 1: البنك 594 سطرًا ومجموعها <span class="ltr">-577,301.66</span>. الدفتر 606 أسطر ومجموعها <span class="ltr">-863,944.63</span>.</li>
+    <li>الخطوة 2: 579 + 22 = 601، والدفتر 606: خمسة قيود مكررة حذفها سطر <code>drop_duplicates</code>. هذا ما تكشفه المجاميع. والخطأ الثاني لا تكشفه: الربط على نص المرجع كما هو، وفي كشف البنك ثمانية مراجع بحروف صغيرة ومسافات، فبقيت ثمانية أزواج دون ربط في الجهتين.</li>
+    <li>الخطوة 4: 587 زوجًا مجموعها <span class="ltr">-634,011.66</span>. غير متطابق: 7 في البنك و19 في الدفتر. 587 + 7 = 594، و587 + 19 = 606.</li>
+    <li>الإضافية: المطابقة بالمبلغ وحده لا تكسر المجاميع، لأن المبالغ متساوية. المجاميع تثبت الاكتمال، ولا تثبت أن كل زوج هو الزوج الصحيح. هذا حد المجموع الرقابي.</li>
+    <li>المشكلات المعتادة: مساعد يقرأ الملف بترميز خاطئ فتظهر الأوصاف العربية رموزًا (لا يؤثر في المطابقة)؛ ومساعد يقرّب المبالغ. من تعطّل مساعده يعمل بالدفتر المعدّ.</li>
+    <li>لم يُشغَّل هذا المختبر على نموذج حقيقي: البرنامجان النصيان كتبهما كاتب المقرر.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_1_six_answers.html" rel="prev">→ المختبر السابق</a><a href="D1_3_statement.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 3a4946b</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T14:16:28Z","version":"2027.1.0","commit":"3a4946b"},"course":{"id":"use-pro-203","code":"USE-PRO-203","title":"الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-203/","repo":"SDAIAAcademy/use-pro-203","home":"../index.html"},"lab":{"id":"1.2","title":"المطابقة بمجاميع رقابية","summary":"تطابق كشف بنك شركة ظِلال مع دفتر الأستاذ، 1,200 سطر، برموز يولّدها المساعد أو بالدفتر المعدّ، وتثبت الناتج بمجاميع رقابية. وتكشف بالمجاميع نفسها ما أضاعه برنامج نصي أول يبدو سليمًا.","minutes":30,"day":1,"unit":"اليوم 1","session":2,"deck":"../slides/day1.html#lab-1-2","prev":"D1_1_six_answers.html","next":"D1_3_statement.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

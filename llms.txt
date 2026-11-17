@@ -1,0 +1,35 @@
+# الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق
+
+> تُقفل شهرًا ماليًا بمساعدة الذكاء الاصطناعي وفق قاعدة واحدة: كل رقم يأتي من صيغة أو رموز برمجية يعاد تشغيلها، وله مجموع رقابي يثبته. مقرر من أكاديمية سدايا، الرمز USE-PRO-203، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/use-pro-203/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/use-pro-203/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/use-pro-203/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 17,012 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/use-pro-203/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [اليوم 1: أرقام يعاد تشغيلها](https://sdaiaacademy.github.io/use-pro-203/slides/day1.md): المحسوب والمولَّد، والمطابقة بمجاميع رقابية، والحالات المحسوبة يدويًا؛ الجلسات: محسوب أم مولَّد؟، رموز مولَّدة تقرؤها وتثبتها، من البنود غير المتطابقة إلى قائمة المطابقة، ثق بجدول البيانات أقل؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/slides/day1.html؛ نحو 7,597 من الوحدات النصية
+- [اليوم 2: التعليق والعينة وإعادة التصميم](https://sdaiaacademy.github.io/use-pro-203/slides/day2.md): اختبار لكل إصلاح، وتعليق مرتبط بالخلايا، وعينة يعاد سحبها، ومهمة معاد تصميمها ومقيسة؛ الجلسات: اختبار لكل إصلاح، تعليق مرتبط بالخلايا، عينة يستطيع غيرك إعادة سحبها، قواعد البيانات وإعادة التصميم المقيسة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/slides/day2.html؛ نحو 7,295 من الوحدات النصية
+- [المشروع الختامي: مراجعة المهام المعاد تصميمها](https://sdaiaacademy.github.io/use-pro-203/slides/capstone.md): فحص تحت الإشراف دون ذكاء اصطناعي، ثم مراجعة مباشرة من عشر دقائق تعيد فيها تشغيل المطابقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/slides/capstone.html؛ نحو 1,462 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: ست إجابات: محسوب أم مولَّد؟](https://sdaiaacademy.github.io/use-pro-203/labs/D1_1_six_answers.md): اليوم 1، الجلسة 1، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D1_1_six_answers.html
+- [المختبر 1.2: المطابقة بمجاميع رقابية](https://sdaiaacademy.github.io/use-pro-203/labs/D1_2_reconcile.md): اليوم 1، الجلسة 2، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D1_2_reconcile.html
+- [المختبر 1.3: قائمة المطابقة](https://sdaiaacademy.github.io/use-pro-203/labs/D1_3_statement.md): اليوم 1، الجلسة 3، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D1_3_statement.html
+- [المختبر 1.4: الحالات اليدوية وتتبع الأخطاء](https://sdaiaacademy.github.io/use-pro-203/labs/D1_4_hand_cases.md): اليوم 1، الجلسة 4، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D1_4_hand_cases.html
+- [المختبر 2.1: إصلاح نموذج الموازنة](https://sdaiaacademy.github.io/use-pro-203/labs/D2_1_repair.md): اليوم 2، الجلسة 1، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D2_1_repair.html
+- [المختبر 2.2: تعليق مرتبط بالخلايا](https://sdaiaacademy.github.io/use-pro-203/labs/D2_2_commentary.md): اليوم 2، الجلسة 2، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D2_2_commentary.html
+- [المختبر 2.3: عينة فواتير يعاد سحبها](https://sdaiaacademy.github.io/use-pro-203/labs/D2_3_sample.md): اليوم 2، الجلسة 3، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D2_3_sample.html
+- [المختبر 2.4: بطاقة إعادة التصميم](https://sdaiaacademy.github.io/use-pro-203/labs/D2_4_redesign.md): اليوم 2، الجلسة 4، 30 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-203/labs/D2_4_redesign.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/use-pro-203/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 17,012 من الوحدات النصية
+- [context/day1.md](https://sdaiaacademy.github.io/use-pro-203/context/day1.md): اليوم 1، نحو 7,597 من الوحدات النصية
+- [context/day2.md](https://sdaiaacademy.github.io/use-pro-203/context/day2.md): اليوم 2، نحو 7,295 من الوحدات النصية
+- [context/capstone.md](https://sdaiaacademy.github.io/use-pro-203/context/capstone.md): المشروع الختامي، نحو 1,462 من الوحدات النصية

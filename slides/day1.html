@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="deck" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اليوم 1 · أرقام يعاد تشغيلها · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day1.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق" data-track="fluency" data-day="اليوم 1">
+<section class="slide title" id="title" data-auto="title" data-label="الترحيب" data-n="1">
+  <div class="kicker">أكاديمية سدايا · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</div>
+  <h1>أرقام يعاد تشغيلها</h1>
+  <p class="lead mt">اليوم 1: المحسوب والمولَّد، والمطابقة بمجاميع رقابية، والحالات المحسوبة يدويًا</p>
+  <div class="meta"><span class="track">مسار الطلاقة في البيانات والذكاء الاصطناعي</span><span>يومان تدريبيان + يوم للمشروع الختامي</span><span>4 جلسات · 4 مختبرات</span><span>USE-PRO-203</span></div>
+  <aside class="notes"><p>رحّب وعرّف بنفسك. اسأل برفع اليد: من أخذ في الشهر الماضي رقمًا من مساعد ذكاء اصطناعي ووضعه في تقرير؟ من أعاد حسابه قبل ذلك؟ ومن قاس خط الأساس في العمل التحضيري؟ الإجابات تضبط الإيقاع: إن كان أغلب القاعة بلا خط أساس فذكّر بأن لشركة ظِلال خط أساس جاهزًا يُستخدم في المختبر 2.4.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="جدول اليوم" data-n="2">
+  <div class="kicker">اليوم</div>
+  <h2>أرقام يعاد تشغيلها</h2>
+  <div class="agenda"><div class="item"><div><b>الجلسة 1 · محسوب أم مولَّد؟</b><small>لماذا تخطئ النماذج اللغوية في الأرقام، وكيف تعرف من أين جاء الرقم، وما الفحص الذي يحتاج إليه</small></div></div><div class="item"><div><b>الجلسة 2 · رموز مولَّدة تقرؤها وتثبتها</b><small>تشغيل الرموز البرمجية المولَّدة وقراءتها، ومفتاح الربط، والمجاميع الرقابية قبل المعالجة وبعدها</small></div></div><div class="item"><div><b>الجلسة 3 · من البنود غير المتطابقة إلى قائمة المطابقة</b><small>فروق التوقيت والقيود المكررة وبنود البنك وأخطاء المبلغ، وما تقرره الرموز وما يقرره المحاسب</small></div></div><div class="item"><div><b>الجلسة 4 · ثق بجدول البيانات أقل</b><small>تتبع السوابق والتوابع، ودوال الذكاء الاصطناعي في الخلايا التي تتغير عند إعادة الحساب، والحالات المحسوبة يدويًا مرجعًا</small></div></div></div>
+  <aside class="notes"><p>أربع جلسات، كل منها 55 دقيقة: نحو 25 دقيقة مفاهيم ثم مختبر من 30 دقيقة. الاستراحات بزر B وليست شرائح.</p></aside>
+</section>
+
+<section class="slide" id="workshop-at-a-glance" data-label="الورشة" data-n="3">
+  <div class="kicker">الورشة في لمحة</div>
+  <h2>خط أساس، ثم يومان من المختبرات، ثم مراجعة مباشرة</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-navy"><h4>قبل الورشة</h4><p class="small">تنفذ مهمة متكررة من عملك بطريقتك الحالية، وتسجّل الوقت والأخطاء.</p><span class="pill c-navy">خط الأساس</span></div>
+    <div class="card c-teal"><h4>اليوم 1</h4><p class="small">المحسوب والمولَّد، والمطابقة بمجاميع رقابية، والحالات اليدوية.</p><span class="pill c-teal">قائمة مطابقة</span></div>
+    <div class="card c-coral"><h4>اليوم 2</h4><p class="small">إصلاح النموذج، والتعليق المرتبط بالخلايا، والعينة، وبطاقة إعادة التصميم.</p><span class="pill c-coral">أربعة مخرجات</span></div>
+    <div class="card c-purple"><h4>المراجعة</h4><p class="small">فحص دون ذكاء اصطناعي، ثم عشر دقائق تدافع فيها عن بطاقتك وتعيد تشغيل المطابقة.</p><span class="pill c-purple">بطاقة مقيسة</span></div>
+  </div>
+  <div class="callout tip mt"><b>الحالة واحدة في اليومين:</b> إقفال أكتوبر 2026 في شركة ظِلال لإدارة المرافق، وهي جهة افتراضية وبياناتها اصطناعية.</div>
+  <aside class="notes"><p>كل مختبر يضيف ملفًا إلى مجلد المشارك: ورقة التصنيف، ثم قائمة المطابقة وسجل التشغيل، ثم النموذج المُصلَح، ثم التعليق، ثم ملف المعاينة، ثم البطاقة. بين اليوم الثاني والمراجعة ينفذ المشارك مهمته المعاد تصميمها مرة ثانية على عمله هو.</p></aside>
+</section>
+
+<section class="slide dark" id="the-close-rule" data-lo="LO1" data-label="القاعدة" data-n="4">
+  <div class="kicker">قاعدة الورشة كلها</div>
+  <h2>الرقم يأتي من صيغة أو رموز برمجية يعاد تشغيلها، ولا يأتي من نص كتبه المساعد</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>المساعد يكتب الرموز</h4><p class="small mb0">والرموز تحسب. أنت تقرؤها وتعيد تشغيلها.</p></div>
+    <div class="card c-cyan"><h4>لكل رقم مجموع رقابي</h4><p class="small mb0">عدد ومجموع قبل المعالجة وبعدها، تحسبهما بنفسك.</p></div>
+    <div class="card c-coral"><h4>الحكم يبقى لك</h4><p class="small mb0">سبب الانحراف، والاستثناء في العينة، وقيد التسوية.</p></div>
+  </div>
+  <aside class="notes"><p>هذه القاعدة هي ما تبقى بعد أن تتغير الأدوات. قل سياسة الذكاء الاصطناعي في الورشة بوضوح: دون مساعد في إعادة حساب الأرقام الثلاثة في المختبر 1.1، وفي الحالات اليدوية في المختبر 1.4، وفي الفحص الفردي. والمساعد معلّم يشرح ولا يصلح في المختبر 2.1. ومسموح كاملًا في الرموز المولَّدة وفي إعادة التصميم، مع إعادة حساب كل رقم. هذا من توصيف المقرر لا من اختيار المدرّب.</p></aside>
+</section>
+
+<section class="slide" id="dhilal-case" data-label="دراسة الحالة" data-n="5">
+  <div class="kicker">دراسة الحالة</div>
+  <h2>شركة ظِلال: إقفال أكتوبر في خمسة ملفات</h2>
+  <div class="cols cols-32">
+    <table class="t small">
+      <tr><th>الملف</th><th>ما فيه</th><th>المختبر</th></tr>
+      <tr><td>ميزان المراجعة</td><td>22 حسابًا، سبتمبر وأكتوبر</td><td class="num">1.1</td></tr>
+      <tr><td>كشف البنك ودفتر الأستاذ</td><td>1,200 سطر</td><td class="num">1.2 و1.3</td></tr>
+      <tr><td>نموذج موازنة 2027</td><td>12 مركز تكلفة، خمسة أخطاء</td><td class="num">1.4 و2.1</td></tr>
+      <tr><td>ورقة الانحرافات</td><td>الموازنة والفعلي لكل مركز</td><td class="num">2.2</td></tr>
+      <tr><td>فواتير الموردين</td><td>5,000 فاتورة</td><td class="num">2.3</td></tr>
+    </table>
+    <div class="stack">
+      <div class="card c-teal flat"><h4>من يعمل على الإقفال</h4><p class="small mb0">ثريا الحمداني المراقبة المالية، ويسرى البواردي محاسبة الخزينة، وشاهين اللهيب محلل الموازنة، ومرزوق الغبيني مدير المراجعة الداخلية.</p></div>
+      <div class="card c-coral flat"><h4>المساعد المعتمد</h4><p class="small mb0">«رقيم»: مساعد يشغّل الرموز البرمجية داخل بيئة الشركة.</p></div>
+    </div>
+  </div>
+  <p class="xsmall muted mt-s">الشركة وأشخاصها وموردوها وأرقامها كلها افتراضية، مولّدة ببذرة ثابتة.</p>
+  <aside class="notes"><p>ثريا الحمداني هي صاحبة القاعدة. زهور الشبل مديرة مركز الصيانة الميدانية تظهر غدًا في تعليق الانحرافات. لا تعلّق الآن على ما في الملفات: كل مختبر يكتشف ما زُرع في ملفه.</p></aside>
+</section>
+
+<section class="slide" id="setup-check" data-label="التجهيز" data-n="6">
+  <div class="kicker">قبل أن نبدأ</div>
+  <h2>ثلاثة أشياء مفتوحة أمامك الآن</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · صفحة المقرر</h4><p class="small mb0">فيها الشرائح وصفحات المختبرات وملفات شركة ظِلال. افتح صفحة المختبر 1.1 للتأكد.</p></div>
+    <div class="card c-cyan"><h4>2 · جدول بيانات</h4><p class="small mb0"><span class="en">LibreOffice Calc</span> أو <span class="en">Microsoft Excel</span>. افتح به ميزان المراجعة.</p></div>
+    <div class="card c-coral"><h4>3 · طريق إلى الرموز</h4><p class="small mb0">مساعد يشغّل الرموز البرمجية على ملف مرفوع، أو الدفتر المعدّ مسبقًا في خدمة دفاتر مستضافة مجانية.</p></div>
+  </div>
+  <div class="callout warn mt"><b>لا بيانات حقيقية:</b> لا ملف من جهة عملك يدخل أي أداة في هذه القاعة. المختبرات كلها على ملفات شركة ظِلال.</div>
+  <aside class="notes"><p>دقيقتان. الدفاتر المعدّة لا تحتاج إلى كتابة رموز: يشغّل المشارك خلاياها بالترتيب. خدمة الدفاتر المستضافة المجانية تكفي، ولا يُنزَّل أي نموذج على الجهاز. إن حُجبت الخدمة في شبكة القاعة فكل مختبر له ملف بداية جاهز في مجلد <span class="ltr">start</span> ومخرج مطبوع في صفحته.</p><p>المصادر: <span class="en">Google Colaboratory FAQ</span>.</p></aside>
+</section>
+
+<!-- الجلسة 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="7">
+  <div class="kicker">الجلسة 1</div>
+  <h1>محسوب أم مولَّد؟</h1>
+  <ul class="bullets outcomes"><li>يشرح لماذا يخطئ النموذج اللغوي في الحساب حين يكتب الرقم نصًّا</li><li>يميّز الرقم المحسوب برموز برمجية أو صيغة من الرقم المولَّد نصًّا</li><li>يحدد لكل نوع الفحص الذي يحتاج إليه قبل أن يدخل الإقفال</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="from-known-answer" data-lo="LO1" data-label="من أين نبدأ" data-n="8" data-session="1">
+  <div class="kicker">من حيث انتهى المقرر السابق</div>
+  <h2>اختبرتَ المساعد مقابل إجابة معروفة. في المالية هذا لا يكفي</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>في مقرر العمل مع المساعدات الذكية اختبرت المساعد على ملخص يغلب عليه الحساب قبل أن تفوّض.</li>
+      <li>في الإقفال لا إجابة معروفة مسبقًا: الرقم الصحيح هو ما نبحث عنه.</li>
+      <li>فالسؤال يتغير من «هل الرقم صحيح؟» إلى <b>«من أين جاء الرقم؟»</b></li>
+    </ul>
+    <div class="card c-teal"><h4>في شركة ظِلال</h4><p class="small mb0">ست إجابات وصلت إلى ثريا الحمداني في يوم الإقفال، كلها تبدو مرتبة. ستصنّفها في المختبر 1.1.</p></div>
+  </div>
+  <aside class="notes"><p>شريحة تذكير واحدة، لا إعادة تدريس: المتطلب السابق هو مقرر العمل مع المساعدات الذكية، وجلسته الثانية «اختبر قبل أن تفوّض». اسأل: ماذا كانت نتيجة اختباركم هناك؟</p></aside>
+</section>
+
+<section class="slide" id="two-answers-one-file" data-lo="LO1" data-label="إجابتان" data-n="9" data-session="1">
+  <div class="kicker">ملف واحد، سؤالان، مساعدان</div>
+  <h2>الإجابتان مرتبتان. واحدة حُسبت وواحدة كُتبت</h2>
+  <div class="cols cols-2">
+    <div class="chat">
+      <div class="msg user"><span class="who">أنت</span>ما إجمالي مصروفات أكتوبر؟</div>
+      <div class="msg ai bad"><span class="who">المساعد</span>بجمع أرصدة الحسابات الأربعة عشر يكون الإجمالي 2,478,783.00 ريال.</div>
+    </div>
+    <div class="chat">
+      <div class="msg user"><span class="who">أنت</span>ما إجمالي إيرادات أكتوبر؟</div>
+      <div class="msg ai good"><span class="who">المساعد</span>شغّلت رموزًا على الملف. المخرج: 3 حسابات، 2,949,030.00 ريال.</div>
+    </div>
+  </div>
+  <div class="callout warn mt"><b>الإجمالي الصحيح للمصروفات 2,487,783.00.</b> في الرد الأول خانتان متبادلتان، ولا شيء في صياغته ينبّهك.</div>
+  <aside class="notes"><p>الإجابتان من ملفات المختبر 1.1، وهما مكتوبتان باليد لتمثّلا ما تعطيه المساعدات: قل ذلك للقاعة. الفرق 9,000 ريال، وهو من النوع الذي يمر في مراجعة سريعة. الرقم الصحيح من تشغيل حل المختبر 1.1.</p></aside>
+</section>
+
+<section class="slide" id="why-prose-arithmetic-fails" data-lo="LO1" data-label="لماذا يخطئ" data-n="10" data-session="1">
+  <div class="kicker">ما الذي يحدث في الداخل</div>
+  <h2>النموذج اللغوي يتوقع النص التالي، ولا يُجري عملية حسابية</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الأرقام وحدات نصية</h4><p class="small mb0">العدد يُقطَّع إلى أجزاء من خانات، ويُعامل كما تُعامل أجزاء الكلمات.</p></div>
+    <div class="card c-cyan"><h4>لا خانة للحمل</h4><p class="small mb0">الجمع الطويل يحتاج إلى خطوات مرتبة تحمل من خانة إلى أخرى. النص المتوقَّع لا يضمن أيًّا منها.</p></div>
+    <div class="card c-coral"><h4>الخطأ يشبه الصواب</h4><p class="small mb0">الناتج الخاطئ له عدد الخانات نفسه وأول خاناته صحيحة غالبًا.</p></div>
+  </div>
+  <div class="callout note mt"><b>لذلك</b> يزداد الخطأ كلما طال العدد وكثرت البنود، وهذا بالضبط شكل الأرقام في ميزان مراجعة.</div>
+  <aside class="notes"><p>لا تدخل في بنية النماذج: المشارك يحتاج إلى فكرة واحدة، أن الرقم في الرد نص متوقَّع وليس ناتج عملية. مثال للقاعة: حين تقرأ «2,478,783» لا شيء فيها يدلك على أنها خطأ، وكذلك النموذج حين يكتبها.</p></aside>
+</section>
+
+<section class="slide dark" id="multiplication-evidence" data-lo="LO1" data-label="الدليل" data-n="11" data-session="1">
+  <div class="kicker">دراسة منشورة، 2023</div>
+  <h2>ضرب عددين من ثلاث خانات: أقوى نموذج في الدراسة أصاب في 59% من المرات</h2>
+  <div class="cols cols-2 mid">
+    <div class="stat center"><div class="big">59%</div><div class="lbl">دقة أقوى نموذجين اختُبرا دون أدوات: 55% و59%</div></div>
+    <ul class="bullets">
+      <li>مسألة يحلها طالب تعلّم قاعدة الضرب.</li>
+      <li>الدقة تهبط سريعًا كلما زادت الخانات والخطوات.</li>
+      <li>النماذج تحسنت منذ ذلك الحين. الآلية لم تتغير: نص متوقَّع.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>الرقمان لنموذجين من عام 2023 دون تشغيل رموز. لا تقل إن نماذج اليوم بهذه الدقة: قل إن أي نسبة أقل من مئة في المئة لا تصلح لرقم في الإقفال، وإنك لا تعرف مسبقًا أي رقم هو الخاطئ. الحل ليس نموذجًا أذكى، بل ألا يحسب النموذج أصلًا.</p><p>المصادر: <span class="en">Dziri et al., Faith and Fate: Limits of Transformers on Compositionality (2023)</span>.</p></aside>
+</section>
+
+<section class="slide" id="what-computed-looks-like" data-lo="LO1" data-label="شكل المحسوب" data-n="12" data-session="1">
+  <div class="kicker">كيف تعرف من أين جاء الرقم</div>
+  <h2>الرقم المحسوب له أثر تراه: رموز ومخرجها، أو صيغة وخلاياها</h2>
+  <table class="t">
+    <tr><th>ما تراه في الإجابة</th><th>النوع</th></tr>
+    <tr><td>رموز برمجية، وتحتها المخرج الذي طبعته</td><td><b>محسوب</b> برموز</td></tr>
+    <tr><td>صيغة في خلية تشير إلى خلايا</td><td><b>محسوب</b> بصيغة</td></tr>
+    <tr><td>«جمعت» أو «راجعت» أو «بحساب» ثم رقم، دون رموز ولا صيغة</td><td><b>مولَّد</b> نصًّا</td></tr>
+    <tr><td>خلية فيها دالة ذكاء اصطناعي تكتب نصًّا</td><td><b>مولَّد</b> داخل الجدول</td></tr>
+  </table>
+  <div class="callout tip mt"><b>الفعل لا يكفي:</b> «حسبت» كلمة. المحسوب ما تستطيع أن تعيد تشغيله.</div>
+  <aside class="notes"><p>وضع تنفيذ الرموز موجود اليوم في المساعدات الشائعة: المساعد يكتب رموزًا بلغة بايثون ويشغّلها على الملف المرفوع ويعرضها مع مخرجها. علّم المشاركين أن يطلبوا دائمًا «اعرض الرموز ومخرجها كما هو». أسماء المزايا تتغير: المهم القدرة لا الاسم.</p><p>المصادر: <span class="en">OpenAI Help Center, Data analysis with ChatGPT</span>؛ <span class="en">Claude Help Center, Create and edit files with Claude</span>؛ <span class="en">Google AI for Developers, Code execution</span>.</p></aside>
+</section>
+
+<section class="slide" id="each-kind-its-check" data-lo="LO1" data-label="لكل نوع فحص" data-n="13" data-session="1">
+  <div class="kicker">النوع يحدد الفحص</div>
+  <h2>المولَّد يُعاد حسابه كله. المحسوب يُقرأ ويُعاد تشغيله</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>رقم مولَّد نصًّا</h4>
+      <ul class="bullets small tight">
+        <li>أعد حسابه من المصدر، بصيغة أو برموز.</li>
+        <li>لا تأخذ منه إلا الصياغة.</li>
+        <li>إن طابق حسابك فالحساب هو ما يدخل الإقفال، لا الرد.</li>
+      </ul>
+    </div>
+    <div class="card c-teal"><h4>رقم محسوب</h4>
+      <ul class="bullets small tight">
+        <li>أي ملف قرأته الرموز؟</li>
+        <li>أي صفوف دخلت؟ كم عددها؟</li>
+        <li>هل الشرط في الرموز هو الشرط في السؤال؟</li>
+        <li>أعد التشغيل: هل يخرج الرقم نفسه؟</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes"><p>هذا هو الجدول الذي يملؤه المشارك في الخطوة 2 من المختبر. شدّد على أن الفحص فعل محدد يُنفَّذ في دقيقة، لا «أتأكد». مثال: «أعدّ حسابات المصروفات في الميزان وأقارن العدد بما طبعته الرموز».</p></aside>
+</section>
+
+<section class="slide" id="computed-can-be-wrong" data-lo="LO1" data-label="محسوب وخاطئ" data-n="14" data-session="1">
+  <div class="kicker">الإجابة 6 في المختبر</div>
+  <h2>المحسوب قد يكون خاطئًا: الرموز أجابت عن سؤال غير سؤالك</h2>
+  <div class="cols cols-2">
+    <pre class="code s"><code class="language-python">exp = tb[tb[<span class="hljs-string">&quot;group&quot;</span>] == <span class="hljs-string">&quot;مصروفات&quot;</span>]
+other = exp[~exp[<span class="hljs-string">&quot;account_name&quot;</span>]
+            .<span class="hljs-built_in">str</span>.contains(<span class="hljs-string">&quot;رواتب&quot;</span>)]
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(other), other[<span class="hljs-string">&quot;oct_2026&quot;</span>].<span class="hljs-built_in">sum</span>())
+<span class="hljs-comment"># 13 1149898.0</span></code></pre>
+    <div class="stack">
+      <div class="card c-coral flat"><h4>السؤال</h4><p class="small mb0">المصروفات دون تكاليف العاملين: الرواتب والبدلات والتأمينات.</p></div>
+      <div class="card c-teal flat"><h4>ما فعلته الرموز</h4><p class="small mb0">استبعدت الحساب الذي في اسمه «رواتب» فقط. بقي 13 حسابًا، والصحيح 11.</p></div>
+    </div>
+  </div>
+  <div class="callout tip mt"><b>العدد كشفها:</b> 14 حسابًا ناقص 3 يساوي 11. المخرج يقول 13. الرقم الصحيح 666,010.00.</div>
+  <aside class="notes"><p>الرموز شُغّلت فعلًا في حل المختبر 1.1 وطبعت هذا المخرج. الدرس: المحسوب يعاد تشغيله ويُقرأ، وهذا ما يجعله قابلًا للفحص، لا ما يجعله صحيحًا. والعدد المطبوع بجانب المجموع مجموع رقابي صغير: هذا تمهيد للجلسة التالية.</p></aside>
+</section>
+
+<section class="slide" id="check-right-number-no-code" data-lo="LO1" data-n="15" data-session="1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>رقم صحيح بلا رموز</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-right-number-no-code-q1">
+    <p class="lead">سألت المساعد عن نسبة أكبر حساب مصروفات من الإجمالي. أجاب بجملة فيها 53.8%، دون رموز ولا صيغة. أعدت الحساب فوجدتها 53.8%. ماذا تضع في تقرير الإقفال؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يجعل صحة رقم واحد دليلًا على الطريقة: الرد التالي من النوع نفسه قد يخطئ ولن ينبّهك شيء" data-k="أ">رد المساعد، فقد ثبتت صحته</div>
+      <div class="opt" data-why="يخلط نوع الرقم بصحته: الرقم مولَّد نصًّا مهما كان صحيحًا، لأن لا شيء فيه يعاد تشغيله" data-k="ب">رد المساعد، لأنه رقم محسوب</div>
+      <div class="opt" data-ok data-k="ج">حسابك أنت، بصيغته أو رموزه</div>
+      <div class="opt" data-why="يظن أن التكرار يثبت الرقم: رد ثانٍ من النوع نفسه نص متوقَّع ثانٍ، لا حساب" data-k="د">رد المساعد بعد أن تسأله مرة ثانية للتأكد</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> ما يدخل الإقفال هو ما يعاد تشغيله. الرد المولَّد وافق حسابك هذه المرة، وحسابك هو الذي له صيغة ومصدر.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الثالث. هذه هي الإجابة 4 في المختبر. إن اختار كثيرون الأول فاسأل: لو لم تُعد الحساب، كيف كنت ستعرف أنها صحيحة؟</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-1" data-auto="lab" data-lab="1.1" data-label="المختبر 1.1" data-n="16" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.1 · 30 دقيقة</div><h2>ست إجابات: محسوب أم مولَّد؟</h2><p class="lead small">تصنّف ست إجابات من الذكاء الاصطناعي عن أسئلة مالية إلى محسوبة ومولَّدة، وتكتب الفحص الذي تحتاج إليه كل إجابة، وتعيد حساب ثلاثة أرقام بيدك. التصنيف المطابق للمفتاح في خمس من ست هو دليل ناتج التعلم الأول.</p><a class="nb" href="../labs/D1_1_six_answers.html">D1_1_six_answers.html</a></div><ul class="checklist"><li>اقرأ الإجابات الست وصنّف كلًّا منها: محسوبة أم مولَّدة <span class="min">10 د</span></li><li>اكتب لكل إجابة ما يدل على نوعها والفحص الذي تحتاج إليه <span class="min">8 د</span></li><li>أعد حساب ثلاثة أرقام بآلة حاسبة ودون مساعد: في <span class="ltr" dir="ltr">A2</span> و<span class="ltr" dir="ltr">A4</span> و<span class="ltr" dir="ltr">A6</span> <span class="min">9 د</span></li><li>قارن تصنيفك بتصنيف زميل وناقشا إجابة واحدة اختلفتما فيها <span class="min">3 د</span></li><li class="stretch">✱ إضافي: اطرح السؤال 2 على مساعدك في محادثتين جديدتين دون تشغيل رموز، وسجّل هل تطابق الرقمان</li></ul></div>
+  <aside class="notes"><p>راقب الخطوة 3: هي دون مساعد، وبآلة حاسبة أو بدالة جمع. من ينتهي مبكرًا يأخذ المهمة الإضافية. المفتاح: المحسوبة A1 وA3 وA6، والمولَّدة A2 وA4 وA5. دليل الناتج الأول تصنيف يطابق المفتاح في خمس من ست. أكثر ما يُخطأ فيه: A4 لأنها صحيحة، وA6 لأنها خاطئة.</p></aside>
+</section>
+
+<!-- الجلسة 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="17">
+  <div class="kicker">الجلسة 2</div>
+  <h1>رموز مولَّدة تقرؤها وتثبتها</h1>
+  <ul class="bullets outcomes"><li>يقرأ رموزًا مولَّدة للمطابقة ويحدد مدخلاتها ومفتاح الربط فيها ومخرجاتها</li><li>يسجّل المجاميع الرقابية قبل المعالجة وبعدها ويثبت بها أن لا سطر ضاع ولا تكرر</li><li>ينفذ مطابقة كشف البنك مع دفتر الأستاذ برموز مولَّدة أو بالدفتر المعدّ</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="three-questions-for-code" data-lo="LO2" data-label="قراءة الرموز" data-n="18" data-session="2">
+  <div class="kicker">لا تحتاج إلى أن تكتبها</div>
+  <h2>تقرأ الرموز المولَّدة بثلاثة أسئلة</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · ماذا تقرأ؟</h4><p class="small mb0">أي ملفات، وأي أعمدة، وهل قرأت كل الصفوف.</p></div>
+    <div class="card c-cyan"><h4>2 · بماذا تربط؟</h4><p class="small mb0">مفتاح الربط بين السطرين: المرجع؟ المبلغ؟ كلاهما؟ وهل نُظّف قبل الربط؟</p></div>
+    <div class="card c-coral"><h4>3 · ماذا تحذف؟</h4><p class="small mb0">أي سطر فيه «احذف» أو «نظّف» أو «استبعد» قبل الحساب يغيّر المجتمع الذي تحسب عليه.</p></div>
+  </div>
+  <div class="callout note mt"><b>اطلب من المساعد أن يشرح رموزه سطرًا سطرًا.</b> الشرح نص مولَّد يساعدك على القراءة. الحكم لقراءتك وللمجاميع.</div>
+  <aside class="notes"><p>المتطلب السابق يقول: لا حاجة إلى البرمجة. المطلوب قراءة بمستوى قراءة صيغة في جدول: ما المدخل، وما الشرط، وما المخرج. اعرض البرنامج النصي الأول في الشريحة التالية واطلب من القاعة أن تجيب عن الأسئلة الثلاثة قبل أن تكشف.</p></aside>
+</section>
+
+<section class="slide" id="first-try-script" data-lo="LO2" data-label="البرنامج الأول" data-n="19" data-session="2">
+  <div class="kicker">ما يكتبه المساعد حين تقول: طابق الملفين</div>
+  <h2>برنامج نصي قصير ومرتب، وفيه سطر يحذف</h2>
+  <pre class="code" data-file="reconcile_first_try.py"><code class="language-python">bank = pd.read_csv("bank_statement_oct.csv")
+ledger = pd.read_csv("ledger_cash_oct.csv")
+
+<span class="hl-line">ledger = ledger.drop_duplicates(subset=["reference", "amount"])</span>
+merged = bank.merge(ledger, on=["reference", "amount"],
+                    how="outer", indicator=True)
+# Reconciliation complete.
+# matched 579 · bank unmatched 15 · ledger unmatched 22</code></pre>
+  <div class="callout warn mt"><b>يعمل دون خطأ ويطبع أرقامًا.</b> لا شيء في المخرج يقول إن خمسة قيود اختفت.</div>
+  <aside class="notes"><p>البرنامج من ملفات المختبر، كتبه كاتب المقرر ليمثّل محاولة أولى، وشُغّل فعلًا على الملفين: الأرقام مخرجه الحقيقي. السطر المظلَّل يحذف من الدفتر كل سطر يكرر مرجعًا ومبلغًا. من منظور «تنظيف البيانات» هذا معقول. من منظور المحاسب القيد المكرر هو بالضبط ما نبحث عنه.</p></aside>
+</section>
+
+<section class="slide" id="control-totals" data-lo="LO2" data-label="المجاميع الرقابية" data-n="20" data-session="2">
+  <div class="kicker">الفكرة التي تسبق الذكاء الاصطناعي بعقود</div>
+  <h2>المجموع الرقابي: ما دخل يساوي ما خرج، عددًا ومبلغًا</h2>
+  <div class="flow">
+    <div class="step c-navy"><b>قبل</b>عدد أسطر كل ملف ومجموع مبالغه، تحسبهما أنت</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>المعالجة</b>الرموز تطابق وتفرز</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>بعد</b>المتطابق وغير المتطابق، عددًا ومبلغًا، لكل جهة</div>
+  </div>
+  <div class="callout tip mt"><b>الفحص:</b> المتطابق + غير المتطابق = الملف. إن نقص سطر فقد ضاع، وإن زاد فقد تكرر.</div>
+  <aside class="notes"><p>أرقام «قبل» لا تؤخذ من مخرج المساعد: يحسبها المشارك بدالة عدّ ودالة جمع في جدول البيانات، لأن الغرض أن يكون عنده رقم مستقل عن الرموز. هذه هي الخطوة 1 في المختبر. في توصيف المقرر: لا رقم يُرفع دون مجموع رقابي.</p></aside>
+</section>
+
+<section class="slide" id="first-try-fails-the-totals" data-lo="LO2" data-label="المجاميع تكشف" data-n="21" data-session="2">
+  <div class="kicker">البرنامج الأول أمام المجاميع</div>
+  <h2>601 سطرًا من 606: المجموع الرقابي يكشف ما لا يقوله المخرج</h2>
+  <div class="cols cols-2">
+    <table class="t">
+      <tr><th>جهة الدفتر</th><th class="num">الأسطر</th></tr>
+      <tr><td>في الملف، بعدّك أنت</td><td class="num">606</td></tr>
+      <tr><td>متطابق في المخرج</td><td class="num">579</td></tr>
+      <tr><td>غير متطابق في المخرج</td><td class="num">22</td></tr>
+      <tr class="hl"><td>مجموع المخرج</td><td class="num">601</td></tr>
+    </table>
+    <div class="stack">
+      <div class="stat center"><div class="big">5</div><div class="lbl">أسطر اختفت من الدفتر قبل المطابقة</div></div>
+      <p class="small">هي القيود الخمسة التي رُحّلت مرتين، ومجموعها 161,714.05 ريال مدفوعات.</p>
+    </div>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل حل المختبر 1.2. اطلب من القاعة أن تجمع 579 و22 قبل أن تُظهر السطر الأخير. من يسأل «ولماذا لا نثق بالمساعد حين يقول إنه لم يحذف؟»: لأن الجملة نص، والمجموع رقم تحسبه أنت.</p></aside>
+</section>
+
+<section class="slide" id="join-key-limits" data-lo="LO2" data-label="مفتاح الربط" data-n="22" data-session="2">
+  <div class="kicker">ما لا تكشفه المجاميع</div>
+  <h2>ثمانية مراجع كُتبت بحروف صغيرة ومسافات، فلم تجد شريكها</h2>
+  <div class="cols cols-2">
+    <table class="t">
+      <tr><th>في كشف البنك</th><th>في الدفتر</th><th>الربط على النص</th></tr>
+      <tr><td><code>" trf-260387 "</code></td><td><code>"TRF-260387"</code></td><td>لا يتطابقان</td></tr>
+      <tr><td><code>"TRF-260387"</code></td><td><code>"TRF-260387"</code></td><td>يتطابقان</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>البرنامج الأول ترك هذه الأزواج الثمانية غير متطابقة في الجهتين.</li>
+      <li>المجاميع بقيت متفقة: لا سطر ضاع، بل وُضع في المكان الخطأ.</li>
+      <li>الذي يكشفه قراءة مفتاح الربط، ثم قراءة البنود غير المتطابقة.</li>
+    </ul>
+  </div>
+  <div class="callout note mt"><b>حد المجموع الرقابي:</b> يثبت أن كل سطر حُسب مرة واحدة، ولا يثبت أن كل زوج هو الزوج الصحيح.</div>
+  <aside class="notes"><p>المثال في الجدول للشرح، والعدد ثمانية من ملفات المختبر. المهمة الإضافية في المختبر تعرض الحد نفسه من زاوية أخرى: المطابقة بالمبلغ وحده تربط ستة أزواج من مدفوعات مختلفة لها المبلغ نفسه، والمجاميع لا تتحرك.</p></aside>
+</section>
+
+<section class="slide" id="ask-for-what-was-missing" data-lo="LO2" data-label="الطلب الثاني" data-n="23" data-session="2">
+  <div class="kicker">اطلب ما كان ينقص</div>
+  <h2>الطلب الجيد يسمّي المفتاح، ويمنع الحذف، ويطلب المجاميع</h2>
+  <div class="prompt" data-tool="مساعد يشغّل الرموز البرمجية + الملفان">
+    <span class="seg c-teal">طابق كشف البنك مع دفتر الأستاذ بالرموز البرمجية.</span>
+    <span class="seg c-cyan">مفتاح الربط هو المرجع بعد حذف المسافات وتوحيد حالة الحروف، ثم المبلغ.</span>
+    <span class="seg c-coral">كل سطر يُستخدم مرة واحدة، ولا تحذف أي سطر مكرر.</span>
+    <span class="seg c-purple">اطبع قبل المطابقة عدد أسطر كل ملف ومجموعه، وبعدها عدد المتطابق ومجموعه وعدد غير المتطابق في كل جهة.</span>
+    <span class="seg c-amber">اعرض الرموز ومخرجها كما هو.</span>
+  </div>
+  <div class="legend"><span class="c-teal">المهمة</span><span class="c-cyan">المفتاح</span><span class="c-coral">ما لا يُحذف</span><span class="c-purple">المجاميع</span><span class="c-amber">الأثر</span></div>
+  <aside class="notes"><p>هذا هو الأمر في الخطوة 3 من المختبر. قارنه بالطلب الأول «طابق الملفين»: الفرق ليس بلاغة، بل معرفة محاسبية بما يجب ألا يفعله البرنامج. من لا يملك مساعدًا يشغّل الرموز يستخدم الدفتر المعدّ، وهو ينفذ الطلب نفسه.</p></aside>
+</section>
+
+<section class="slide" id="prepared-notebook-run-log" data-lo="LO2" data-label="الدفتر المعدّ" data-n="24" data-session="2">
+  <div class="kicker">الطريق الثاني إلى الرموز</div>
+  <h2>الدفتر المعدّ مسبقًا يحسب، ويفحص نفسه، ويترك أثرًا</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>تشغّل خلاياه بالترتيب. لا تكتب شيئًا.</li>
+      <li>يتوقف برسالة واضحة إن لم تتفق المجاميع الرقابية.</li>
+      <li>يضيف سطرًا إلى <b>سجل التشغيل</b> في كل مرة: متى، وعلى أي ملفات، وبأي مجاميع.</li>
+      <li>يعمل على جهازك أو في خدمة دفاتر مستضافة مجانية.</li>
+    </ul>
+    <div class="card c-teal"><h4>سطر من سجل التشغيل</h4><p class="small mb0"><span class="ltr">bank 594/-577301.66; ledger 606/-863944.63; matched 587; adjusted 1749779.42/1749779.42</span></p></div>
+  </div>
+  <div class="callout tip mt"><b>في المراجعة</b> ستعيد تشغيل هذا الدفتر أمام المراجع. السجل يبيّن أن الرقم خرج اليوم كما خرج أمس.</div>
+  <aside class="notes"><p>السطر من تشغيل حل المختبر 1.2. سجل التشغيل يحفظ بصمة كل ملف مدخل، فإن تغيّر الملف بين تشغيلين ظهر ذلك. نبّه: في خدمة مستضافة يُرفع الملفان بجوار الدفتر، وبيانات الورشة اصطناعية. في العمل الحقيقي ملف مصنف «مقيد» لا يُرفع إلى خدمة عامة: هذا موضوع الجلسة الأخيرة غدًا.</p></aside>
+</section>
+
+<section class="slide" id="check-dropped-duplicates" data-lo="LO2" data-n="25" data-session="2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>برنامج «ينظّف» قبل أن يطابق</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-dropped-duplicates-q1">
+    <p class="lead">ملف دفتر الأستاذ فيه 606 أسطر بعدّك. برنامج ولّده المساعد يطبع: 579 متطابقًا و22 غير متطابق في جهة الدفتر. ما أول ما تفعله؟</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="أ">تبحث في الرموز عن السطر الذي أسقط خمسة أسطر</div>
+      <div class="opt" data-why="يبدأ بالتفاصيل قبل الاكتمال: القائمة نفسها ناقصة خمسة أسطر، فتصنيفها يبني على مجتمع خاطئ" data-k="ب">تصنّف البنود الاثنين والعشرين غير المتطابقة</div>
+      <div class="opt" data-why="يعامل النص دليلًا: جواب المساعد عن نفسه مولَّد، والفرق بين 601 و606 محسوب" data-k="ج">تسأل المساعد هل حذف شيئًا وتأخذ بجوابه</div>
+      <div class="opt" data-why="يفترض أن الفرق الصغير غير مهم: خمسة أسطر قد تكون خمسة قيود مكررة بمبالغ كبيرة" data-k="د">تقبل الناتج لأن الفرق أقل من واحد في المئة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> 579 + 22 = 601، والملف 606. المجموع الرقابي لم يتفق، فلا معنى لأي خطوة بعده حتى يُعرف أين ذهبت الأسطر الخمسة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الأول. اربطها بالأسئلة الثلاثة: «ماذا تحذف؟» هو السؤال الذي يجد السطر. إن اختار كثيرون الثاني فذكّر بأن التصنيف عمل الجلسة التالية، ولا يبدأ قبل أن تتفق المجاميع.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-2" data-auto="lab" data-lab="1.2" data-label="المختبر 1.2" data-n="26" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.2 · 30 دقيقة</div><h2>المطابقة بمجاميع رقابية</h2><p class="lead small">تطابق كشف بنك شركة ظِلال مع دفتر الأستاذ، 1,200 سطر، برموز يولّدها المساعد أو بالدفتر المعدّ، وتثبت الناتج بمجاميع رقابية. وتكشف بالمجاميع نفسها ما أضاعه برنامج نصي أول يبدو سليمًا.</p><a class="nb" href="../labs/D1_2_reconcile.html">D1_2_reconcile.html</a></div><ul class="checklist"><li>سجّل المجاميع الرقابية للملفين قبل أي معالجة: عدد الأسطر والمجموع <span class="min">5 د</span></li><li>اقرأ البرنامج النصي الأول ومخرجه، واكشف بالمجاميع ما أضاعه <span class="min">8 د</span></li><li>طابق برموز يولّدها المساعد بعد أن تطلب ما ينقص، أو شغّل الدفتر المعدّ <span class="min">10 د</span></li><li>أثبت الناتج: المتطابق وغير المتطابق يساويان كل ملف عددًا ومبلغًا <span class="min">7 د</span></li><li class="stretch">✱ إضافي: اطلب من المساعد مطابقة بالمبلغ وحده دون المرجع، وعُدّ بالمجاميع كم زوجًا ربطه خطأً</li></ul></div>
+  <aside class="notes"><p>الأرقام المرجعية: البنك 594 سطرًا، والدفتر 606؛ 587 زوجًا متطابقًا؛ غير متطابق 7 في البنك و19 في الدفتر. راقب الخطوة 1: من يأخذ المجاميع من المساعد يُعاد إلى جدول البيانات. من تعطّل مساعده أو لا يشغّل الرموز يفتح الدفتر المعدّ. لم يُجرَّب هذا المختبر على مساعد حقيقي عند بناء المقرر: جرّب الأمر مرة قبل الدفعة على المساعد الذي ستستخدمه القاعة.</p></aside>
+</section>
+
+<!-- الجلسة 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="27">
+  <div class="kicker">الجلسة 3</div>
+  <h1>من البنود غير المتطابقة إلى قائمة المطابقة</h1>
+  <ul class="bullets outcomes"><li>يصنّف البنود غير المتطابقة إلى فروق توقيت وقيود مكررة وبنود في البنك لم تُقيَّد وفروق مبلغ</li><li>يبني قائمة مطابقة يتساوى فيها الرصيدان المعدَّلان</li><li>يفصل ما تقترحه الرموز عمّا يقرره المحاسب من المستند</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide dark" id="the-work-is-in-25-items" data-lo="LO2" data-label="أين العمل" data-n="28" data-session="3">
+  <div class="kicker">بعد أن تتفق المجاميع</div>
+  <h2>الرموز طابقت 587 زوجًا. عملك في 25 بندًا</h2>
+  <div class="cols cols-2 mid">
+    <div class="stat center"><div class="big">25</div><div class="lbl">بندًا غير متطابق من 1,200 سطر</div></div>
+    <ul class="bullets">
+      <li>المطابقة السهلة عمل الرموز، وتثبتها المجاميع.</li>
+      <li>كل بند من الخمسة والعشرين سؤال محاسبي له مستند.</li>
+      <li>الوقت الذي وفّرته الرموز يُصرف هنا، لا يُختصر.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>الأرقام من حل المختبرين 1.2 و1.3: 7 أسطر في البنك و19 في الدفتر، أي 26 سطرًا و25 بندًا، لأن فرق المبلغ بند واحد له سطران. هذه الشريحة تجيب عن سؤال سيأتي غدًا في إعادة التصميم: أين يذهب الوقت الموفَّر؟</p></aside>
+</section>
+
+<section class="slide" id="four-classes" data-lo="LO2" data-label="أربعة تصنيفات" data-n="29" data-session="3">
+  <div class="kicker">البنود غير المتطابقة</div>
+  <h2>أربعة تصنيفات، ولكل منها مكان في القائمة</h2>
+  <table class="t">
+    <tr><th>التصنيف</th><th>كيف يظهر</th><th class="num">العدد</th><th>الجهة التي تُعدَّل</th></tr>
+    <tr><td><b>فرق توقيت</b></td><td>في الدفتر آخر الشهر، وليس في البنك بعد</td><td class="num">13</td><td>البنك</td></tr>
+    <tr><td><b>قيد مكرر</b></td><td>سطران في الدفتر وسطر في البنك</td><td class="num">5</td><td>الدفتر</td></tr>
+    <tr><td><b>في البنك ولم يُقيَّد</b></td><td>رسوم، إيداع مباشر، شيك مرتجع</td><td class="num">6</td><td>الدفتر</td></tr>
+    <tr><td><b>فرق مبلغ</b></td><td>المرجع نفسه بمبلغين</td><td class="num">1</td><td>الدفتر، إن صحّ البنك</td></tr>
+  </table>
+  <p class="small muted mt-s">الأعداد من ملفات شركة ظِلال: 9 مدفوعات لم تُصرف و4 إيداعات بالطريق هي فروق التوقيت.</p>
+  <aside class="notes"><p>المشاركون يعرفون هذه التصنيفات من عملهم: لا تشرحها طويلًا. الجديد هو السؤال التالي: أي منها تستطيع قاعدة في الرموز أن تقترحه، وأي منها يحتاج إلى المستند؟</p></aside>
+</section>
+
+<section class="slide" id="code-suggests-you-decide" data-lo="LO2" data-label="اقتراح وقرار" data-n="30" data-session="3">
+  <div class="kicker">ما تعرفه القاعدة وما لا تعرفه</div>
+  <h2>الرموز تقترح تصنيفًا من قاعدة. القرار من المستند</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>ما تقترحه القاعدة</h4>
+      <ul class="bullets small tight">
+        <li>مرجع في الدفتر لا وجود له في البنك: توقيت.</li>
+        <li>مرجع ومبلغ طوبقا مرة وبقي منهما سطر: مكرر.</li>
+        <li>مرجع واحد بمبلغين: فرق مبلغ.</li>
+      </ul>
+    </div>
+    <div class="card c-coral"><h4>ما لا تعرفه</h4>
+      <ul class="bullets small tight">
+        <li>هل الشيك الذي لم يُصرف منذ أشهر ما زال قائمًا؟</li>
+        <li>أي المبلغين هو الصحيح: البنك أم الدفتر؟</li>
+        <li>لماذا ارتجع الشيك، ومن يتصل بالعميل؟</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout note mt"><b>في الدفتر المعدّ</b> العمود اسمه «مقترح»، وبجانبه عمود تملؤه أنت.</div>
+  <aside class="notes"><p>اطلب مثالًا من القاعة على بند صنّفه نظام آليًّا وكان التصنيف خطأ. الفكرة: القاعدة مكتوبة ومقروءة، فهي محسوبة. لكن مدخلاتها ملفان فقط، والمحاسب عنده الفاتورة وإشعار البنك والعميل.</p></aside>
+</section>
+
+<section class="slide" id="statement-two-sides" data-lo="LO2" data-label="القائمة" data-n="31" data-session="3">
+  <div class="kicker">قائمة مطابقة أكتوبر في شركة ظِلال</div>
+  <h2>جهتان تنتهيان إلى رقم واحد</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>جهة البنك</th><th class="num">ريال</th></tr>
+      <tr><td>الرصيد الختامي في الكشف</td><td class="num">1,772,698.34</td></tr>
+      <tr><td>إيداعات بالطريق (4)</td><td class="num">198,748.90</td></tr>
+      <tr><td>مدفوعات لم تُصرف (9)</td><td class="num"><span class="ltr">-221,667.82</span></td></tr>
+      <tr class="hl"><td>الرصيد المعدَّل</td><td class="num">1,749,779.42</td></tr>
+    </table>
+    <table class="t small">
+      <tr><th>جهة الدفتر</th><th class="num">ريال</th></tr>
+      <tr><td>الرصيد الختامي في الدفتر</td><td class="num">1,486,055.37</td></tr>
+      <tr><td>عكس قيود مكررة (5)</td><td class="num">161,714.05</td></tr>
+      <tr><td>بنود في البنك لم تُقيَّد (6)</td><td class="num">100,210.00</td></tr>
+      <tr><td>تصحيح فرق المبلغ</td><td class="num">1,800.00</td></tr>
+      <tr class="hl"><td>الرصيد المعدَّل</td><td class="num">1,749,779.42</td></tr>
+    </table>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل حل المختبر 1.3. لا تعرض هذه الشريحة قبل أن يحاول المشاركون: أبقها للخطوة 4 من المختبر، أو اعرضها سريعًا هنا لشرح الشكل ثم عد إليها. الرصيد الافتتاحي 2,350,000.00 في الجهتين.</p></aside>
+</section>
+
+<section class="slide" id="what-becomes-an-entry" data-lo="LO2" data-label="القيود" data-n="32" data-session="3">
+  <div class="kicker">بعد القائمة</div>
+  <h2>فرق التوقيت ينتظر. الباقي يصير قيودًا يعتمدها إنسان</h2>
+  <div class="cols cols-3">
+    <div class="card c-navy"><h4>ينتظر</h4><p class="small mb0">13 بندًا تظهر في كشف نوفمبر. تُتابَع، ولا قيد لها.</p></div>
+    <div class="card c-teal"><h4>يُقيَّد أو يُعكس</h4><p class="small mb0">الرسوم والإيداعات المباشرة تُقيَّد. القيود المكررة تُعكس. فرق المبلغ يُصحَّح.</p></div>
+    <div class="card c-coral"><h4>يحتاج إلى سؤال</h4><p class="small mb0">الشيك المرتجع: اتصال بالعميل. والقيد المكرر: هل خرج المال مرة أم مرتين؟</p></div>
+  </div>
+  <div class="callout warn mt"><b>المساعد لا يرحّل قيدًا.</b> يصوغ مسودته إن أردت، والاعتماد لصاحب الصلاحية.</div>
+  <aside class="notes"><p>اربط بالقاعدة: القيد رقم يدخل الدفتر، فمصدره القائمة المحسوبة لا رد المساعد. وما في ميزان المراجعة لحساب البنك هو 1,486,055.37، أي قبل التسوية: هذا سؤال التحقق الثالث في المختبر.</p></aside>
+</section>
+
+<section class="slide" id="pass-rule" data-lo="LO2" data-label="شرط النجاح" data-n="33" data-session="3">
+  <div class="kicker">شرط النجاح في المقرر</div>
+  <h2>مطابقتك تتفق مع المجاميع المرجعية، وتعيد تشغيلها أمام المراجع</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>البنود غير المتطابقة عندك هي البنود المرجعية.</li>
+      <li>الرصيدان المعدَّلان متساويان ويساويان الرقم المرجعي.</li>
+      <li>سجل التشغيل محفوظ في مجلدك.</li>
+    </ul>
+    <div class="card c-teal"><h4>لماذا هذا الشرط بالذات؟</h4><p class="small mb0">لأن المطابقة هي المكان الذي يجتمع فيه كل ما في الورشة: رموز مولَّدة، ومجاميع رقابية، وحكم على بنود.</p></div>
+  </div>
+  <div class="callout note mt"><b>النجاح:</b> 70% في المجموع، بشرط أن تتفق المطابقة مع المجاميع المرجعية.</div>
+  <aside class="notes"><p>توزيع الدرجة من توصيف المقرر: الفحص تحت الإشراف دون ذكاء اصطناعي 20%، ومخرجات المختبرات 40%، وبطاقة إعادة التصميم والمراجعة المباشرة 40%. المراجعة تتضمن إعادة تشغيل المطابقة.</p></aside>
+</section>
+
+<section class="slide" id="check-which-item-waits" data-lo="LO2" data-n="34" data-session="3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي بند لا يدخل الدفتر؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-which-item-waits-q1">
+    <p class="lead">أربعة بنود بقيت غير متطابقة في 31 أكتوبر. أيها يُعدَّل في جهة البنك من القائمة ولا يحتاج إلى قيد في الدفتر؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يخلط ما لم يُقيَّد بما لم يُصرف: الرسوم خصمها البنك فعلًا، والدفتر هو الناقص" data-k="أ">رسوم خدمات مصرفية خصمها البنك في 31 أكتوبر</div>
+      <div class="opt" data-why="يعامل التكرار فرق توقيت: السطر الثاني لن يظهر في البنك أبدًا، فيُعكس في الدفتر" data-k="ب">سداد لمورد ظهر في الدفتر مرتين وفي البنك مرة</div>
+      <div class="opt" data-why="يظن أن البنك هو الذي يُعدَّل لأن البند في كشفه: الشيك ارتجع فعلًا، والدفتر ما زال يعدّه مقبوضًا" data-k="ج">شيك من عميل ارتجع في 27 أكتوبر</div>
+      <div class="opt" data-ok data-k="د">شيك لمورد قُيّد في 30 أكتوبر ولم يُصرف بعد</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> القيد صحيح والمال سيخرج حين يُقدَّم الشيك. الدفتر سبق البنك أيامًا، فيُعدَّل رصيد البنك في القائمة وينتظر البند كشف نوفمبر.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الرابع. إن تعثرت القاعة فاسأل عن كل بند: من عنده المعلومة الصحيحة الآن، البنك أم الدفتر؟ الجهة الأخرى هي التي تُعدَّل.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-3" data-auto="lab" data-lab="1.3" data-label="المختبر 1.3" data-n="35" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.3 · 30 دقيقة</div><h2>قائمة المطابقة</h2><p class="lead small">تبدأ من 25 بندًا غير متطابق جاهزة، فتصنّفها وتبني قائمة المطابقة حتى يتساوى الرصيدان المعدَّلان ويتفقا مع المجاميع المرجعية. هذا شرط النجاح في المقرر.</p><a class="nb" href="../labs/D1_3_statement.html">D1_3_statement.html</a></div><ul class="checklist"><li>صنّف البنود الخمسة والعشرين: توقيت، قيد مكرر، في البنك ولم يُقيَّد، فرق مبلغ <span class="min">10 د</span></li><li>املأ قائمة المطابقة واحسب الرصيدين المعدَّلين <span class="min">10 د</span></li><li>اكتب قيود التسوية المطلوبة ومن يعتمد كلًّا منها <span class="min">6 د</span></li><li>قارن رصيدك المعدَّل بالرقم المرجعي عند المدرّب <span class="min">4 د</span></li><li class="stretch">✱ إضافي: اطلب من المساعد تصنيف البنود نفسها، وعُدّ ما خالفك فيه واكتب سبب كل اختلاف</li></ul></div>
+  <aside class="notes"><p>يبدأ المختبر من ملف البنود الجاهز في مجلد <span class="ltr">start</span>، فلا يتأثر من لم يُنهِ المختبر 1.2. الرقم المرجعي الذي تعرضه في الخطوة 4: الرصيد المعدَّل 1,749,779.42. الخطأ الشائع: القيود المكررة في جهة البنك، أو إشارة الشيك المرتجع معكوسة، فيكون الفرق بين الرصيدين ضعف البند. من ينتهي مبكرًا يأخذ المهمة الإضافية.</p></aside>
+</section>
+
+<!-- الجلسة 4 -->
+
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="36">
+  <div class="kicker">الجلسة 4</div>
+  <h1>ثق بجدول البيانات أقل</h1>
+  <ul class="bullets outcomes"><li>يتتبع سوابق الخلية وتوابعها حتى يصل إلى مصدر رقم خاطئ</li><li>يشرح لماذا لا تصلح خلية فيها دالة ذكاء اصطناعي مصدرًا لرقم في الإقفال</li><li>يحسب حالات يدوية من المواصفة ويقارنها بالنموذج ليحدد أخطاءه</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="spreadsheets-carry-errors" data-lo="LO3" data-label="أخطاء الجداول" data-n="37" data-session="4">
+  <div class="kicker">قبل الذكاء الاصطناعي بزمن</div>
+  <h2>جداول البيانات تحمل أخطاء، ومن بناها لا يراها</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>مراجعة لخمس عشرة سنة من الدراسات خلصت إلى أن أخطاء الجداول شائعة وليست هيّنة.</li>
+      <li>الطريقة الوحيدة التي ثبتت فاعليتها حينها: فحص الخلايا خلية خلية.</li>
+      <li>النموذج الذي «يعمل منذ سنوات» لم يُختبر: استُخدم فقط.</li>
+    </ul>
+    <div class="card c-coral"><h4>وما علاقة المساعد؟</h4><p class="small mb0">مساعد يُسأل عن رقم في نموذج معيب يعيد لك الرقم المعيب بثقة. ومساعد يُطلب منه «أصلح النموذج» يغيّر خلايا لا تعرفها.</p></div>
+  </div>
+  <aside class="notes"><p>لا تذكر نسبًا لم ترد في المصدر. الفكرة: الخطأ في الجدول سابق على المساعد، والمساعد يضخّمه أو يخفيه إن لم يكن عندك مرجع مستقل. هذا المرجع هو الحالات المحسوبة يدويًا.</p><p>المصادر: <span class="en">Panko, Spreadsheet Errors: What We Know. What We Think We Can Do (2008)</span>.</p></aside>
+</section>
+
+<section class="slide" id="precedents-and-dependants" data-lo="LO3" data-label="السوابق والتوابع" data-n="38" data-session="4">
+  <div class="kicker">أداة في كل جدول بيانات</div>
+  <h2>السوابق: من أين يأتي هذا الرقم؟ التوابع: إلى أين يذهب؟</h2>
+  <div class="flow">
+    <div class="step c-navy"><b>السوابق</b>الخلايا التي تدخل في صيغة هذه الخلية</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>الخلية</b>الرقم الذي لم يطابق حسابك</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>التوابع</b>الخلايا التي تستخدم هذا الرقم بعده</div>
+  </div>
+  <div class="cols cols-2 mt">
+    <div class="callout tip small"><b>السوابق تجد الخطأ:</b> سهم يشير إلى خلية غير التي تقولها المواصفة.</div>
+    <div class="callout note small"><b>التوابع تقيس أثره:</b> كم رقمًا آخر فسد معه.</div>
+  </div>
+  <aside class="notes"><p>عرض حي من دقيقتين على نموذج الموازنة: قف على خلية اشتراكات المركز في الصف 7 واعرض سوابقها. في <span class="en">Excel</span>: تبويب الصيغ ثم تتبع السوابق. في <span class="en">LibreOffice Calc</span>: قائمة أدوات ثم المحقق. لا تكشف الخطأ: اترك القاعة تلاحظ إلى أين يشير السهم. النموذج لم يُفتح في برنامج جداول عند بناء المقرر، فجرّب العرض قبل الدفعة.</p></aside>
+</section>
+
+<section class="slide" id="arrows-that-tell" data-lo="LO3" data-label="ثلاث علامات" data-n="39" data-session="4">
+  <div class="kicker">ما تقوله الأسهم</div>
+  <h2>ثلاث علامات تراها دون أن تحسب شيئًا</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>سهم ينزلق</h4><p class="small mb0">صيغة نُسخت إلى أسفل، ومرجع النسبة نزل معها صفًّا في كل مرة. المرجع كان يجب أن يكون مطلقًا.</p></div>
+    <div class="card c-coral"><h4>خلية بلا سهم</h4><p class="small mb0">عمود كله صيغ وفيه خلية واحدة لا سوابق لها: رقم كُتب باليد فوق الصيغة.</p></div>
+    <div class="card c-purple"><h4>نطاق يقصر</h4><p class="small mb0">إطار الجمع ينتهي قبل آخر صف: صف أُضيف بعد كتابة الصيغة.</p></div>
+  </div>
+  <div class="callout note mt"><b>والرابعة لا يُظهرها سهم:</b> الصيغة سليمة الشكل، وتنفذ قاعدة غير التي في المواصفة. هذه لا تكشفها إلا حالة محسوبة يدويًا.</div>
+  <aside class="notes"><p>هذه العلامات هي ثلاثة من الأخطاء الخمسة في نموذج شركة ظِلال، دون أن تسمّي خلاياها. الخطآن الباقيان من النوع الرابع: دالة بحث تعيد عمودًا غير المطلوب، وإشارة جمع مكان الطرح.</p></aside>
+</section>
+
+<section class="slide" id="ai-function-in-a-cell" data-lo="LO1 LO3" data-label="دالة في خلية" data-n="40" data-session="4">
+  <div class="kicker">دوال الذكاء الاصطناعي داخل الخلايا</div>
+  <h2>خلية تكتبها دالة ذكاء اصطناعي ليست صيغة: ناتجها نص يتغير</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4><span class="en">Google Sheets</span></h4><p class="small mb0">دالة <span class="ltr">=AI()</span> تولّد نصًّا في الخلية عند طلبك، ولها زر تحديث يولّد ناتجًا جديدًا. وإن تغيّرت بيانات الأمر فأنت من يقرر متى يُحدَّث الناتج.</p></div>
+    <div class="card c-coral"><h4><span class="en">Microsoft Excel</span></h4><p class="small mb0">دالة <span class="ltr">=COPILOT()</span> أُوقفت في 14 سبتمبر 2026. القيم القديمة بقيت محفوظة في الخلايا، وأي خلية يعاد حسابها تعيد الخطأ <span class="ltr">#NAME?</span>.</p></div>
+  </div>
+  <div class="callout warn mt"><b>في الحالتين</b> رقم بُني على هذه الخلايا لا يستطيع أحد أن يعيد تشغيله ويحصل عليه نفسه.</div>
+  <aside class="notes"><p>هذه حقائق عن منتجين من صفحتيهما الرسميتين في نوفمبر 2026، وتتغير: تحقق منها قبل كل دفعة. الدرس لا يتغير: دالة تولّد نصًّا تصلح لتصنيف أولي تراجعه ثم تثبّته قيمًا، ولا تصلح حلقة في سلسلة تنتهي برقم في الإقفال. وقصة الدالة التي أُوقفت مثال على خطر ثانٍ: ملف لا يعاد حسابه لأن الأداة تغيّرت.</p><p>المصادر: <span class="en">Google Docs Editors Help, Use the AI function in Google Sheets</span>؛ <span class="en">Microsoft Support, COPILOT function</span>.</p></aside>
+</section>
+
+<section class="slide" id="two-refreshes" data-lo="LO1" data-label="تحديثان" data-n="41" data-session="4">
+  <div class="kicker">الإجابة 5 في مختبر الصباح</div>
+  <h2>تحديثان للدالة نفسها على الأوصاف نفسها: العدد صار 10 بعد 8</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>الوصف</th><th>التحديث 1</th><th>التحديث 2</th></tr>
+      <tr><td>قفازات ومعدات وقاية</td><td>معدات سلامة</td><td>مواد نظافة</td></tr>
+      <tr><td>زيت محركات للمولدات</td><td>قطع غيار</td><td>مواد نظافة</td></tr>
+      <tr><td>أقفال وسلاسل بوابات</td><td>معدات سلامة</td><td>قطع غيار</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>ثلاثة صفوف من عشرين غيّرت فئتها.</li>
+      <li>عدد «مواد نظافة» كان 8 وصار 10.</li>
+      <li>أي جمع شرطي فوق هذا العمود يتغير معه.</li>
+    </ul>
+  </div>
+  <div class="callout tip mt"><b>إن استخدمتها:</b> راجع التصنيف صفًّا صفًّا، ثم الصقه قيمًا، واحسب فوق القيم.</div>
+  <aside class="notes"><p>المثال مكتوب باليد في ملفات المختبر 1.1 ليمثّل ما يحدث، وليس قياسًا على دالة حقيقية: قل ذلك. من عنده الدالة في حسابه يستطيع أن يجرب على الأوصاف العشرين نفسها ويخبر القاعة بما رأى.</p></aside>
+</section>
+
+<section class="slide" id="hand-worked-cases" data-lo="LO3" data-label="الحالات اليدوية" data-n="42" data-session="4">
+  <div class="kicker">المرجع المستقل</div>
+  <h2>الحالة المحسوبة يدويًا: رقم لا يعتمد على النموذج ولا على المساعد</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>تُحسب من <b>المواصفة</b> والمدخلات، بآلة حاسبة.</li>
+      <li>تُكتب <b>قبل</b> النظر إلى ناتج النموذج.</li>
+      <li>تُختار لتغطي كل قاعدة مرة على الأقل.</li>
+      <li>ثلاث حالات جيدة تكفي لنموذج من اثني عشر صفًّا.</li>
+    </ul>
+    <div class="card c-teal"><h4>لماذا دون مساعد؟</h4><p class="small mb0">لأن قيمتها في استقلالها. حالة حسبها المساعد من النموذج تكرر خطأ النموذج، وحالة حسبها نصًّا قد تضيف خطأ جديدًا.</p></div>
+  </div>
+  <div class="callout note mt"><b>في شركة ظِلال:</b> ثلاثة مراكز، أولها في أول صف، وثانيها فيه مبالغ مستردة، وثالثها في آخر صف.</div>
+  <aside class="notes"><p>اسأل: لماذا هذه المراكز الثلاثة؟ الصف الأول لأن الصيغ تُكتب فيه ثم تُنسخ، فهو أصحّها. وصف في الوسط فيه كل المدخلات غير صفرية. والصف الأخير لأن النطاقات تقصر عنده. هذا اختيار حالات، وهو مهارة تدقيق.</p></aside>
+</section>
+
+<section class="slide" id="a-total-that-disagrees" data-lo="LO3" data-label="رقمان" data-n="43" data-session="4">
+  <div class="kicker">فحص رقابي داخل النموذج</div>
+  <h2>إجمالي الموازنة ومجموع القطاعات رقم واحد. في النموذج رقمان</h2>
+  <div class="cols cols-2 mid">
+    <table class="t">
+      <tr><th>في ورقة <span class="en">Summary</span></th><th class="num">ريال</th></tr>
+      <tr><td>إجمالي الموازنة</td><td class="num">23,296,196</td></tr>
+      <tr><td>مجموع القطاعات الأربعة</td><td class="num">25,186,996</td></tr>
+      <tr class="hl"><td>الفرق</td><td class="num">1,890,800</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>لا أحد وضع الرقمين جنبًا إلى جنب.</li>
+      <li>الفرق يساوي إجمالي مركز واحد بالضبط.</li>
+      <li>والرقمان كلاهما بعيدان عن الصحيح: الحالات اليدوية ستقول كم.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل حل المختبر 1.4 بمحرك صيغ. الفرق 1,890,800 هو ما يعرضه النموذج لآخر مركز، وهو المركز الذي تركه نطاق الجمع. لا تقل ذلك: هذه المهمة الإضافية في المختبر. الإجمالي الصحيح بعد إصلاح الأخطاء الخمسة 33,759,380.64، وتعرضه غدًا.</p></aside>
+</section>
+
+<section class="slide" id="check-cell-that-changes" data-lo="LO1 LO3" data-n="44" data-session="4">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>عمود تصنّفه دالة، وفوقه جمع شرطي</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-cell-that-changes-q1">
+    <p class="lead">تقرير مصروفات العهدة يجمع المبالغ حسب فئة يكتبها عمود فيه دالة ذكاء اصطناعي. الزميل الذي أعدّه يقول إن الأرقام «راجعها أمس وكانت سليمة». ما الذي يجعل التقرير صالحًا للإقفال؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يعالج العرَض: إيقاف إعادة الحساب يجمّد الملف كله، ولا يجعل التصنيف مراجَعًا ولا ثابتًا عند من يفتحه بعدك" data-k="أ">إيقاف إعادة الحساب التلقائي في الملف</div>
+      <div class="opt" data-ok data-k="ب">مراجعة التصنيف، ثم لصقه قيمًا، ثم الجمع فوق القيم</div>
+      <div class="opt" data-why="يظن أن الدالة تثبت بالتكرار: كل تحديث توليد جديد، وثلاثة تحديثات متفقة لا تضمن الرابع" data-k="ج">تحديث الدالة ثلاث مرات والتأكد من أن الناتج لم يتغير</div>
+      <div class="opt" data-why="يخلط المراجعة بالتثبيت: ما رآه أمس ليس بالضرورة ما في الخلايا اليوم إن حُدّثت الدالة" data-k="د">توقيع الزميل على أنه راجع الأرقام أمس</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> القيم الملصقة لا تتغير، والجمع الشرطي فوقها صيغة يعاد تشغيلها. التصنيف صار قرارًا راجعه إنسان، لا ناتجًا يتولد من جديد.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الثاني. اربطها بالقاعدة: الدالة ساعدت في المسودة، والرقم يأتي من صيغة فوق قيم ثابتة. وسجّل في سجل الاستخدام أن التصنيف الأول كان بالدالة.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-4" data-auto="lab" data-lab="1.4" data-label="المختبر 1.4" data-n="45" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.4 · 30 دقيقة</div><h2>الحالات اليدوية وتتبع الأخطاء</h2><p class="lead small">دون مساعد: تحسب ثلاث حالات من مواصفة موازنة 2027 بآلة حاسبة، وتقارنها بنموذج فيه خمسة أخطاء مزروعة، وتتتبع كل فرق إلى خليته. هذا الجزء الأول من إصلاح نموذج الموازنة.</p><a class="nb" href="../labs/D1_4_hand_cases.html">D1_4_hand_cases.html</a></div><ul class="checklist"><li>احسب الحالات الثلاث يدويًا من المواصفة قبل أن تنظر إلى النموذج <span class="min">12 د</span></li><li>قارن كل ناتج بخلية النموذج وسجّل الفروق <span class="min">6 د</span></li><li>تتبّع سوابق كل فرق وتوابعه حتى تجد الخلية المعيبة <span class="min">9 د</span></li><li>اكتب قائمة الأخطاء: الخلية أو النطاق، وما الخطأ <span class="min">3 د</span></li><li class="stretch">✱ إضافي: ابحث في ورقة <span class="ltr" dir="ltr">Summary</span> عن رقمين يجب أن يتساويا ولا يتساويان، دون أي حالة يدوية</li></ul></div>
+  <aside class="notes"><p>هذا المختبر دون مساعد: قلها قبل البدء. راقب من يكتب صيغة في خلية بدل الآلة الحاسبة، فهو ينسخ منطق النموذج. الإجماليات الصحيحة للمراكز الثلاثة: 4,793,611.20 و2,787,329.28 و2,533,270.40. من لم يُنهِ يجد الحالات محلولة وقائمة الأخطاء في مجلد <span class="ltr">start</span>، وهما نقطة بداية المختبر 2.1 غدًا.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-label="خلاصة اليوم" data-n="46" data-session="4">
+  <div class="kicker">خلاصة اليوم</div>
+  <h2>ثلاثة أشياء تبقى معك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>اسأل من أين جاء الرقم</h4><p class="small mb0">المحسوب يُقرأ ويعاد تشغيله. المولَّد يُعاد حسابه كله.</p></div>
+    <div class="card c-cyan"><h4>مجموع رقابي لكل معالجة</h4><p class="small mb0">ما دخل يساوي ما خرج، عددًا ومبلغًا، بأرقام حسبتها أنت.</p></div>
+    <div class="card c-coral"><h4>مرجع مستقل قبل أي إصلاح</h4><p class="small mb0">حالات محسوبة يدويًا من المواصفة، قبل النظر إلى النموذج.</p></div>
+  </div>
+  <aside class="notes"><p>اطلب من كل مشارك جملة واحدة: أي رقم في عمله هذا الشهر كان مولَّدًا ودخل تقريرًا؟ لا تعليق: الغرض أن يسمّيه.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="غدًا" data-n="47" data-session="4">
+  <div class="kicker">غدًا</div>
+  <h1>نصلح النموذج، ونكتب التعليق، ونسحب العينة، ونقيس</h1>
+  <ul class="bullets">
+    <li>أحضر حالاتك اليدوية وقائمة الأخطاء.</li>
+    <li>أحضر سطر خط الأساس من عملك التحضيري: الدقائق وعدد الأخطاء.</li>
+    <li>احفظ قائمة المطابقة وسجل التشغيل في مجلدك.</li>
+  </ul>
+  <aside class="notes"><p>من لم يقس خط الأساس يستطيع أن يفعل مساء اليوم: التعليمات في ملف العمل التحضيري. ومن لا مهمة عنده يستخدم خط أساس شركة ظِلال.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T14:16:28Z","version":"2027.1.0","commit":"3a4946b"},"course":{"id":"use-pro-203","code":"USE-PRO-203","title":"الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-203/","repo":"SDAIAAcademy/use-pro-203","home":"../index.html"},"deck":{"id":"day1","kind":"day","day":1,"label":"اليوم 1","title":"أرقام يعاد تشغيلها","prev":null,"next":"day2.html","md":"day1.md","alt":{}},"sessions":[{"n":1,"label":"الجلسة 1","title":"محسوب أم مولَّد؟","slide":"s1","outcomes":["يشرح لماذا يخطئ النموذج اللغوي في الحساب حين يكتب الرقم نصًّا","يميّز الرقم المحسوب برموز برمجية أو صيغة من الرقم المولَّد نصًّا","يحدد لكل نوع الفحص الذي يحتاج إليه قبل أن يدخل الإقفال"],"minutes":55,"lab":{"id":"1.1","title":"ست إجابات: محسوب أم مولَّد؟","minutes":30,"href":"../labs/D1_1_six_answers.html"}},{"n":2,"label":"الجلسة 2","title":"رموز مولَّدة تقرؤها وتثبتها","slide":"s2","outcomes":["يقرأ رموزًا مولَّدة للمطابقة ويحدد مدخلاتها ومفتاح الربط فيها ومخرجاتها","يسجّل المجاميع الرقابية قبل المعالجة وبعدها ويثبت بها أن لا سطر ضاع ولا تكرر","ينفذ مطابقة كشف البنك مع دفتر الأستاذ برموز مولَّدة أو بالدفتر المعدّ"],"minutes":55,"lab":{"id":"1.2","title":"المطابقة بمجاميع رقابية","minutes":30,"href":"../labs/D1_2_reconcile.html"}},{"n":3,"label":"الجلسة 3","title":"من البنود غير المتطابقة إلى قائمة المطابقة","slide":"s3","outcomes":["يصنّف البنود غير المتطابقة إلى فروق توقيت وقيود مكررة وبنود في البنك لم تُقيَّد وفروق مبلغ","يبني قائمة مطابقة يتساوى فيها الرصيدان المعدَّلان","يفصل ما تقترحه الرموز عمّا يقرره المحاسب من المستند"],"minutes":55,"lab":{"id":"1.3","title":"قائمة المطابقة","minutes":30,"href":"../labs/D1_3_statement.html"}},{"n":4,"label":"الجلسة 4","title":"ثق بجدول البيانات أقل","slide":"s4","outcomes":["يتتبع سوابق الخلية وتوابعها حتى يصل إلى مصدر رقم خاطئ","يشرح لماذا لا تصلح خلية فيها دالة ذكاء اصطناعي مصدرًا لرقم في الإقفال","يحسب حالات يدوية من المواصفة ويقارنها بالنموذج ليحدد أخطاءه"],"minutes":55,"lab":{"id":"1.4","title":"الحالات اليدوية وتتبع الأخطاء","minutes":30,"href":"../labs/D1_4_hand_cases.html"}}],"slides":[{"id":"title","n":1,"title":"أرقام يعاد تشغيلها","kind":"title","session":0,"hash":"ecf9bcc9","md":"#### [day1#title] أرقام يعاد تشغيلها\n\n*أكاديمية سدايا · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق*\n\nاليوم 1: المحسوب والمولَّد، والمطابقة بمجاميع رقابية، والحالات المحسوبة يدويًا\n\nمسار الطلاقة في البيانات والذكاء الاصطناعي · يومان تدريبيان + يوم للمشروع الختامي · 4 جلسات · 4 مختبرات · USE-PRO-203","notes":"رحّب وعرّف بنفسك. اسأل برفع اليد: من أخذ في الشهر الماضي رقمًا من مساعد ذكاء اصطناعي ووضعه في تقرير؟ من أعاد حسابه قبل ذلك؟ ومن قاس خط الأساس في العمل التحضيري؟ الإجابات تضبط الإيقاع: إن كان أغلب القاعة بلا خط أساس فذكّر بأن لشركة ظِلال خط أساس جاهزًا يُستخدم في المختبر 2.4.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"أرقام يعاد تشغيلها","kind":"content","session":0,"hash":"995e6f6d","md":"#### [day1#agenda] أرقام يعاد تشغيلها\n\n*اليوم*\n\n- **الجلسة 1 · محسوب أم مولَّد؟**: لماذا تخطئ النماذج اللغوية في الأرقام، وكيف تعرف من أين جاء الرقم، وما الفحص الذي يحتاج إليه\n- **الجلسة 2 · رموز مولَّدة تقرؤها وتثبتها**: تشغيل الرموز البرمجية المولَّدة وقراءتها، ومفتاح الربط، والمجاميع الرقابية قبل المعالجة وبعدها\n- **الجلسة 3 · من البنود غير المتطابقة إلى قائمة المطابقة**: فروق التوقيت والقيود المكررة وبنود البنك وأخطاء المبلغ، وما تقرره الرموز وما يقرره المحاسب\n- **الجلسة 4 · ثق بجدول البيانات أقل**: تتبع السوابق والتوابع، ودوال الذكاء الاصطناعي في الخلايا التي تتغير عند إعادة الحساب، والحالات المحسوبة يدويًا مرجعًا","notes":"أربع جلسات، كل منها 55 دقيقة: نحو 25 دقيقة مفاهيم ثم مختبر من 30 دقيقة. الاستراحات بزر B وليست شرائح.","minutes":null,"lo":[]},{"id":"workshop-at-a-glance","n":3,"title":"خط أساس، ثم يومان من المختبرات، ثم مراجعة مباشرة","kind":"content","session":0,"hash":"5ca4463b","md":"#### [day1#workshop-at-a-glance] خط أساس، ثم يومان من المختبرات، ثم مراجعة مباشرة\n\n*الورشة في لمحة*\n\n- **قبل الورشة.** تنفذ مهمة متكررة من عملك بطريقتك الحالية، وتسجّل الوقت والأخطاء. خط الأساس\n- **اليوم 1.** المحسوب والمولَّد، والمطابقة بمجاميع رقابية، والحالات اليدوية. قائمة مطابقة\n- **اليوم 2.** إصلاح النموذج، والتعليق المرتبط بالخلايا، والعينة، وبطاقة إعادة التصميم. أربعة مخرجات\n- **المراجعة.** فحص دون ذكاء اصطناعي، ثم عشر دقائق تدافع فيها عن بطاقتك وتعيد تشغيل المطابقة. بطاقة مقيسة\n\n> **الحالة واحدة في اليومين:** إقفال أكتوبر 2026 في شركة ظِلال لإدارة المرافق، وهي جهة افتراضية وبياناتها اصطناعية.","notes":"كل مختبر يضيف ملفًا إلى مجلد المشارك: ورقة التصنيف، ثم قائمة المطابقة وسجل التشغيل، ثم النموذج المُصلَح، ثم التعليق، ثم ملف المعاينة، ثم البطاقة. بين اليوم الثاني والمراجعة ينفذ المشارك مهمته المعاد تصميمها مرة ثانية على عمله هو.","minutes":null,"lo":[]},{"id":"the-close-rule","n":4,"title":"الرقم يأتي من صيغة أو رموز برمجية يعاد تشغيلها، ولا يأتي من نص كتبه المساعد","kind":"content","session":0,"hash":"c074f314","md":"#### [day1#the-close-rule] الرقم يأتي من صيغة أو رموز برمجية يعاد تشغيلها، ولا يأتي من نص كتبه المساعد\n\n*قاعدة الورشة كلها*\n\n- **المساعد يكتب الرموز.** والرموز تحسب. أنت تقرؤها وتعيد تشغيلها.\n- **لكل رقم مجموع رقابي.** عدد ومجموع قبل المعالجة وبعدها، تحسبهما بنفسك.\n- **الحكم يبقى لك.** سبب الانحراف، والاستثناء في العينة، وقيد التسوية.","notes":"هذه القاعدة هي ما تبقى بعد أن تتغير الأدوات. قل سياسة الذكاء الاصطناعي في الورشة بوضوح: دون مساعد في إعادة حساب الأرقام الثلاثة في المختبر 1.1، وفي الحالات اليدوية في المختبر 1.4، وفي الفحص الفردي. والمساعد معلّم يشرح ولا يصلح في المختبر 2.1. ومسموح كاملًا في الرموز المولَّدة وفي إعادة التصميم، مع إعادة حساب كل رقم. هذا من توصيف المقرر لا من اختيار المدرّب.","minutes":null,"lo":["LO1"]},{"id":"dhilal-case","n":5,"title":"شركة ظِلال: إقفال أكتوبر في خمسة ملفات","kind":"content","session":0,"hash":"c10faa30","md":"#### [day1#dhilal-case] شركة ظِلال: إقفال أكتوبر في خمسة ملفات\n\n*دراسة الحالة*\n\n| الملف | ما فيه | المختبر |\n| --- | --- | --- |\n| ميزان المراجعة | 22 حسابًا، سبتمبر وأكتوبر | 1.1 |\n| كشف البنك ودفتر الأستاذ | 1,200 سطر | 1.2 و1.3 |\n| نموذج موازنة 2027 | 12 مركز تكلفة، خمسة أخطاء | 1.4 و2.1 |\n| ورقة الانحرافات | الموازنة والفعلي لكل مركز | 2.2 |\n| فواتير الموردين | 5,000 فاتورة | 2.3 |\n\n- **من يعمل على الإقفال.** ثريا الحمداني المراقبة المالية، ويسرى البواردي محاسبة الخزينة، وشاهين اللهيب محلل الموازنة، ومرزوق الغبيني مدير المراجعة الداخلية.\n- **المساعد المعتمد.** «رقيم»: مساعد يشغّل الرموز البرمجية داخل بيئة الشركة.\n\nالشركة وأشخاصها وموردوها وأرقامها كلها افتراضية، مولّدة ببذرة ثابتة.","notes":"ثريا الحمداني هي صاحبة القاعدة. زهور الشبل مديرة مركز الصيانة الميدانية تظهر غدًا في تعليق الانحرافات. لا تعلّق الآن على ما في الملفات: كل مختبر يكتشف ما زُرع في ملفه.","minutes":null,"lo":[]},{"id":"setup-check","n":6,"title":"ثلاثة أشياء مفتوحة أمامك الآن","kind":"content","session":0,"hash":"ece0fe94","md":"#### [day1#setup-check] ثلاثة أشياء مفتوحة أمامك الآن\n\n*قبل أن نبدأ*\n\n- **1 · صفحة المقرر.** فيها الشرائح وصفحات المختبرات وملفات شركة ظِلال. افتح صفحة المختبر 1.1 للتأكد.\n- **2 · جدول بيانات.** LibreOffice Calc أو Microsoft Excel. افتح به ميزان المراجعة.\n- **3 · طريق إلى الرموز.** مساعد يشغّل الرموز البرمجية على ملف مرفوع، أو الدفتر المعدّ مسبقًا في خدمة دفاتر مستضافة مجانية.\n\n> **لا بيانات حقيقية:** لا ملف من جهة عملك يدخل أي أداة في هذه القاعة. المختبرات كلها على ملفات شركة ظِلال.","notes":"دقيقتان. الدفاتر المعدّة لا تحتاج إلى كتابة رموز: يشغّل المشارك خلاياها بالترتيب. خدمة الدفاتر المستضافة المجانية تكفي، ولا يُنزَّل أي نموذج على الجهاز. إن حُجبت الخدمة في شبكة القاعة فكل مختبر له ملف بداية جاهز في مجلد start ومخرج مطبوع في صفحته.\n\nالمصادر: Google Colaboratory FAQ.","minutes":null,"lo":[]},{"id":"s1","n":7,"title":"محسوب أم مولَّد؟","kind":"section","session":1,"hash":"0b353fd5","md":"#### [day1#s1] محسوب أم مولَّد؟\n\n*الجلسة 1*\n\n- يشرح لماذا يخطئ النموذج اللغوي في الحساب حين يكتب الرقم نصًّا\n- يميّز الرقم المحسوب برموز برمجية أو صيغة من الرقم المولَّد نصًّا\n- يحدد لكل نوع الفحص الذي يحتاج إليه قبل أن يدخل الإقفال","notes":"","minutes":null,"lo":["LO1"]},{"id":"from-known-answer","n":8,"title":"اختبرتَ المساعد مقابل إجابة معروفة. في المالية هذا لا يكفي","kind":"content","session":1,"hash":"13da3839","md":"#### [day1#from-known-answer] اختبرتَ المساعد مقابل إجابة معروفة. في المالية هذا لا يكفي\n\n*من حيث انتهى المقرر السابق*\n\n- في مقرر العمل مع المساعدات الذكية اختبرت المساعد على ملخص يغلب عليه الحساب قبل أن تفوّض.\n- في الإقفال لا إجابة معروفة مسبقًا: الرقم الصحيح هو ما نبحث عنه.\n- فالسؤال يتغير من «هل الرقم صحيح؟» إلى **«من أين جاء الرقم؟»**\n\n- **في شركة ظِلال.** ست إجابات وصلت إلى ثريا الحمداني في يوم الإقفال، كلها تبدو مرتبة. ستصنّفها في المختبر 1.1.","notes":"شريحة تذكير واحدة، لا إعادة تدريس: المتطلب السابق هو مقرر العمل مع المساعدات الذكية، وجلسته الثانية «اختبر قبل أن تفوّض». اسأل: ماذا كانت نتيجة اختباركم هناك؟","minutes":null,"lo":["LO1"]},{"id":"two-answers-one-file","n":9,"title":"الإجابتان مرتبتان. واحدة حُسبت وواحدة كُتبت","kind":"content","session":1,"hash":"4c2a7d26","md":"#### [day1#two-answers-one-file] الإجابتان مرتبتان. واحدة حُسبت وواحدة كُتبت\n\n*ملف واحد، سؤالان، مساعدان*\n\n**أنت:** ما إجمالي مصروفات أكتوبر؟\n\n**المساعد (مثال ضعيف):** بجمع أرصدة الحسابات الأربعة عشر يكون الإجمالي 2,478,783.00 ريال.\n\n**أنت:** ما إجمالي إيرادات أكتوبر؟\n\n**المساعد (مثال جيد):** شغّلت رموزًا على الملف. المخرج: 3 حسابات، 2,949,030.00 ريال.\n\n> **الإجمالي الصحيح للمصروفات 2,487,783.00.** في الرد الأول خانتان متبادلتان، ولا شيء في صياغته ينبّهك.","notes":"الإجابتان من ملفات المختبر 1.1، وهما مكتوبتان باليد لتمثّلا ما تعطيه المساعدات: قل ذلك للقاعة. الفرق 9,000 ريال، وهو من النوع الذي يمر في مراجعة سريعة. الرقم الصحيح من تشغيل حل المختبر 1.1.","minutes":null,"lo":["LO1"]},{"id":"why-prose-arithmetic-fails","n":10,"title":"النموذج اللغوي يتوقع النص التالي، ولا يُجري عملية حسابية","kind":"content","session":1,"hash":"d4229895","md":"#### [day1#why-prose-arithmetic-fails] النموذج اللغوي يتوقع النص التالي، ولا يُجري عملية حسابية\n\n*ما الذي يحدث في الداخل*\n\n- **الأرقام وحدات نصية.** العدد يُقطَّع إلى أجزاء من خانات، ويُعامل كما تُعامل أجزاء الكلمات.\n- **لا خانة للحمل.** الجمع الطويل يحتاج إلى خطوات مرتبة تحمل من خانة إلى أخرى. النص المتوقَّع لا يضمن أيًّا منها.\n- **الخطأ يشبه الصواب.** الناتج الخاطئ له عدد الخانات نفسه وأول خاناته صحيحة غالبًا.\n\n> **لذلك** يزداد الخطأ كلما طال العدد وكثرت البنود، وهذا بالضبط شكل الأرقام في ميزان مراجعة.","notes":"لا تدخل في بنية النماذج: المشارك يحتاج إلى فكرة واحدة، أن الرقم في الرد نص متوقَّع وليس ناتج عملية. مثال للقاعة: حين تقرأ «2,478,783» لا شيء فيها يدلك على أنها خطأ، وكذلك النموذج حين يكتبها.","minutes":null,"lo":["LO1"]},{"id":"multiplication-evidence","n":11,"title":"ضرب عددين من ثلاث خانات: أقوى نموذج في الدراسة أصاب في 59% من المرات","kind":"content","session":1,"hash":"29d47e2c","md":"#### [day1#multiplication-evidence] ضرب عددين من ثلاث خانات: أقوى نموذج في الدراسة أصاب في 59% من المرات\n\n*دراسة منشورة، 2023*\n\n**59%** دقة أقوى نموذجين اختُبرا دون أدوات: 55% و59%\n\n- مسألة يحلها طالب تعلّم قاعدة الضرب.\n- الدقة تهبط سريعًا كلما زادت الخانات والخطوات.\n- النماذج تحسنت منذ ذلك الحين. الآلية لم تتغير: نص متوقَّع.","notes":"الرقمان لنموذجين من عام 2023 دون تشغيل رموز. لا تقل إن نماذج اليوم بهذه الدقة: قل إن أي نسبة أقل من مئة في المئة لا تصلح لرقم في الإقفال، وإنك لا تعرف مسبقًا أي رقم هو الخاطئ. الحل ليس نموذجًا أذكى، بل ألا يحسب النموذج أصلًا.\n\nالمصادر: Dziri et al., Faith and Fate: Limits of Transformers on Compositionality (2023).","minutes":null,"lo":["LO1"]},{"id":"what-computed-looks-like","n":12,"title":"الرقم المحسوب له أثر تراه: رموز ومخرجها، أو صيغة وخلاياها","kind":"content","session":1,"hash":"d5e5751a","md":"#### [day1#what-computed-looks-like] الرقم المحسوب له أثر تراه: رموز ومخرجها، أو صيغة وخلاياها\n\n*كيف تعرف من أين جاء الرقم*\n\n| ما تراه في الإجابة | النوع |\n| --- | --- |\n| رموز برمجية، وتحتها المخرج الذي طبعته | **محسوب** برموز |\n| صيغة في خلية تشير إلى خلايا | **محسوب** بصيغة |\n| «جمعت» أو «راجعت» أو «بحساب» ثم رقم، دون رموز ولا صيغة | **مولَّد** نصًّا |\n| خلية فيها دالة ذكاء اصطناعي تكتب نصًّا | **مولَّد** داخل الجدول |\n\n> **الفعل لا يكفي:** «حسبت» كلمة. المحسوب ما تستطيع أن تعيد تشغيله.","notes":"وضع تنفيذ الرموز موجود اليوم في المساعدات الشائعة: المساعد يكتب رموزًا بلغة بايثون ويشغّلها على الملف المرفوع ويعرضها مع مخرجها. علّم المشاركين أن يطلبوا دائمًا «اعرض الرموز ومخرجها كما هو». أسماء المزايا تتغير: المهم القدرة لا الاسم.\n\nالمصادر: OpenAI Help Center, Data analysis with ChatGPT؛ Claude Help Center, Create and edit files with Claude؛ Google AI for Developers, Code execution.","minutes":null,"lo":["LO1"]},{"id":"each-kind-its-check","n":13,"title":"المولَّد يُعاد حسابه كله. المحسوب يُقرأ ويُعاد تشغيله","kind":"content","session":1,"hash":"3729feae","md":"#### [day1#each-kind-its-check] المولَّد يُعاد حسابه كله. المحسوب يُقرأ ويُعاد تشغيله\n\n*النوع يحدد الفحص*\n\n- **رقم مولَّد نصًّا.**\n  - أعد حسابه من المصدر، بصيغة أو برموز.\n  - لا تأخذ منه إلا الصياغة.\n  - إن طابق حسابك فالحساب هو ما يدخل الإقفال، لا الرد.\n- **رقم محسوب.**\n  - أي ملف قرأته الرموز؟\n  - أي صفوف دخلت؟ كم عددها؟\n  - هل الشرط في الرموز هو الشرط في السؤال؟\n  - أعد التشغيل: هل يخرج الرقم نفسه؟","notes":"هذا هو الجدول الذي يملؤه المشارك في الخطوة 2 من المختبر. شدّد على أن الفحص فعل محدد يُنفَّذ في دقيقة، لا «أتأكد». مثال: «أعدّ حسابات المصروفات في الميزان وأقارن العدد بما طبعته الرموز».","minutes":null,"lo":["LO1"]},{"id":"computed-can-be-wrong","n":14,"title":"المحسوب قد يكون خاطئًا: الرموز أجابت عن سؤال غير سؤالك","kind":"content","session":1,"hash":"7eebec04","md":"#### [day1#computed-can-be-wrong] المحسوب قد يكون خاطئًا: الرموز أجابت عن سؤال غير سؤالك\n\n*الإجابة 6 في المختبر*\n\n```python\nexp = tb[tb[\"group\"] == \"مصروفات\"]\nother = exp[~exp[\"account_name\"]\n            .str.contains(\"رواتب\")]\nprint(len(other), other[\"oct_2026\"].sum())\n# 13 1149898.0\n```\n\n- **السؤال.** المصروفات دون تكاليف العاملين: الرواتب والبدلات والتأمينات.\n- **ما فعلته الرموز.** استبعدت الحساب الذي في اسمه «رواتب» فقط. بقي 13 حسابًا، والصحيح 11.\n\n> **العدد كشفها:** 14 حسابًا ناقص 3 يساوي 11. المخرج يقول 13. الرقم الصحيح 666,010.00.","notes":"الرموز شُغّلت فعلًا في حل المختبر 1.1 وطبعت هذا المخرج. الدرس: المحسوب يعاد تشغيله ويُقرأ، وهذا ما يجعله قابلًا للفحص، لا ما يجعله صحيحًا. والعدد المطبوع بجانب المجموع مجموع رقابي صغير: هذا تمهيد للجلسة التالية.","minutes":null,"lo":["LO1"]},{"id":"check-right-number-no-code","n":15,"title":"رقم صحيح بلا رموز","kind":"quiz","session":1,"hash":"993b9721","md":"#### [day1#check-right-number-no-code] رقم صحيح بلا رموز\n\n*نقطة تحقق*\n\n**سؤال:** سألت المساعد عن نسبة أكبر حساب مصروفات من الإجمالي. أجاب بجملة فيها 53.8%، دون رموز ولا صيغة. أعدت الحساب فوجدتها 53.8%. ماذا تضع في تقرير الإقفال؟\n\n- أ. رد المساعد، فقد ثبتت صحته\n- ب. رد المساعد، لأنه رقم محسوب\n- ج. حسابك أنت، بصيغته أو رموزه\n- د. رد المساعد بعد أن تسأله مرة ثانية للتأكد","notes":"الإجابة: الخيار الثالث. هذه هي الإجابة 4 في المختبر. إن اختار كثيرون الأول فاسأل: لو لم تُعد الحساب، كيف كنت ستعرف أنها صحيحة؟","minutes":null,"lo":["LO1"]},{"id":"lab-1-1","n":16,"title":"ست إجابات: محسوب أم مولَّد؟","kind":"lab","session":1,"hash":"aa4b9b9f","md":"#### [day1#lab-1-1] ست إجابات: محسوب أم مولَّد؟\n\nالمختبر 1.1 · 30 دقيقة\n\nتصنّف ست إجابات من الذكاء الاصطناعي عن أسئلة مالية إلى محسوبة ومولَّدة، وتكتب الفحص الذي تحتاج إليه كل إجابة، وتعيد حساب ثلاثة أرقام بيدك. التصنيف المطابق للمفتاح في خمس من ست هو دليل ناتج التعلم الأول.\n\n[D1_1_six_answers.html](https://sdaiaacademy.github.io/use-pro-203/labs/D1_1_six_answers.html)\n\n- [ ] اقرأ الإجابات الست وصنّف كلًّا منها: محسوبة أم مولَّدة (10 د)\n- [ ] اكتب لكل إجابة ما يدل على نوعها والفحص الذي تحتاج إليه (8 د)\n- [ ] أعد حساب ثلاثة أرقام بآلة حاسبة ودون مساعد: في A2 وA4 وA6 (9 د)\n- [ ] قارن تصنيفك بتصنيف زميل وناقشا إجابة واحدة اختلفتما فيها (3 د)\n- [ ] ✱ إضافي: اطرح السؤال 2 على مساعدك في محادثتين جديدتين دون تشغيل رموز، وسجّل هل تطابق الرقمان","notes":"راقب الخطوة 3: هي دون مساعد، وبآلة حاسبة أو بدالة جمع. من ينتهي مبكرًا يأخذ المهمة الإضافية. المفتاح: المحسوبة A1 وA3 وA6، والمولَّدة A2 وA4 وA5. دليل الناتج الأول تصنيف يطابق المفتاح في خمس من ست. أكثر ما يُخطأ فيه: A4 لأنها صحيحة، وA6 لأنها خاطئة.","minutes":null,"lo":[]},{"id":"s2","n":17,"title":"رموز مولَّدة تقرؤها وتثبتها","kind":"section","session":2,"hash":"b788284b","md":"#### [day1#s2] رموز مولَّدة تقرؤها وتثبتها\n\n*الجلسة 2*\n\n- يقرأ رموزًا مولَّدة للمطابقة ويحدد مدخلاتها ومفتاح الربط فيها ومخرجاتها\n- يسجّل المجاميع الرقابية قبل المعالجة وبعدها ويثبت بها أن لا سطر ضاع ولا تكرر\n- ينفذ مطابقة كشف البنك مع دفتر الأستاذ برموز مولَّدة أو بالدفتر المعدّ","notes":"","minutes":null,"lo":["LO2"]},{"id":"three-questions-for-code","n":18,"title":"تقرأ الرموز المولَّدة بثلاثة أسئلة","kind":"content","session":2,"hash":"23da0e8f","md":"#### [day1#three-questions-for-code] تقرأ الرموز المولَّدة بثلاثة أسئلة\n\n*لا تحتاج إلى أن تكتبها*\n\n- **1 · ماذا تقرأ؟** أي ملفات، وأي أعمدة، وهل قرأت كل الصفوف.\n- **2 · بماذا تربط؟** مفتاح الربط بين السطرين: المرجع؟ المبلغ؟ كلاهما؟ وهل نُظّف قبل الربط؟\n- **3 · ماذا تحذف؟** أي سطر فيه «احذف» أو «نظّف» أو «استبعد» قبل الحساب يغيّر المجتمع الذي تحسب عليه.\n\n> **اطلب من المساعد أن يشرح رموزه سطرًا سطرًا.** الشرح نص مولَّد يساعدك على القراءة. الحكم لقراءتك وللمجاميع.","notes":"المتطلب السابق يقول: لا حاجة إلى البرمجة. المطلوب قراءة بمستوى قراءة صيغة في جدول: ما المدخل، وما الشرط، وما المخرج. اعرض البرنامج النصي الأول في الشريحة التالية واطلب من القاعة أن تجيب عن الأسئلة الثلاثة قبل أن تكشف.","minutes":null,"lo":["LO2"]},{"id":"first-try-script","n":19,"title":"برنامج نصي قصير ومرتب، وفيه سطر يحذف","kind":"content","session":2,"hash":"1d5ee81a","md":"#### [day1#first-try-script] برنامج نصي قصير ومرتب، وفيه سطر يحذف\n\n*ما يكتبه المساعد حين تقول: طابق الملفين*\n\n```python\n# ملف: reconcile_first_try.py\nbank = pd.read_csv(\"bank_statement_oct.csv\")\nledger = pd.read_csv(\"ledger_cash_oct.csv\")\n\nledger = ledger.drop_duplicates(subset=[\"reference\", \"amount\"])\nmerged = bank.merge(ledger, on=[\"reference\", \"amount\"],\n                    how=\"outer\", indicator=True)\n# Reconciliation complete.\n# matched 579 · bank unmatched 15 · ledger unmatched 22\n```\n\n> **يعمل دون خطأ ويطبع أرقامًا.** لا شيء في المخرج يقول إن خمسة قيود اختفت.","notes":"البرنامج من ملفات المختبر، كتبه كاتب المقرر ليمثّل محاولة أولى، وشُغّل فعلًا على الملفين: الأرقام مخرجه الحقيقي. السطر المظلَّل يحذف من الدفتر كل سطر يكرر مرجعًا ومبلغًا. من منظور «تنظيف البيانات» هذا معقول. من منظور المحاسب القيد المكرر هو بالضبط ما نبحث عنه.","minutes":null,"lo":["LO2"]},{"id":"control-totals","n":20,"title":"المجموع الرقابي: ما دخل يساوي ما خرج، عددًا ومبلغًا","kind":"content","session":2,"hash":"5f7df5e2","md":"#### [day1#control-totals] المجموع الرقابي: ما دخل يساوي ما خرج، عددًا ومبلغًا\n\n*الفكرة التي تسبق الذكاء الاصطناعي بعقود*\n\n1. **قبل** عدد أسطر كل ملف ومجموع مبالغه، تحسبهما أنت\n2. **المعالجة** الرموز تطابق وتفرز\n3. **بعد** المتطابق وغير المتطابق، عددًا ومبلغًا، لكل جهة\n\n> **الفحص:** المتطابق + غير المتطابق = الملف. إن نقص سطر فقد ضاع، وإن زاد فقد تكرر.","notes":"أرقام «قبل» لا تؤخذ من مخرج المساعد: يحسبها المشارك بدالة عدّ ودالة جمع في جدول البيانات، لأن الغرض أن يكون عنده رقم مستقل عن الرموز. هذه هي الخطوة 1 في المختبر. في توصيف المقرر: لا رقم يُرفع دون مجموع رقابي.","minutes":null,"lo":["LO2"]},{"id":"first-try-fails-the-totals","n":21,"title":"601 سطرًا من 606: المجموع الرقابي يكشف ما لا يقوله المخرج","kind":"content","session":2,"hash":"60f058de","md":"#### [day1#first-try-fails-the-totals] 601 سطرًا من 606: المجموع الرقابي يكشف ما لا يقوله المخرج\n\n*البرنامج الأول أمام المجاميع*\n\n| جهة الدفتر | الأسطر |\n| --- | --- |\n| في الملف، بعدّك أنت | 606 |\n| متطابق في المخرج | 579 |\n| غير متطابق في المخرج | 22 |\n| مجموع المخرج | 601 |\n\n**5** أسطر اختفت من الدفتر قبل المطابقة\n\nهي القيود الخمسة التي رُحّلت مرتين، ومجموعها 161,714.05 ريال مدفوعات.","notes":"الأرقام من تشغيل حل المختبر 1.2. اطلب من القاعة أن تجمع 579 و22 قبل أن تُظهر السطر الأخير. من يسأل «ولماذا لا نثق بالمساعد حين يقول إنه لم يحذف؟»: لأن الجملة نص، والمجموع رقم تحسبه أنت.","minutes":null,"lo":["LO2"]},{"id":"join-key-limits","n":22,"title":"ثمانية مراجع كُتبت بحروف صغيرة ومسافات، فلم تجد شريكها","kind":"content","session":2,"hash":"2172ac6c","md":"#### [day1#join-key-limits] ثمانية مراجع كُتبت بحروف صغيرة ومسافات، فلم تجد شريكها\n\n*ما لا تكشفه المجاميع*\n\n| في كشف البنك | في الدفتر | الربط على النص |\n| --- | --- | --- |\n| `\" trf-260387 \"` | `\"TRF-260387\"` | لا يتطابقان |\n| `\"TRF-260387\"` | `\"TRF-260387\"` | يتطابقان |\n\n- البرنامج الأول ترك هذه الأزواج الثمانية غير متطابقة في الجهتين.\n- المجاميع بقيت متفقة: لا سطر ضاع، بل وُضع في المكان الخطأ.\n- الذي يكشفه قراءة مفتاح الربط، ثم قراءة البنود غير المتطابقة.\n\n> **حد المجموع الرقابي:** يثبت أن كل سطر حُسب مرة واحدة، ولا يثبت أن كل زوج هو الزوج الصحيح.","notes":"المثال في الجدول للشرح، والعدد ثمانية من ملفات المختبر. المهمة الإضافية في المختبر تعرض الحد نفسه من زاوية أخرى: المطابقة بالمبلغ وحده تربط ستة أزواج من مدفوعات مختلفة لها المبلغ نفسه، والمجاميع لا تتحرك.","minutes":null,"lo":["LO2"]},{"id":"ask-for-what-was-missing","n":23,"title":"الطلب الجيد يسمّي المفتاح، ويمنع الحذف، ويطلب المجاميع","kind":"content","session":2,"hash":"18a0524c","md":"#### [day1#ask-for-what-was-missing] الطلب الجيد يسمّي المفتاح، ويمنع الحذف، ويطلب المجاميع\n\n*اطلب ما كان ينقص*\n\nأمر لـ مساعد يشغّل الرموز البرمجية + الملفان:\n\n```text\nطابق كشف البنك مع دفتر الأستاذ بالرموز البرمجية.\nمفتاح الربط هو المرجع بعد حذف المسافات وتوحيد حالة الحروف، ثم المبلغ.\nكل سطر يُستخدم مرة واحدة، ولا تحذف أي سطر مكرر.\nاطبع قبل المطابقة عدد أسطر كل ملف ومجموعه، وبعدها عدد المتطابق ومجموعه وعدد غير المتطابق في كل جهة.\nاعرض الرموز ومخرجها كما هو.\n```\n\nالمهمة · المفتاح · ما لا يُحذف · المجاميع · الأثر","notes":"هذا هو الأمر في الخطوة 3 من المختبر. قارنه بالطلب الأول «طابق الملفين»: الفرق ليس بلاغة، بل معرفة محاسبية بما يجب ألا يفعله البرنامج. من لا يملك مساعدًا يشغّل الرموز يستخدم الدفتر المعدّ، وهو ينفذ الطلب نفسه.","minutes":null,"lo":["LO2"]},{"id":"prepared-notebook-run-log","n":24,"title":"الدفتر المعدّ مسبقًا يحسب، ويفحص نفسه، ويترك أثرًا","kind":"content","session":2,"hash":"a597e5b9","md":"#### [day1#prepared-notebook-run-log] الدفتر المعدّ مسبقًا يحسب، ويفحص نفسه، ويترك أثرًا\n\n*الطريق الثاني إلى الرموز*\n\n- تشغّل خلاياه بالترتيب. لا تكتب شيئًا.\n- يتوقف برسالة واضحة إن لم تتفق المجاميع الرقابية.\n- يضيف سطرًا إلى **سجل التشغيل** في كل مرة: متى، وعلى أي ملفات، وبأي مجاميع.\n- يعمل على جهازك أو في خدمة دفاتر مستضافة مجانية.\n\n- **سطر من سجل التشغيل.** bank 594/-577301.66; ledger 606/-863944.63; matched 587; adjusted 1749779.42/1749779.42\n\n> **في المراجعة** ستعيد تشغيل هذا الدفتر أمام المراجع. السجل يبيّن أن الرقم خرج اليوم كما خرج أمس.","notes":"السطر من تشغيل حل المختبر 1.2. سجل التشغيل يحفظ بصمة كل ملف مدخل، فإن تغيّر الملف بين تشغيلين ظهر ذلك. نبّه: في خدمة مستضافة يُرفع الملفان بجوار الدفتر، وبيانات الورشة اصطناعية. في العمل الحقيقي ملف مصنف «مقيد» لا يُرفع إلى خدمة عامة: هذا موضوع الجلسة الأخيرة غدًا.","minutes":null,"lo":["LO2"]},{"id":"check-dropped-duplicates","n":25,"title":"برنامج «ينظّف» قبل أن يطابق","kind":"quiz","session":2,"hash":"b3343d68","md":"#### [day1#check-dropped-duplicates] برنامج «ينظّف» قبل أن يطابق\n\n*نقطة تحقق*\n\n**سؤال:** ملف دفتر الأستاذ فيه 606 أسطر بعدّك. برنامج ولّده المساعد يطبع: 579 متطابقًا و22 غير متطابق في جهة الدفتر. ما أول ما تفعله؟\n\n- أ. تبحث في الرموز عن السطر الذي أسقط خمسة أسطر\n- ب. تصنّف البنود الاثنين والعشرين غير المتطابقة\n- ج. تسأل المساعد هل حذف شيئًا وتأخذ بجوابه\n- د. تقبل الناتج لأن الفرق أقل من واحد في المئة","notes":"الإجابة: الخيار الأول. اربطها بالأسئلة الثلاثة: «ماذا تحذف؟» هو السؤال الذي يجد السطر. إن اختار كثيرون الثاني فذكّر بأن التصنيف عمل الجلسة التالية، ولا يبدأ قبل أن تتفق المجاميع.","minutes":null,"lo":["LO2"]},{"id":"lab-1-2","n":26,"title":"المطابقة بمجاميع رقابية","kind":"lab","session":2,"hash":"1dc27b94","md":"#### [day1#lab-1-2] المطابقة بمجاميع رقابية\n\nالمختبر 1.2 · 30 دقيقة\n\nتطابق كشف بنك شركة ظِلال مع دفتر الأستاذ، 1,200 سطر، برموز يولّدها المساعد أو بالدفتر المعدّ، وتثبت الناتج بمجاميع رقابية. وتكشف بالمجاميع نفسها ما أضاعه برنامج نصي أول يبدو سليمًا.\n\n[D1_2_reconcile.html](https://sdaiaacademy.github.io/use-pro-203/labs/D1_2_reconcile.html)\n\n- [ ] سجّل المجاميع الرقابية للملفين قبل أي معالجة: عدد الأسطر والمجموع (5 د)\n- [ ] اقرأ البرنامج النصي الأول ومخرجه، واكشف بالمجاميع ما أضاعه (8 د)\n- [ ] طابق برموز يولّدها المساعد بعد أن تطلب ما ينقص، أو شغّل الدفتر المعدّ (10 د)\n- [ ] أثبت الناتج: المتطابق وغير المتطابق يساويان كل ملف عددًا ومبلغًا (7 د)\n- [ ] ✱ إضافي: اطلب من المساعد مطابقة بالمبلغ وحده دون المرجع، وعُدّ بالمجاميع كم زوجًا ربطه خطأً","notes":"الأرقام المرجعية: البنك 594 سطرًا، والدفتر 606؛ 587 زوجًا متطابقًا؛ غير متطابق 7 في البنك و19 في الدفتر. راقب الخطوة 1: من يأخذ المجاميع من المساعد يُعاد إلى جدول البيانات. من تعطّل مساعده أو لا يشغّل الرموز يفتح الدفتر المعدّ. لم يُجرَّب هذا المختبر على مساعد حقيقي عند بناء المقرر: جرّب الأمر مرة قبل الدفعة على المساعد الذي ستستخدمه القاعة.","minutes":null,"lo":[]},{"id":"s3","n":27,"title":"من البنود غير المتطابقة إلى قائمة المطابقة","kind":"section","session":3,"hash":"0521d606","md":"#### [day1#s3] من البنود غير المتطابقة إلى قائمة المطابقة\n\n*الجلسة 3*\n\n- يصنّف البنود غير المتطابقة إلى فروق توقيت وقيود مكررة وبنود في البنك لم تُقيَّد وفروق مبلغ\n- يبني قائمة مطابقة يتساوى فيها الرصيدان المعدَّلان\n- يفصل ما تقترحه الرموز عمّا يقرره المحاسب من المستند","notes":"","minutes":null,"lo":["LO2"]},{"id":"the-work-is-in-25-items","n":28,"title":"الرموز طابقت 587 زوجًا. عملك في 25 بندًا","kind":"content","session":3,"hash":"bb4a1e51","md":"#### [day1#the-work-is-in-25-items] الرموز طابقت 587 زوجًا. عملك في 25 بندًا\n\n*بعد أن تتفق المجاميع*\n\n**25** بندًا غير متطابق من 1,200 سطر\n\n- المطابقة السهلة عمل الرموز، وتثبتها المجاميع.\n- كل بند من الخمسة والعشرين سؤال محاسبي له مستند.\n- الوقت الذي وفّرته الرموز يُصرف هنا، لا يُختصر.","notes":"الأرقام من حل المختبرين 1.2 و1.3: 7 أسطر في البنك و19 في الدفتر، أي 26 سطرًا و25 بندًا، لأن فرق المبلغ بند واحد له سطران. هذه الشريحة تجيب عن سؤال سيأتي غدًا في إعادة التصميم: أين يذهب الوقت الموفَّر؟","minutes":null,"lo":["LO2"]},{"id":"four-classes","n":29,"title":"أربعة تصنيفات، ولكل منها مكان في القائمة","kind":"content","session":3,"hash":"643a96e5","md":"#### [day1#four-classes] أربعة تصنيفات، ولكل منها مكان في القائمة\n\n*البنود غير المتطابقة*\n\n| التصنيف | كيف يظهر | العدد | الجهة التي تُعدَّل |\n| --- | --- | --- | --- |\n| **فرق توقيت** | في الدفتر آخر الشهر، وليس في البنك بعد | 13 | البنك |\n| **قيد مكرر** | سطران في الدفتر وسطر في البنك | 5 | الدفتر |\n| **في البنك ولم يُقيَّد** | رسوم، إيداع مباشر، شيك مرتجع | 6 | الدفتر |\n| **فرق مبلغ** | المرجع نفسه بمبلغين | 1 | الدفتر، إن صحّ البنك |\n\nالأعداد من ملفات شركة ظِلال: 9 مدفوعات لم تُصرف و4 إيداعات بالطريق هي فروق التوقيت.","notes":"المشاركون يعرفون هذه التصنيفات من عملهم: لا تشرحها طويلًا. الجديد هو السؤال التالي: أي منها تستطيع قاعدة في الرموز أن تقترحه، وأي منها يحتاج إلى المستند؟","minutes":null,"lo":["LO2"]},{"id":"code-suggests-you-decide","n":30,"title":"الرموز تقترح تصنيفًا من قاعدة. القرار من المستند","kind":"content","session":3,"hash":"175cca2c","md":"#### [day1#code-suggests-you-decide] الرموز تقترح تصنيفًا من قاعدة. القرار من المستند\n\n*ما تعرفه القاعدة وما لا تعرفه*\n\n- **ما تقترحه القاعدة.**\n  - مرجع في الدفتر لا وجود له في البنك: توقيت.\n  - مرجع ومبلغ طوبقا مرة وبقي منهما سطر: مكرر.\n  - مرجع واحد بمبلغين: فرق مبلغ.\n- **ما لا تعرفه.**\n  - هل الشيك الذي لم يُصرف منذ أشهر ما زال قائمًا؟\n  - أي المبلغين هو الصحيح: البنك أم الدفتر؟\n  - لماذا ارتجع الشيك، ومن يتصل بالعميل؟\n\n> **في الدفتر المعدّ** العمود اسمه «مقترح»، وبجانبه عمود تملؤه أنت.","notes":"اطلب مثالًا من القاعة على بند صنّفه نظام آليًّا وكان التصنيف خطأ. الفكرة: القاعدة مكتوبة ومقروءة، فهي محسوبة. لكن مدخلاتها ملفان فقط، والمحاسب عنده الفاتورة وإشعار البنك والعميل.","minutes":null,"lo":["LO2"]},{"id":"statement-two-sides","n":31,"title":"جهتان تنتهيان إلى رقم واحد","kind":"content","session":3,"hash":"1969fa65","md":"#### [day1#statement-two-sides] جهتان تنتهيان إلى رقم واحد\n\n*قائمة مطابقة أكتوبر في شركة ظِلال*\n\n| جهة البنك | ريال |\n| --- | --- |\n| الرصيد الختامي في الكشف | 1,772,698.34 |\n| إيداعات بالطريق (4) | 198,748.90 |\n| مدفوعات لم تُصرف (9) | -221,667.82 |\n| الرصيد المعدَّل | 1,749,779.42 |\n\n| جهة الدفتر | ريال |\n| --- | --- |\n| الرصيد الختامي في الدفتر | 1,486,055.37 |\n| عكس قيود مكررة (5) | 161,714.05 |\n| بنود في البنك لم تُقيَّد (6) | 100,210.00 |\n| تصحيح فرق المبلغ | 1,800.00 |\n| الرصيد المعدَّل | 1,749,779.42 |","notes":"الأرقام من تشغيل حل المختبر 1.3. لا تعرض هذه الشريحة قبل أن يحاول المشاركون: أبقها للخطوة 4 من المختبر، أو اعرضها سريعًا هنا لشرح الشكل ثم عد إليها. الرصيد الافتتاحي 2,350,000.00 في الجهتين.","minutes":null,"lo":["LO2"]},{"id":"what-becomes-an-entry","n":32,"title":"فرق التوقيت ينتظر. الباقي يصير قيودًا يعتمدها إنسان","kind":"content","session":3,"hash":"1665811e","md":"#### [day1#what-becomes-an-entry] فرق التوقيت ينتظر. الباقي يصير قيودًا يعتمدها إنسان\n\n*بعد القائمة*\n\n- **ينتظر.** 13 بندًا تظهر في كشف نوفمبر. تُتابَع، ولا قيد لها.\n- **يُقيَّد أو يُعكس.** الرسوم والإيداعات المباشرة تُقيَّد. القيود المكررة تُعكس. فرق المبلغ يُصحَّح.\n- **يحتاج إلى سؤال.** الشيك المرتجع: اتصال بالعميل. والقيد المكرر: هل خرج المال مرة أم مرتين؟\n\n> **المساعد لا يرحّل قيدًا.** يصوغ مسودته إن أردت، والاعتماد لصاحب الصلاحية.","notes":"اربط بالقاعدة: القيد رقم يدخل الدفتر، فمصدره القائمة المحسوبة لا رد المساعد. وما في ميزان المراجعة لحساب البنك هو 1,486,055.37، أي قبل التسوية: هذا سؤال التحقق الثالث في المختبر.","minutes":null,"lo":["LO2"]},{"id":"pass-rule","n":33,"title":"مطابقتك تتفق مع المجاميع المرجعية، وتعيد تشغيلها أمام المراجع","kind":"content","session":3,"hash":"93ffee02","md":"#### [day1#pass-rule] مطابقتك تتفق مع المجاميع المرجعية، وتعيد تشغيلها أمام المراجع\n\n*شرط النجاح في المقرر*\n\n- البنود غير المتطابقة عندك هي البنود المرجعية.\n- الرصيدان المعدَّلان متساويان ويساويان الرقم المرجعي.\n- سجل التشغيل محفوظ في مجلدك.\n\n- **لماذا هذا الشرط بالذات؟** لأن المطابقة هي المكان الذي يجتمع فيه كل ما في الورشة: رموز مولَّدة، ومجاميع رقابية، وحكم على بنود.\n\n> **النجاح:** 70% في المجموع، بشرط أن تتفق المطابقة مع المجاميع المرجعية.","notes":"توزيع الدرجة من توصيف المقرر: الفحص تحت الإشراف دون ذكاء اصطناعي 20%، ومخرجات المختبرات 40%، وبطاقة إعادة التصميم والمراجعة المباشرة 40%. المراجعة تتضمن إعادة تشغيل المطابقة.","minutes":null,"lo":["LO2"]},{"id":"check-which-item-waits","n":34,"title":"أي بند لا يدخل الدفتر؟","kind":"quiz","session":3,"hash":"b838efd5","md":"#### [day1#check-which-item-waits] أي بند لا يدخل الدفتر؟\n\n*نقطة تحقق*\n\n**سؤال:** أربعة بنود بقيت غير متطابقة في 31 أكتوبر. أيها يُعدَّل في جهة البنك من القائمة ولا يحتاج إلى قيد في الدفتر؟\n\n- أ. رسوم خدمات مصرفية خصمها البنك في 31 أكتوبر\n- ب. سداد لمورد ظهر في الدفتر مرتين وفي البنك مرة\n- ج. شيك من عميل ارتجع في 27 أكتوبر\n- د. شيك لمورد قُيّد في 30 أكتوبر ولم يُصرف بعد","notes":"الإجابة: الخيار الرابع. إن تعثرت القاعة فاسأل عن كل بند: من عنده المعلومة الصحيحة الآن، البنك أم الدفتر؟ الجهة الأخرى هي التي تُعدَّل.","minutes":null,"lo":["LO2"]},{"id":"lab-1-3","n":35,"title":"قائمة المطابقة","kind":"lab","session":3,"hash":"97a5f511","md":"#### [day1#lab-1-3] قائمة المطابقة\n\nالمختبر 1.3 · 30 دقيقة\n\nتبدأ من 25 بندًا غير متطابق جاهزة، فتصنّفها وتبني قائمة المطابقة حتى يتساوى الرصيدان المعدَّلان ويتفقا مع المجاميع المرجعية. هذا شرط النجاح في المقرر.\n\n[D1_3_statement.html](https://sdaiaacademy.github.io/use-pro-203/labs/D1_3_statement.html)\n\n- [ ] صنّف البنود الخمسة والعشرين: توقيت، قيد مكرر، في البنك ولم يُقيَّد، فرق مبلغ (10 د)\n- [ ] املأ قائمة المطابقة واحسب الرصيدين المعدَّلين (10 د)\n- [ ] اكتب قيود التسوية المطلوبة ومن يعتمد كلًّا منها (6 د)\n- [ ] قارن رصيدك المعدَّل بالرقم المرجعي عند المدرّب (4 د)\n- [ ] ✱ إضافي: اطلب من المساعد تصنيف البنود نفسها، وعُدّ ما خالفك فيه واكتب سبب كل اختلاف","notes":"يبدأ المختبر من ملف البنود الجاهز في مجلد start، فلا يتأثر من لم يُنهِ المختبر 1.2. الرقم المرجعي الذي تعرضه في الخطوة 4: الرصيد المعدَّل 1,749,779.42. الخطأ الشائع: القيود المكررة في جهة البنك، أو إشارة الشيك المرتجع معكوسة، فيكون الفرق بين الرصيدين ضعف البند. من ينتهي مبكرًا يأخذ المهمة الإضافية.","minutes":null,"lo":[]},{"id":"s4","n":36,"title":"ثق بجدول البيانات أقل","kind":"section","session":4,"hash":"c82a5c18","md":"#### [day1#s4] ثق بجدول البيانات أقل\n\n*الجلسة 4*\n\n- يتتبع سوابق الخلية وتوابعها حتى يصل إلى مصدر رقم خاطئ\n- يشرح لماذا لا تصلح خلية فيها دالة ذكاء اصطناعي مصدرًا لرقم في الإقفال\n- يحسب حالات يدوية من المواصفة ويقارنها بالنموذج ليحدد أخطاءه","notes":"","minutes":null,"lo":["LO3","LO1"]},{"id":"spreadsheets-carry-errors","n":37,"title":"جداول البيانات تحمل أخطاء، ومن بناها لا يراها","kind":"content","session":4,"hash":"0c09e001","md":"#### [day1#spreadsheets-carry-errors] جداول البيانات تحمل أخطاء، ومن بناها لا يراها\n\n*قبل الذكاء الاصطناعي بزمن*\n\n- مراجعة لخمس عشرة سنة من الدراسات خلصت إلى أن أخطاء الجداول شائعة وليست هيّنة.\n- الطريقة الوحيدة التي ثبتت فاعليتها حينها: فحص الخلايا خلية خلية.\n- النموذج الذي «يعمل منذ سنوات» لم يُختبر: استُخدم فقط.\n\n- **وما علاقة المساعد؟** مساعد يُسأل عن رقم في نموذج معيب يعيد لك الرقم المعيب بثقة. ومساعد يُطلب منه «أصلح النموذج» يغيّر خلايا لا تعرفها.","notes":"لا تذكر نسبًا لم ترد في المصدر. الفكرة: الخطأ في الجدول سابق على المساعد، والمساعد يضخّمه أو يخفيه إن لم يكن عندك مرجع مستقل. هذا المرجع هو الحالات المحسوبة يدويًا.\n\nالمصادر: Panko, Spreadsheet Errors: What We Know. What We Think We Can Do (2008).","minutes":null,"lo":["LO3"]},{"id":"precedents-and-dependants","n":38,"title":"السوابق: من أين يأتي هذا الرقم؟ التوابع: إلى أين يذهب؟","kind":"content","session":4,"hash":"e07e6b13","md":"#### [day1#precedents-and-dependants] السوابق: من أين يأتي هذا الرقم؟ التوابع: إلى أين يذهب؟\n\n*أداة في كل جدول بيانات*\n\n1. **السوابق** الخلايا التي تدخل في صيغة هذه الخلية\n2. **الخلية** الرقم الذي لم يطابق حسابك\n3. **التوابع** الخلايا التي تستخدم هذا الرقم بعده\n\n> **السوابق تجد الخطأ:** سهم يشير إلى خلية غير التي تقولها المواصفة.\n\n> **التوابع تقيس أثره:** كم رقمًا آخر فسد معه.","notes":"عرض حي من دقيقتين على نموذج الموازنة: قف على خلية اشتراكات المركز في الصف 7 واعرض سوابقها. في Excel: تبويب الصيغ ثم تتبع السوابق. في LibreOffice Calc: قائمة أدوات ثم المحقق. لا تكشف الخطأ: اترك القاعة تلاحظ إلى أين يشير السهم. النموذج لم يُفتح في برنامج جداول عند بناء المقرر، فجرّب العرض قبل الدفعة.","minutes":null,"lo":["LO3"]},{"id":"arrows-that-tell","n":39,"title":"ثلاث علامات تراها دون أن تحسب شيئًا","kind":"content","session":4,"hash":"2bd4fecc","md":"#### [day1#arrows-that-tell] ثلاث علامات تراها دون أن تحسب شيئًا\n\n*ما تقوله الأسهم*\n\n- **سهم ينزلق.** صيغة نُسخت إلى أسفل، ومرجع النسبة نزل معها صفًّا في كل مرة. المرجع كان يجب أن يكون مطلقًا.\n- **خلية بلا سهم.** عمود كله صيغ وفيه خلية واحدة لا سوابق لها: رقم كُتب باليد فوق الصيغة.\n- **نطاق يقصر.** إطار الجمع ينتهي قبل آخر صف: صف أُضيف بعد كتابة الصيغة.\n\n> **والرابعة لا يُظهرها سهم:** الصيغة سليمة الشكل، وتنفذ قاعدة غير التي في المواصفة. هذه لا تكشفها إلا حالة محسوبة يدويًا.","notes":"هذه العلامات هي ثلاثة من الأخطاء الخمسة في نموذج شركة ظِلال، دون أن تسمّي خلاياها. الخطآن الباقيان من النوع الرابع: دالة بحث تعيد عمودًا غير المطلوب، وإشارة جمع مكان الطرح.","minutes":null,"lo":["LO3"]},{"id":"ai-function-in-a-cell","n":40,"title":"خلية تكتبها دالة ذكاء اصطناعي ليست صيغة: ناتجها نص يتغير","kind":"content","session":4,"hash":"c5434966","md":"#### [day1#ai-function-in-a-cell] خلية تكتبها دالة ذكاء اصطناعي ليست صيغة: ناتجها نص يتغير\n\n*دوال الذكاء الاصطناعي داخل الخلايا*\n\n- **Google Sheets.** دالة =AI() تولّد نصًّا في الخلية عند طلبك، ولها زر تحديث يولّد ناتجًا جديدًا. وإن تغيّرت بيانات الأمر فأنت من يقرر متى يُحدَّث الناتج.\n- **Microsoft Excel.** دالة =COPILOT() أُوقفت في 14 سبتمبر 2026. القيم القديمة بقيت محفوظة في الخلايا، وأي خلية يعاد حسابها تعيد الخطأ #NAME?.\n\n> **في الحالتين** رقم بُني على هذه الخلايا لا يستطيع أحد أن يعيد تشغيله ويحصل عليه نفسه.","notes":"هذه حقائق عن منتجين من صفحتيهما الرسميتين في نوفمبر 2026، وتتغير: تحقق منها قبل كل دفعة. الدرس لا يتغير: دالة تولّد نصًّا تصلح لتصنيف أولي تراجعه ثم تثبّته قيمًا، ولا تصلح حلقة في سلسلة تنتهي برقم في الإقفال. وقصة الدالة التي أُوقفت مثال على خطر ثانٍ: ملف لا يعاد حسابه لأن الأداة تغيّرت.\n\nالمصادر: Google Docs Editors Help, Use the AI function in Google Sheets؛ Microsoft Support, COPILOT function.","minutes":null,"lo":["LO1","LO3"]},{"id":"two-refreshes","n":41,"title":"تحديثان للدالة نفسها على الأوصاف نفسها: العدد صار 10 بعد 8","kind":"content","session":4,"hash":"4eef368b","md":"#### [day1#two-refreshes] تحديثان للدالة نفسها على الأوصاف نفسها: العدد صار 10 بعد 8\n\n*الإجابة 5 في مختبر الصباح*\n\n| الوصف | التحديث 1 | التحديث 2 |\n| --- | --- | --- |\n| قفازات ومعدات وقاية | معدات سلامة | مواد نظافة |\n| زيت محركات للمولدات | قطع غيار | مواد نظافة |\n| أقفال وسلاسل بوابات | معدات سلامة | قطع غيار |\n\n- ثلاثة صفوف من عشرين غيّرت فئتها.\n- عدد «مواد نظافة» كان 8 وصار 10.\n- أي جمع شرطي فوق هذا العمود يتغير معه.\n\n> **إن استخدمتها:** راجع التصنيف صفًّا صفًّا، ثم الصقه قيمًا، واحسب فوق القيم.","notes":"المثال مكتوب باليد في ملفات المختبر 1.1 ليمثّل ما يحدث، وليس قياسًا على دالة حقيقية: قل ذلك. من عنده الدالة في حسابه يستطيع أن يجرب على الأوصاف العشرين نفسها ويخبر القاعة بما رأى.","minutes":null,"lo":["LO1"]},{"id":"hand-worked-cases","n":42,"title":"الحالة المحسوبة يدويًا: رقم لا يعتمد على النموذج ولا على المساعد","kind":"content","session":4,"hash":"a5ee0e86","md":"#### [day1#hand-worked-cases] الحالة المحسوبة يدويًا: رقم لا يعتمد على النموذج ولا على المساعد\n\n*المرجع المستقل*\n\n- تُحسب من **المواصفة** والمدخلات، بآلة حاسبة.\n- تُكتب **قبل** النظر إلى ناتج النموذج.\n- تُختار لتغطي كل قاعدة مرة على الأقل.\n- ثلاث حالات جيدة تكفي لنموذج من اثني عشر صفًّا.\n\n- **لماذا دون مساعد؟** لأن قيمتها في استقلالها. حالة حسبها المساعد من النموذج تكرر خطأ النموذج، وحالة حسبها نصًّا قد تضيف خطأ جديدًا.\n\n> **في شركة ظِلال:** ثلاثة مراكز، أولها في أول صف، وثانيها فيه مبالغ مستردة، وثالثها في آخر صف.","notes":"اسأل: لماذا هذه المراكز الثلاثة؟ الصف الأول لأن الصيغ تُكتب فيه ثم تُنسخ، فهو أصحّها. وصف في الوسط فيه كل المدخلات غير صفرية. والصف الأخير لأن النطاقات تقصر عنده. هذا اختيار حالات، وهو مهارة تدقيق.","minutes":null,"lo":["LO3"]},{"id":"a-total-that-disagrees","n":43,"title":"إجمالي الموازنة ومجموع القطاعات رقم واحد. في النموذج رقمان","kind":"content","session":4,"hash":"4fba75c9","md":"#### [day1#a-total-that-disagrees] إجمالي الموازنة ومجموع القطاعات رقم واحد. في النموذج رقمان\n\n*فحص رقابي داخل النموذج*\n\n| في ورقة Summary | ريال |\n| --- | --- |\n| إجمالي الموازنة | 23,296,196 |\n| مجموع القطاعات الأربعة | 25,186,996 |\n| الفرق | 1,890,800 |\n\n- لا أحد وضع الرقمين جنبًا إلى جنب.\n- الفرق يساوي إجمالي مركز واحد بالضبط.\n- والرقمان كلاهما بعيدان عن الصحيح: الحالات اليدوية ستقول كم.","notes":"الأرقام من تشغيل حل المختبر 1.4 بمحرك صيغ. الفرق 1,890,800 هو ما يعرضه النموذج لآخر مركز، وهو المركز الذي تركه نطاق الجمع. لا تقل ذلك: هذه المهمة الإضافية في المختبر. الإجمالي الصحيح بعد إصلاح الأخطاء الخمسة 33,759,380.64، وتعرضه غدًا.","minutes":null,"lo":["LO3"]},{"id":"check-cell-that-changes","n":44,"title":"عمود تصنّفه دالة، وفوقه جمع شرطي","kind":"quiz","session":4,"hash":"4da1dcc0","md":"#### [day1#check-cell-that-changes] عمود تصنّفه دالة، وفوقه جمع شرطي\n\n*نقطة تحقق*\n\n**سؤال:** تقرير مصروفات العهدة يجمع المبالغ حسب فئة يكتبها عمود فيه دالة ذكاء اصطناعي. الزميل الذي أعدّه يقول إن الأرقام «راجعها أمس وكانت سليمة». ما الذي يجعل التقرير صالحًا للإقفال؟\n\n- أ. إيقاف إعادة الحساب التلقائي في الملف\n- ب. مراجعة التصنيف، ثم لصقه قيمًا، ثم الجمع فوق القيم\n- ج. تحديث الدالة ثلاث مرات والتأكد من أن الناتج لم يتغير\n- د. توقيع الزميل على أنه راجع الأرقام أمس","notes":"الإجابة: الخيار الثاني. اربطها بالقاعدة: الدالة ساعدت في المسودة، والرقم يأتي من صيغة فوق قيم ثابتة. وسجّل في سجل الاستخدام أن التصنيف الأول كان بالدالة.","minutes":null,"lo":["LO1","LO3"]},{"id":"lab-1-4","n":45,"title":"الحالات اليدوية وتتبع الأخطاء","kind":"lab","session":4,"hash":"0ce3f491","md":"#### [day1#lab-1-4] الحالات اليدوية وتتبع الأخطاء\n\nالمختبر 1.4 · 30 دقيقة\n\nدون مساعد: تحسب ثلاث حالات من مواصفة موازنة 2027 بآلة حاسبة، وتقارنها بنموذج فيه خمسة أخطاء مزروعة، وتتتبع كل فرق إلى خليته. هذا الجزء الأول من إصلاح نموذج الموازنة.\n\n[D1_4_hand_cases.html](https://sdaiaacademy.github.io/use-pro-203/labs/D1_4_hand_cases.html)\n\n- [ ] احسب الحالات الثلاث يدويًا من المواصفة قبل أن تنظر إلى النموذج (12 د)\n- [ ] قارن كل ناتج بخلية النموذج وسجّل الفروق (6 د)\n- [ ] تتبّع سوابق كل فرق وتوابعه حتى تجد الخلية المعيبة (9 د)\n- [ ] اكتب قائمة الأخطاء: الخلية أو النطاق، وما الخطأ (3 د)\n- [ ] ✱ إضافي: ابحث في ورقة Summary عن رقمين يجب أن يتساويا ولا يتساويان، دون أي حالة يدوية","notes":"هذا المختبر دون مساعد: قلها قبل البدء. راقب من يكتب صيغة في خلية بدل الآلة الحاسبة، فهو ينسخ منطق النموذج. الإجماليات الصحيحة للمراكز الثلاثة: 4,793,611.20 و2,787,329.28 و2,533,270.40. من لم يُنهِ يجد الحالات محلولة وقائمة الأخطاء في مجلد start، وهما نقطة بداية المختبر 2.1 غدًا.","minutes":null,"lo":[]},{"id":"wrap-up","n":46,"title":"ثلاثة أشياء تبقى معك","kind":"content","session":4,"hash":"b3f04782","md":"#### [day1#wrap-up] ثلاثة أشياء تبقى معك\n\n*خلاصة اليوم*\n\n- **اسأل من أين جاء الرقم.** المحسوب يُقرأ ويعاد تشغيله. المولَّد يُعاد حسابه كله.\n- **مجموع رقابي لكل معالجة.** ما دخل يساوي ما خرج، عددًا ومبلغًا، بأرقام حسبتها أنت.\n- **مرجع مستقل قبل أي إصلاح.** حالات محسوبة يدويًا من المواصفة، قبل النظر إلى النموذج.","notes":"اطلب من كل مشارك جملة واحدة: أي رقم في عمله هذا الشهر كان مولَّدًا ودخل تقريرًا؟ لا تعليق: الغرض أن يسمّيه.","minutes":null,"lo":[]},{"id":"next","n":47,"title":"نصلح النموذج، ونكتب التعليق، ونسحب العينة، ونقيس","kind":"content","session":4,"hash":"a490066c","md":"#### [day1#next] نصلح النموذج، ونكتب التعليق، ونسحب العينة، ونقيس\n\n*غدًا*\n\n- أحضر حالاتك اليدوية وقائمة الأخطاء.\n- أحضر سطر خط الأساس من عملك التحضيري: الدقائق وعدد الأخطاء.\n- احفظ قائمة المطابقة وسجل التشغيل في مجلدك.","notes":"من لم يقس خط الأساس يستطيع أن يفعل مساء اليوم: التعليمات في ملف العمل التحضيري. ومن لا مهمة عنده يستخدم خط أساس شركة ظِلال.","minutes":null,"lo":[]}],"activities":[{"id":"check-right-number-no-code-q1","slide":"check-right-number-no-code","type":"single","prompt":"سألت المساعد عن نسبة أكبر حساب مصروفات من الإجمالي. أجاب بجملة فيها 53.8%، دون رموز ولا صيغة. أعدت الحساب فوجدتها 53.8%. ماذا تضع في تقرير الإقفال؟","options":[{"key":"أ","text":"رد المساعد، فقد ثبتت صحته"},{"key":"ب","text":"رد المساعد، لأنه رقم محسوب"},{"key":"ج","text":"حسابك أنت، بصيغته أو رموزه"},{"key":"د","text":"رد المساعد بعد أن تسأله مرة ثانية للتأكد"}],"correct":[2],"explanation":"ما يدخل الإقفال هو ما يعاد تشغيله. الرد المولَّد وافق حسابك هذه المرة، وحسابك هو الذي له صيغة ومصدر.","misconceptions":["يجعل صحة رقم واحد دليلًا على الطريقة: الرد التالي من النوع نفسه قد يخطئ ولن ينبّهك شيء","يخلط نوع الرقم بصحته: الرقم مولَّد نصًّا مهما كان صحيحًا، لأن لا شيء فيه يعاد تشغيله","","يظن أن التكرار يثبت الرقم: رد ثانٍ من النوع نفسه نص متوقَّع ثانٍ، لا حساب"],"lo":["LO1"]},{"id":"check-dropped-duplicates-q1","slide":"check-dropped-duplicates","type":"single","prompt":"ملف دفتر الأستاذ فيه 606 أسطر بعدّك. برنامج ولّده المساعد يطبع: 579 متطابقًا و22 غير متطابق في جهة الدفتر. ما أول ما تفعله؟","options":[{"key":"أ","text":"تبحث في الرموز عن السطر الذي أسقط خمسة أسطر"},{"key":"ب","text":"تصنّف البنود الاثنين والعشرين غير المتطابقة"},{"key":"ج","text":"تسأل المساعد هل حذف شيئًا وتأخذ بجوابه"},{"key":"د","text":"تقبل الناتج لأن الفرق أقل من واحد في المئة"}],"correct":[0],"explanation":"579 + 22 = 601، والملف 606. المجموع الرقابي لم يتفق، فلا معنى لأي خطوة بعده حتى يُعرف أين ذهبت الأسطر الخمسة.","misconceptions":["","يبدأ بالتفاصيل قبل الاكتمال: القائمة نفسها ناقصة خمسة أسطر، فتصنيفها يبني على مجتمع خاطئ","يعامل النص دليلًا: جواب المساعد عن نفسه مولَّد، والفرق بين 601 و606 محسوب","يفترض أن الفرق الصغير غير مهم: خمسة أسطر قد تكون خمسة قيود مكررة بمبالغ كبيرة"],"lo":["LO2"]},{"id":"check-which-item-waits-q1","slide":"check-which-item-waits","type":"single","prompt":"أربعة بنود بقيت غير متطابقة في 31 أكتوبر. أيها يُعدَّل في جهة البنك من القائمة ولا يحتاج إلى قيد في الدفتر؟","options":[{"key":"أ","text":"رسوم خدمات مصرفية خصمها البنك في 31 أكتوبر"},{"key":"ب","text":"سداد لمورد ظهر في الدفتر مرتين وفي البنك مرة"},{"key":"ج","text":"شيك من عميل ارتجع في 27 أكتوبر"},{"key":"د","text":"شيك لمورد قُيّد في 30 أكتوبر ولم يُصرف بعد"}],"correct":[3],"explanation":"القيد صحيح والمال سيخرج حين يُقدَّم الشيك. الدفتر سبق البنك أيامًا، فيُعدَّل رصيد البنك في القائمة وينتظر البند كشف نوفمبر.","misconceptions":["يخلط ما لم يُقيَّد بما لم يُصرف: الرسوم خصمها البنك فعلًا، والدفتر هو الناقص","يعامل التكرار فرق توقيت: السطر الثاني لن يظهر في البنك أبدًا، فيُعكس في الدفتر","يظن أن البنك هو الذي يُعدَّل لأن البند في كشفه: الشيك ارتجع فعلًا، والدفتر ما زال يعدّه مقبوضًا",""],"lo":["LO2"]},{"id":"check-cell-that-changes-q1","slide":"check-cell-that-changes","type":"single","prompt":"تقرير مصروفات العهدة يجمع المبالغ حسب فئة يكتبها عمود فيه دالة ذكاء اصطناعي. الزميل الذي أعدّه يقول إن الأرقام «راجعها أمس وكانت سليمة». ما الذي يجعل التقرير صالحًا للإقفال؟","options":[{"key":"أ","text":"إيقاف إعادة الحساب التلقائي في الملف"},{"key":"ب","text":"مراجعة التصنيف، ثم لصقه قيمًا، ثم الجمع فوق القيم"},{"key":"ج","text":"تحديث الدالة ثلاث مرات والتأكد من أن الناتج لم يتغير"},{"key":"د","text":"توقيع الزميل على أنه راجع الأرقام أمس"}],"correct":[1],"explanation":"القيم الملصقة لا تتغير، والجمع الشرطي فوقها صيغة يعاد تشغيلها. التصنيف صار قرارًا راجعه إنسان، لا ناتجًا يتولد من جديد.","misconceptions":["يعالج العرَض: إيقاف إعادة الحساب يجمّد الملف كله، ولا يجعل التصنيف مراجَعًا ولا ثابتًا عند من يفتحه بعدك","","يظن أن الدالة تثبت بالتكرار: كل تحديث توليد جديد، وثلاثة تحديثات متفقة لا تضمن الرابع","يخلط المراجعة بالتثبيت: ما رآه أمس ليس بالضرورة ما في الخلايا اليوم إن حُدّثت الدالة"],"lo":["LO1"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day1.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

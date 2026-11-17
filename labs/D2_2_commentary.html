@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · تعليق مرتبط بالخلايا · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_commentary.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>تعليق مرتبط بالخلايا</h1>
+<p>تفحص مسودة تعليق كتبها المساعد على انحرافات 12 مركز تكلفة، وتصحح أرقامها، ثم تكتب تعليقًا كل رقم فيه بخليته، وتترك الأسباب غير الموثقة لصاحب المركز.</p>
+<div class="meta"><span>30 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: تعليق مرتبط بالخلايا</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>تعليق على انحرافات أكتوبر لمراكز التكلفة الاثني عشر، كل رقم فيه يتبعه عنوان خليته ويطابقها.</li>
+    <li>سبب لكل انحراف مصنفًا: موثق بمستند، أو يُسأل عنه صاحب المركز. هذا نصف دليل ناتج التعلم الرابع.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/variance_oct.xlsx" download><b>variance_oct.xlsx</b><span>ورقة <span class="en">Variance</span>: الموازنة والفعلي والانحراف ونسبته لكل مركز، والإجمالي في الصف 16.</span></a>
+  <a href="files/cc_notes.txt" target="_blank"><b>cc_notes.txt</b><span>ما وصل من أصحاب المراكز عن مصروفات الشهر. ما ليس فيه لم يصل عنه شيء.</span></a>
+  <a href="files/ai_draft_commentary.txt" target="_blank"><b>ai_draft_commentary.txt</b><span>مسودة تعليق تمثّل ما يكتبه المساعد. مكتوبة باليد، وفيها أخطاء مزروعة.</span></a>
+  <a href="files/commentary_template.txt" download><b>commentary_template.txt</b><span>قالب التعليق وقاعدتا الكتابة والتعليق.</span></a>
+  <a href="files/notebooks/commentary_check.ipynb" download><b>commentary_check.ipynb</b><span>الدفتر المعدّ: يقارن كل رقم في نص بخليته.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي في هذا المختبر: مسموح كاملًا في الصياغة. الرقم يُنقل من الخلية، والسبب يُكتب من المستند.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · افحص مسودة المساعد رقمًا رقمًا <span class="min">8 د</span></h3>
+  <p>لكل رقم في المسودة يتبعه عنوان خلية: افتح الخلية وقارن. ثم ابحث عن أرقام لا خلية بعدها. يدويًا، أو شغّل <code>commentary_check.ipynb</code> كما هو: يقرأ المسودة ويطبع جدول المطابقة.</p>
+  <table>
+    <tr><th>الرقم في المسودة</th><th>الخلية</th><th>ما في الخلية</th><th>مطابق؟</th></tr>
+    <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>2 · حدّد المراكز التي تستوجب التعليق <span class="min">4 د</span></h3>
+  <p>القاعدة في رأس الورقة: يُعلَّق على المركز حين يبلغ الانحراف 20,000 ريال <b>و</b>10% من موازنته معًا. طبّقها على الصفوف الاثني عشر. أي مركز علّقت عليه المسودة وهو دون القاعدة؟ وأي مركز يستوجب التعليق وغاب عنها؟</p>
+</div>
+
+<div class="step">
+  <h3>3 · اكتب تعليقك <span class="min">10 د</span></h3>
+  <p>اكتب في ملف نصي باسم <code>my_commentary.txt</code>، بقالب التعليق. قاعدة واحدة: <b>كل رقم يتبعه عنوان خليته</b>، مثل <span class="ltr">41,300 ريال [Variance!E7]</span>، والنسبة بخانة عشرية واحدة كما تعرضها الورقة. لك أن تطلب الصياغة من المساعد:</p>
+  <div class="prompt" data-tool="مساعد محادثة">اكتب تعليقًا على انحرافات الشهر للمراكز الآتية فقط: <span class="ph">المراكز التي حددتها</span>. سأعطيك لكل مركز الانحراف ونسبته وعنوان خليتيهما. اكتب كل رقم كما أعطيته لك حرفيًّا، وضع بعده عنوان خليته بين قوسين مربعين. لا تحسب أي رقم ولا نسبة. ولا تكتب سببًا لأي انحراف: اترك مكان السبب فارغًا وسأملؤه أنا.</div>
+</div>
+
+<div class="step">
+  <h3>4 · صنّف كل سبب <span class="min">5 د</span></h3>
+  <p>لكل مركز علّقت عليه: هل في ملاحظات أصحاب المراكز ما يفسّر الانحراف؟ إن وُجد فاكتب السبب ومعه رقم مستنده. وإن لم يوجد فاكتب «السبب غير موثق: يُسأل صاحب المركز». السبب المعقول الذي لا مستند له ليس سببًا.</p>
+</div>
+
+<div class="step">
+  <h3>5 · شغّل الفحص على تعليقك <span class="min">3 د</span></h3>
+  <p>في الدفتر غيّر اسم الملف في السطر الذي يبدأ بـ<code>COMMENTARY</code> إلى <code>my_commentary.txt</code> وشغّله. النتيجة المطلوبة: كل الأرقام مطابقة، ولا رقم بلا خلية، ولا مركز غائب. الدفتر لا يحكم على الأسباب.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي: مسودة من مساعدك</h3>
+  <p>اطلب من مساعدك مسودة كاملة بأمر يفرض قاعدة الخلايا، وأعطه أرقام الورقة. افحصها بالدفتر. كم رقمًا خالف خليته؟ وهل كتب سببًا لم تعطه إياه؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم رقمًا في مسودة المساعد خالف خليته، وكم رقمًا بلا خلية؟</li>
+  <li>أي مركزين يستوجبان التعليق ولا مستند يفسّر انحرافهما؟</li>
+  <li>مركز انحرافه 24,800 ريال: لماذا لا يُعلَّق عليه؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل: <code>labs/solutions/D2_2_commentary.md</code> والنص المرجعي <code>labs/solutions/commentary_reference.txt</code>. التحقق: <code>uv run labs/solutions/check.py 2.2</code>، وهو يشغّل الدفتر على المسودة وعلى النص المرجعي.</li>
+    <li>المسودة: عشرة أرقام لها خلية، سبعة مطابقة وثلاثة لا. المخالفة: 43,100 مقابل 41,300 في <span class="ltr">E7</span> (خانتان متبادلتان)؛ 11.8% مقابل 13.3% في <span class="ltr">F10</span> (قُسم على الفعلي)؛ 28,300 منسوبة إلى <span class="ltr">D13</span> وهي في <span class="ltr">E13</span>. ورقم بلا خلية: 2,368,500.</li>
+    <li>المراكز التي تستوجب التعليق خمسة: <span class="en">CC-102</span> و<span class="en">CC-104</span> و<span class="en">CC-107</span> و<span class="en">CC-109</span> و<span class="en">CC-110</span>. المسودة أغفلت <span class="en">CC-109</span>، وعلّقت على <span class="en">CC-101</span> وهو دون حد النسبة (8.0%).</li>
+    <li>الأسباب: موثقة لثلاثة مراكز (104 و107 و110). غير موثقة لاثنين (102 و109). المسودة كتبت لمركز 102 سببًا لا أصل له: «ارتفاع أسعار مواد النظافة».</li>
+    <li>الخطأ الشائع: تصحيح أرقام المسودة وترك سببها المختلق لأنه «معقول». والثاني: كتابة النسبة بخانتين فلا تطابق الفحص.</li>
+    <li>الدفتر يقرأ القيم المحفوظة في الملف. إن فتح المشارك الملف وحفظه ببرنامج لا يحفظ القيم فسيطلب منه الدفتر أن يحفظه من جدول البيانات.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_1_repair.html" rel="prev">→ المختبر السابق</a><a href="D2_3_sample.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 3a4946b</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T14:16:28Z","version":"2027.1.0","commit":"3a4946b"},"course":{"id":"use-pro-203","code":"USE-PRO-203","title":"الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-203/","repo":"SDAIAAcademy/use-pro-203","home":"../index.html"},"lab":{"id":"2.2","title":"تعليق مرتبط بالخلايا","summary":"تفحص مسودة تعليق كتبها المساعد على انحرافات 12 مركز تكلفة، وتصحح أرقامها، ثم تكتب تعليقًا كل رقم فيه بخليته، وتترك الأسباب غير الموثقة لصاحب المركز.","minutes":30,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_repair.html","next":"D2_3_sample.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

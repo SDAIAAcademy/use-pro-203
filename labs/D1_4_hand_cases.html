@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.4 · الحالات اليدوية وتتبع الأخطاء · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_4_hand_cases.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-4">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.4</span>
+<h1>الحالات اليدوية وتتبع الأخطاء</h1>
+<p>دون مساعد: تحسب ثلاث حالات من مواصفة موازنة 2027 بآلة حاسبة، وتقارنها بنموذج فيه خمسة أخطاء مزروعة، وتتتبع كل فرق إلى خليته. هذا الجزء الأول من إصلاح نموذج الموازنة.</p>
+<div class="meta"><span>30 دقيقة</span><span>اليوم 1</span><span>الجلسة 4: ثق بجدول البيانات أقل</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.4">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>ثلاث حالات من موازنة 2027 محسوبة بيدك من المواصفة: هذه مرجعك الذي لا يعتمد على النموذج ولا على المساعد.</li>
+    <li>قائمة بالأخطاء التي في نموذج الموازنة: الخلية أو النطاق، وما الخطأ. تصلحها غدًا في المختبر 2.1.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/budget_spec.txt" target="_blank"><b>budget_spec.txt</b><span>مواصفة النموذج: خمس قواعد حساب وثلاثة افتراضات.</span></a>
+  <a href="files/budget_model_fy2027.xlsx" download><b>budget_model_fy2027.xlsx</b><span>نموذج موازنة 2027 لاثني عشر مركز تكلفة. أربع أوراق: <span class="en">Assumptions</span> و<span class="en">Rates</span> و<span class="en">Budget</span> و<span class="en">Summary</span>.</span></a>
+  <a href="files/hand_cases.csv" download><b>hand_cases.csv</b><span>ورقة الحالات اليدوية الفارغة.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي في هذا المختبر: دون مساعد. آلة حاسبة، وجدول البيانات لفتح النموذج وتتبع خلاياه فقط. الحالات اليدوية لا قيمة لها إلا إذا حسبها إنسان من المواصفة.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · احسب الحالات الثلاث يدويًا <span class="min">12 د</span></h3>
+  <p>اقرأ المواصفة. ثم خذ من النموذج <b>المدخلات فقط</b> للمراكز <span class="en">CC-101</span> و<span class="en">CC-105</span> و<span class="en">CC-112</span>: عدد الموظفين، والدرجة، ومواد وخدمات 2026، والمبالغ المستردة، ومن ورقة <span class="en">Rates</span> الراتب الشهري الشامل للدرجة. احسب لكل مركز خمسة أرقام بالآلة الحاسبة، واكتبها في عمود «ناتجك اليدوي» قبل أن تنظر إلى أعمدة النموذج المحسوبة.</p>
+  <table>
+    <tr><th>البند</th><th>القاعدة في المواصفة</th></tr>
+    <tr><td>الراتب الشهري الشامل</td><td>من عمود الراتب الشامل، حسب الدرجة</td></tr>
+    <tr><td>الرواتب السنوية 2027</td><td>العدد × الراتب الشامل × 12 × 1.04</td></tr>
+    <tr><td>اشتراكات صاحب العمل</td><td>الرواتب السنوية × 12%</td></tr>
+    <tr><td>مواد وخدمات 2027</td><td>مواد وخدمات 2026 × 1.03</td></tr>
+    <tr><td>إجمالي المركز</td><td>الرواتب + الاشتراكات + المواد − المبالغ المستردة</td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>2 · قارن بخلايا النموذج <span class="min">6 د</span></h3>
+  <p>الآن انقل قيمة كل خلية مقابلة من ورقة <span class="en">Budget</span> إلى عمود «قيمة النموذج»، واكتب: متساويان أم لا. ثم قارن إجمالي الشركة في <span class="ltr">Budget!L15</span> بمجموع القطاعات في <span class="ltr">Summary!B12</span>: المواصفة تقول إنهما رقم واحد.</p>
+</div>
+
+<div class="step">
+  <h3>3 · تتبّع كل فرق إلى خليته <span class="min">9 د</span></h3>
+  <p>لكل رقم لم يتساوَ: قف على خلية النموذج واعرض <b>سوابقها</b>، أي الخلايا التي تدخل في صيغتها. في <span class="en">Excel</span>: تبويب الصيغ ثم «تتبع السوابق». في <span class="en">LibreOffice Calc</span>: قائمة أدوات ثم «المحقق». اسأل عند كل سهم: هل يشير إلى الخلية التي تقولها المواصفة؟ وإن لم يخرج من الخلية سهم أصلًا فماذا يعني ذلك؟</p>
+  <p>ثم اعرض <b>توابع</b> الخلية المعيبة لتعرف أي أرقام أخرى أفسدها الخطأ.</p>
+</div>
+
+<div class="step">
+  <h3>4 · اكتب قائمة الأخطاء <span class="min">3 د</span></h3>
+  <p>سطر لكل خطأ: الخلية أو النطاق، وما الخطأ في جملة، وأي حالة يدوية كشفته. في النموذج خمسة أخطاء. إن وجدت أربعة فالخامس في خلية الإجمالي.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي: خطأ بلا حالة يدوية</h3>
+  <p>أحد الأخطاء الخمسة يظهر من ورقة <span class="en">Summary</span> وحدها، دون أي حساب يدوي. أي رقمين فيها يجب أن يتساويا؟ وما الفرق بينهما؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم يساوي إجمالي موازنة <span class="en">CC-105</span> بحسابك، وكم يعرضه النموذج؟</li>
+  <li>أي خطأ من الخمسة يصيب مركزًا واحدًا فقط، وأيها يصيب كل المراكز؟</li>
+  <li>لو حسبت حالة <span class="en">CC-101</span> وحدها، أي الأخطاء كانت ستفوتك؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل: <code>labs/solutions/D1_4_hand_cases.md</code>. التحقق: <code>uv run labs/solutions/check.py 1.4</code>، وهو يحسب صيغ النموذج بمحرك صيغ.</li>
+    <li>الحالات: <span class="en">CC-101</span>: 5,200 ثم 3,893,760 ثم 467,251.20 ثم 432,600 ثم 4,793,611.20. <span class="en">CC-105</span>: 9,600 ثم 2,156,544 ثم 258,785.28 ثم 412,000 ثم 2,787,329.28. <span class="en">CC-112</span>: 18,500 ثم 2,077,920 ثم 249,350.40 ثم 206,000 ثم 2,533,270.40.</li>
+    <li>النموذج يعرض للإجماليات الثلاثة: 3,787,224 و2,124,800 و1,890,800. إجمالي الشركة فيه 23,296,196 والصحيح 33,759,380.64. ومجموع القطاعات في <span class="ltr">Summary!B12</span> يعرض 25,186,996.</li>
+    <li>الأخطاء الخمسة: (1) <span class="ltr">Budget!F3:F14</span> دالة البحث تعيد العمود 2، الراتب الأساسي. (2) <span class="ltr">Budget!H4:H14</span> مرجع النسبة نسبي فانزلق: الصف 4 يضرب في 3% والصفوف بعده في خلايا فارغة. (3) <span class="ltr">Budget!J7</span> رقم مكتوب باليد. (4) <span class="ltr">Budget!L3:L14</span> المبالغ المستردة تُجمع. (5) <span class="ltr">Budget!L15</span> الجمع ينتهي عند الصف 13.</li>
+    <li>من لم يُنهِ: الحالات محلولة في <code>files/start/hand_cases_worked.csv</code> والقائمة في <code>files/start/fault_list.csv</code>، وهما نقطة بداية المختبر 2.1.</li>
+    <li>الخطأ الشائع: المشارك يكتب الصيغة في خلية بدل الحساب بالآلة، فينسخ منطق النموذج. والثاني: يتوقف عند أول خطأ يفسّر الفرق، والفرق في الإجمالي له أكثر من سبب.</li>
+    <li>الملف لم يُفتح في <span class="en">Excel</span> ولا <span class="en">LibreOffice</span> عند بناء المقرر: افتحه قبل الدفعة الأولى وتأكد من القيم المعروضة ومن اتجاه الأوراق.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_3_statement.html" rel="prev">→ المختبر السابق</a><a href="D2_1_repair.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 3a4946b</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T14:16:28Z","version":"2027.1.0","commit":"3a4946b"},"course":{"id":"use-pro-203","code":"USE-PRO-203","title":"الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-203/","repo":"SDAIAAcademy/use-pro-203","home":"../index.html"},"lab":{"id":"1.4","title":"الحالات اليدوية وتتبع الأخطاء","summary":"دون مساعد: تحسب ثلاث حالات من مواصفة موازنة 2027 بآلة حاسبة، وتقارنها بنموذج فيه خمسة أخطاء مزروعة، وتتتبع كل فرق إلى خليته. هذا الجزء الأول من إصلاح نموذج الموازنة.","minutes":30,"day":1,"unit":"اليوم 1","session":4,"deck":"../slides/day1.html#lab-1-4","prev":"D1_3_statement.html","next":"D2_1_repair.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

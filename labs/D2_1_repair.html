@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · إصلاح نموذج الموازنة · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_repair.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>إصلاح نموذج الموازنة</h1>
+<p>تبدأ من قائمة الأخطاء الخمسة الجاهزة، فتصلح نموذج موازنة 2027 بيدك والمساعد يشرح، وتكتب اختبارًا لكل إصلاح وسجل تغييرات. النموذج المُصلَح مع اختبار لكل إصلاح هو دليل ناتج التعلم الثالث.</p>
+<div class="meta"><span>30 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: اختبار لكل إصلاح</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>نموذج موازنة 2027 مُصلَح: الأخطاء الخمسة أصلحتها بيدك.</li>
+    <li>ورقة اختبارات فيها اختبار لكل إصلاح، وسجل تغييرات فيه سطر لكل خلية غيّرتها. هذا دليل ناتج التعلم الثالث.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/budget_model_fy2027.xlsx" download><b>budget_model_fy2027.xlsx</b><span>النموذج كما هو، بأخطائه الخمسة. احفظ نسخة باسم جديد قبل أي تغيير.</span></a>
+  <a href="files/budget_spec.txt" target="_blank"><b>budget_spec.txt</b><span>المواصفة: هي المرجع في كل إصلاح.</span></a>
+  <a href="files/start/fault_list.csv" download><b>start/fault_list.csv</b><span>نقطة البداية: قائمة الأخطاء الخمسة بخلاياها، وأعمدة الإصلاح والاختبار فارغة.</span></a>
+  <a href="files/start/hand_cases_worked.csv" download><b>start/hand_cases_worked.csv</b><span>الحالات اليدوية الثلاث محلولة: منها تأخذ القيم المتوقعة لاختباراتك. استخدم حالاتك إن أنهيت المختبر 1.4.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي في هذا المختبر: المساعد معلّم. يشرح الصيغة ويقترح الإصلاح، وأنت تكتب التغيير في الخلية بيدك. لا ترفع إليه الملف ليعيده «مُصلَحًا».</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اطلب شرح كل صيغة معيبة <span class="min">6 د</span></h3>
+  <p>انسخ صيغة الخلية وقاعدة المواصفة التي تقابلها، واطلب شرحًا لا إصلاحًا:</p>
+  <div class="prompt" data-tool="مساعد محادثة">هذه صيغة في نموذج موازنة: <span class="ph">=G4*Assumptions!B4</span>. وهذه القاعدة التي يُفترض أن تنفذها: <span class="ph">اشتراكات صاحب العمل = الرواتب السنوية × نسبة الاشتراكات، والنسبة واحدة لكل المراكز وهي في الخلية B3 من ورقة Assumptions</span>. اشرح ما تفعله الصيغة الآن خطوة خطوة، وما الذي يخالف القاعدة. لا تكتب الصيغة المصحَّحة: سأكتبها أنا ثم أعرضها عليك.</div>
+  <p>اكتب الصيغة المصحَّحة بنفسك في عمود الإصلاح من قائمة الأخطاء. ثم اعرضها على المساعد إن أردت رأيًا ثانيًا.</p>
+</div>
+
+<div class="step">
+  <h3>2 · أصلح الأخطاء الخمسة بيدك <span class="min">10 د</span></h3>
+  <p>خطأ واحد في كل مرة، بالترتيب الذي في القائمة. حيث يكون الخطأ في عمود كامل: أصلح الخلية الأولى ثم انسخها إلى أسفل، وتأكد من الصف الأخير. بعد كل إصلاح انظر إلى الخلية التي كانت تخالف حالتك اليدوية: هل اقتربت؟</p>
+  <div class="callout warn">لا تغيّر خلية ليست في القائمة. إن رأيت شيئًا آخر يبدو خطأ فاكتبه سطرًا سادسًا واسأل عنه قبل أن تلمسه.</div>
+</div>
+
+<div class="step">
+  <h3>3 · اكتب اختبارًا لكل إصلاح <span class="min">9 د</span></h3>
+  <p>أضف ورقة باسم <span class="en">Tests</span>. لكل إصلاح سطر فيه خمسة أشياء: ما الذي يُختبر، وخليته، والقيمة المتوقعة مكتوبة رقمًا من حالتك اليدوية، والقيمة الفعلية بصيغة تشير إلى خلية النموذج، وخلية تقول هل تساويا.</p>
+  <table>
+    <tr><th>الاختبار</th><th>الخلية</th><th>المتوقع، من الحالة اليدوية</th><th>الفعلي</th><th>ناجح؟</th></tr>
+    <tr><td>الراتب الشامل لمركز <span class="en">CC-101</span></td><td><span class="ltr">Budget!F3</span></td><td>5,200</td><td><code>=Budget!F3</code></td><td><code>=ABS(D2-C2)&lt;0.5</code></td></tr>
+    <tr><td class="fill">…</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+  <p>القيمة المتوقعة رقم مكتوب، لا صيغة: لو كانت صيغة لورثت أخطاء النموذج. بعد الإصلاح الخامس يجب أن تنجح الاختبارات الخمسة كلها معًا.</p>
+</div>
+
+<div class="step">
+  <h3>4 · املأ سجل التغييرات <span class="min">5 د</span></h3>
+  <p>أضف ورقة باسم <span class="en">ChangeLog</span>: سطر لكل إصلاح فيه التاريخ، والخلية أو النطاق، وما كان، وما صار، والسبب من المواصفة، والاختبار الذي يثبته، واسمك. من يفتح الملف بعد سنة يعرف منه ما تغيّر ولماذا دون أن يسألك.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي: فحص رقابي دائم</h3>
+  <p>أضف إلى ورقة الاختبارات سطرًا سادسًا لا يعتمد على أي حالة يدوية: إجمالي الموازنة ناقص مجموع القطاعات يساوي صفرًا. أي إصلاح من الخمسة كان هذا الفحص سيكشفه لو وُجد في النموذج من البداية؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>ما إجمالي موازنة الشركة بعد الإصلاحات الخمسة؟</li>
+  <li>أي إصلاح غيّر الإجمالي أكثر من غيره؟ وهل كان أوضح الأخطاء؟</li>
+  <li>لماذا تُكتب القيمة المتوقعة في الاختبار رقمًا لا صيغة؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل: <code>labs/solutions/D2_1_repair.md</code> والملف <code>labs/solutions/budget_model_fy2027_repaired.xlsx</code>. التحقق: <code>uv run labs/solutions/check.py 2.1</code>، وهو يحسب صيغ الملف المُصلَح بمحرك صيغ ويتأكد أن الخلايا المتغيرة هي خلايا الأخطاء الخمسة فقط.</li>
+    <li>الإصلاحات: العمود F رقم العمود في دالة البحث من 2 إلى 3. العمود H المرجع <span class="ltr">Assumptions!$B$3</span>، ويُكتب في الصف 3 أيضًا ثم يُنسخ: قيمة الصف 3 لا تتغير، وصيغته تتغير. الخلية <span class="ltr">J7</span> الصيغة <span class="ltr">=I7*(1+Assumptions!$B$4)</span>. العمود L إشارة المبالغ المستردة سالبة. الخلية <span class="ltr">L15</span> الجمع حتى الصف 14.</li>
+    <li>الإجمالي بعد الإصلاح 33,759,380.64، وكان 23,296,196. إجماليات الحالات: 4,793,611.20 و2,787,329.28 و2,533,270.40.</li>
+    <li>الخطأ الشائع: إصلاح العمود H في الصف 4 ونسخه دون علامتَي التثبيت، فيبقى الانزلاق. والثاني: اختبار قيمته المتوقعة صيغة تشير إلى النموذج، فينجح دائمًا.</li>
+    <li>من رفع الملف كله إلى المساعد وأخذ نسخة «مُصلَحة»: اطلب منه سجل تغييرات لما تغيّر، ثم اسأل: كيف تعرف أن السجل كامل وأن خلية أخرى لم تتغير؟ لا يعرف ذلك إلا من يقارن الملفين خلية خلية، وهذا هو الدرس.</li>
+    <li>لم يُجرَّب أمر الخطوة 1 على مساعد حقيقي عند بناء المقرر: جرّبه قبل الدفعة. بعض المساعدات تكتب الصيغة المصحَّحة مع أنك طلبت ألا تفعل.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_4_hand_cases.html" rel="prev">→ المختبر السابق</a><a href="D2_2_commentary.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 3a4946b</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T14:16:28Z","version":"2027.1.0","commit":"3a4946b"},"course":{"id":"use-pro-203","code":"USE-PRO-203","title":"الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-203/","repo":"SDAIAAcademy/use-pro-203","home":"../index.html"},"lab":{"id":"2.1","title":"إصلاح نموذج الموازنة","summary":"تبدأ من قائمة الأخطاء الخمسة الجاهزة، فتصلح نموذج موازنة 2027 بيدك والمساعد يشرح، وتكتب اختبارًا لكل إصلاح وسجل تغييرات. النموذج المُصلَح مع اختبار لكل إصلاح هو دليل ناتج التعلم الثالث.","minutes":30,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_4_hand_cases.html","next":"D2_2_commentary.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

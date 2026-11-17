@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="deck" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اليوم 2 · التعليق والعينة وإعادة التصميم · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day2.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق" data-track="fluency" data-day="اليوم 2">
+<section class="slide title" id="title" data-auto="title" data-label="الترحيب" data-n="1">
+  <div class="kicker">أكاديمية سدايا · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق</div>
+  <h1>التعليق والعينة وإعادة التصميم</h1>
+  <p class="lead mt">اليوم 2: اختبار لكل إصلاح، وتعليق مرتبط بالخلايا، وعينة يعاد سحبها، ومهمة معاد تصميمها ومقيسة</p>
+  <div class="meta"><span class="track">مسار الطلاقة في البيانات والذكاء الاصطناعي</span><span>يومان تدريبيان + يوم للمشروع الختامي</span><span>4 جلسات · 4 مختبرات</span><span>USE-PRO-203</span></div>
+  <aside class="notes"><p>اسأل برفع اليد: من عنده حالاته اليدوية وقائمة الأخطاء؟ من قاس خط الأساس؟ من لم يُنهِ مختبرات أمس يبدأ اليوم من ملفات البداية الجاهزة: لا أحد يتأخر بسبب أمس.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="جدول اليوم" data-n="2">
+  <div class="kicker">اليوم</div>
+  <h2>التعليق والعينة وإعادة التصميم</h2>
+  <div class="agenda"><div class="item"><div><b>الجلسة 1 · اختبار لكل إصلاح</b><small>المساعد معلّمًا عند الإصلاح، واختبار لكل إصلاح من حالة محسوبة يدويًا، وسجل التغييرات</small></div></div><div class="item"><div><b>الجلسة 2 · تعليق مرتبط بالخلايا</b><small>تعليقات الانحرافات التي يحمل كل رقم فيها عنوان خليته، والأسباب التي تبقى لحكم الإنسان ودليله</small></div></div><div class="item"><div><b>الجلسة 3 · عينة يستطيع غيرك إعادة سحبها</b><small>المعاينة الموثقة ببذرة مسجَّلة، ومجاميع المجتمع، والشك المهني في مخرجات الذكاء الاصطناعي</small></div></div><div class="item"><div><b>الجلسة 4 · قواعد البيانات وإعادة التصميم المقيسة</b><small>البيانات السرية وبيانات الرواتب في الأدوات المعتمدة، وأثر الاستخدام، وقياس الوقت والأخطاء قبل إعادة التصميم وبعدها</small></div></div></div>
+  <aside class="notes"><p>أربع جلسات من 55 دقيقة، وفي كل منها مختبر من 30 دقيقة. الجلسة الأخيرة تنتهي ببطاقة إعادة التصميم التي تُستكمل قبل جلسة المراجعة.</p></aside>
+</section>
+
+<section class="slide" id="review-day-1" data-lo="LO2" data-n="3">
+  <div class="kicker">مراجعة اليوم الأول</div>
+  <h2>ماذا يثبت المجموع الرقابي؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="review-day-1-q1">
+    <p class="lead">طابقت ملفين برموز ولّدها المساعد. المتطابق وغير المتطابق يساويان كل ملف، عددًا ومبلغًا. ما الذي ثبت بذلك؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يمدّ الفحص إلى ما لا يقيسه: مبلغان متساويان لمرجعين مختلفين يتبادلان دون أن يتحرك أي مجموع" data-k="أ">أن كل زوج متطابق هو الزوج الصحيح</div>
+      <div class="opt" data-why="يخلط اكتمال المعالجة بصحة المدخلات: الملف نفسه قد يكون ناقصًا أو فيه قيد خاطئ" data-k="ب">أن الملفين صحيحان وليس فيهما خطأ</div>
+      <div class="opt" data-ok data-k="ج">أن كل سطر حُسب مرة واحدة: لا ضائع ولا مكرر</div>
+      <div class="opt" data-why="يعامل اتفاق المجاميع نهاية العمل: البنود غير المتطابقة ما زالت تحتاج إلى تصنيف وحكم" data-k="د">أن المطابقة انتهت ولا بنود تحتاج إلى نظر</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المجموع الرقابي يثبت الاكتمال. صحة الربط تأتي من مفتاح الربط، والحكم على البنود يأتي من المستندات.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الثالث. دقيقتان. اربطها بما فعلوه أمس: البرنامج الأول كُشف بالمجموع، والمراجع الثمانية كُشفت بقراءة المفتاح.</p></aside>
+</section>
+
+<section class="slide" id="today-four-outputs" data-label="اليوم" data-n="4">
+  <div class="kicker">اليوم</div>
+  <h2>أربعة مخرجات، والقاعدة نفسها في كل منها</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal"><h4>نموذج مُصلَح</h4><p class="small mb0">اختبار لكل إصلاح، وسجل تغييرات.</p></div>
+    <div class="card c-cyan"><h4>تعليق</h4><p class="small mb0">كل رقم يحمل عنوان خليته.</p></div>
+    <div class="card c-coral"><h4>عينة</h4><p class="small mb0">بذرة مسجَّلة، يعيد سحبها أي زميل.</p></div>
+    <div class="card c-purple"><h4>بطاقة</h4><p class="small mb0">مهمة معاد تصميمها ومقيسة مقابل خط الأساس.</p></div>
+  </div>
+  <div class="callout tip mt"><b>في كل منها:</b> الرقم يُحسب ويعاد تشغيله، والمساعد يكتب رموزًا أو كلمات، والحكم لك.</div>
+  <aside class="notes"><p>سياسة اليوم: المساعد معلّم في المختبر الأول، ومسموح كاملًا في الثلاثة الباقية مع إعادة حساب كل رقم.</p></aside>
+</section>
+
+<!-- الجلسة 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="5">
+  <div class="kicker">الجلسة 1</div>
+  <h1>اختبار لكل إصلاح</h1>
+  <ul class="bullets outcomes"><li>يستخدم المساعد لشرح صيغة واقتراح إصلاحها دون أن يسلّمه النموذج</li><li>يكتب لكل إصلاح اختبارًا من حالة محسوبة يدويًا</li><li>يوثق كل تغيير في سجل تغييرات: الخلية وما كان وما صار والسبب</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="five-faults-found" data-lo="LO3" data-label="خمسة أخطاء" data-n="6" data-session="1">
+  <div class="kicker">ما وجدته حالاتك اليدوية أمس</div>
+  <h2>خمسة أخطاء، والإجمالي ينقص أكثر من عشرة ملايين ريال</h2>
+  <div class="cols cols-32">
+    <table class="t small">
+      <tr><th>#</th><th>أين</th><th>ما الخطأ</th></tr>
+      <tr><td>1</td><td><span class="ltr">F3:F14</span></td><td>دالة البحث تعيد الراتب الأساسي لا الشامل</td></tr>
+      <tr><td>2</td><td><span class="ltr">H4:H14</span></td><td>مرجع نسبة الاشتراكات ينزلق عند النسخ</td></tr>
+      <tr><td>3</td><td><span class="ltr">J7</span></td><td>رقم مكتوب باليد فوق الصيغة</td></tr>
+      <tr><td>4</td><td><span class="ltr">L3:L14</span></td><td>المبالغ المستردة تُجمع ولا تُطرح</td></tr>
+      <tr><td>5</td><td><span class="ltr">L15</span></td><td>الجمع يترك آخر مركز</td></tr>
+    </table>
+    <div class="stack">
+      <div class="card c-coral flat"><h4>النموذج يعرض</h4><p class="mb0">23,296,196 ريالًا</p></div>
+      <div class="card c-teal flat"><h4>المواصفة تعطي</h4><p class="mb0">33,759,380.64 ريالًا</p></div>
+    </div>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل حل المختبرين 1.4 و2.1 بمحرك صيغ. من لم يجد الخمسة أمس يجد القائمة في مجلد <span class="ltr">start</span>. اسأل: أي خطأ من الخمسة كان أصعب أن يُرى؟ غالبًا الأول: الصيغة سليمة الشكل وتنفذ قاعدة غير المواصفة.</p></aside>
+</section>
+
+<section class="slide" id="tutor-not-repairman" data-lo="LO3" data-label="معلّم لا مصلح" data-n="7" data-session="1">
+  <div class="kicker">سياسة هذا المختبر</div>
+  <h2>المساعد يشرح ويقترح. التغيير في الخلية بيدك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>يشرح</h4><p class="small mb0">ما الذي تفعله هذه الصيغة خطوة خطوة، وأين تخالف القاعدة.</p></div>
+    <div class="card c-cyan"><h4>يقترح</h4><p class="small mb0">بعد أن تكتب إصلاحك: هل يرى فيه ما فاتك؟</p></div>
+    <div class="card c-coral"><h4>لا يطبّق</h4><p class="small mb0">لا يستلم الملف ليعيده «مُصلَحًا». ملف غيّره المساعد نموذج جديد لم يختبره أحد.</p></div>
+  </div>
+  <div class="callout note mt"><b>لماذا؟</b> لأن من يوقّع على الموازنة يجب أن يعرف كل خلية تغيّرت ولماذا. والشرح يعلّمك، والنسخة الجاهزة لا تعلّمك شيئًا.</div>
+  <aside class="notes"><p>هذه السياسة من توصيف المقرر: المساعد معلّم أثناء إصلاح النموذج. بعض المساعدات تعدّل ملفات الجداول مباشرة اليوم. القدرة موجودة، والسؤال من يعرف ما تغيّر. من يرفع الملف ويأخذ نسخة مُصلَحة: اطلب منه سجل تغييرات لها.</p></aside>
+</section>
+
+<section class="slide" id="ask-to-explain" data-lo="LO3" data-label="اطلب الشرح" data-n="8" data-session="1">
+  <div class="kicker">مثال من المختبر</div>
+  <h2>تعطيه الصيغة والقاعدة، وتطلب الفرق بينهما</h2>
+  <div class="chat">
+    <div class="msg user"><span class="who">أنت</span>الصيغة: <span class="ltr">=G4*Assumptions!B4</span>. القاعدة: الاشتراكات تساوي الرواتب في نسبة واحدة لكل المراكز، وهي في <span class="ltr">B3</span>. اشرح ما تفعله الصيغة، ولا تكتب التصحيح.</div>
+    <div class="msg ai good"><span class="who">المساعد</span>الصيغة تضرب رواتب الصف 4 في الخلية <span class="ltr">B4</span>، وهي تضخم العقود لا نسبة الاشتراكات. يبدو أن المرجع كُتب نسبيًّا في الصف 3 ثم نُسخ إلى أسفل فنزل معه.</div>
+  </div>
+  <div class="callout tip mt"><b>ثم تكتب أنت:</b> <span class="ltr">=G4*Assumptions!$B$3</span>، وتنسخها إلى آخر صف.</div>
+  <aside class="notes"><p>الحوار مثال مكتوب باليد، وليس مخرج نموذج: قل ذلك. الشرح الجيد يسمّي الخلية ومعناها، وهذا ما تطلبه. وشرح المساعد نص مولَّد: تتحقق منه بسهم السوابق، وهو يؤكد أن المرجع يشير إلى <span class="ltr">B4</span>.</p></aside>
+</section>
+
+<section class="slide" id="a-test-per-fix" data-lo="LO3" data-label="اختبار لكل إصلاح" data-n="9" data-session="1">
+  <div class="kicker">ورقة الاختبارات</div>
+  <h2>الاختبار ثلاثة أشياء: متوقع مكتوب، وفعلي بصيغة، وخلية تحكم</h2>
+  <table class="t small">
+    <tr><th>الاختبار</th><th>الخلية</th><th class="num">المتوقع</th><th>الفعلي</th><th>ناجح؟</th></tr>
+    <tr><td>الراتب الشامل لمركز <span class="en">CC-101</span></td><td><span class="ltr">F3</span></td><td class="num">5,200</td><td><code>=Budget!F3</code></td><td><code>=ABS(D2-C2)&lt;0.5</code></td></tr>
+    <tr><td>اشتراكات <span class="en">CC-105</span></td><td><span class="ltr">H7</span></td><td class="num">258,785.28</td><td><code>=Budget!H7</code></td><td><code>=ABS(D3-C3)&lt;0.5</code></td></tr>
+    <tr><td>إجمالي <span class="en">CC-105</span></td><td><span class="ltr">L7</span></td><td class="num">2,787,329.28</td><td><code>=Budget!L7</code></td><td><code>=ABS(D5-C5)&lt;0.5</code></td></tr>
+  </table>
+  <div class="cols cols-2 mt">
+    <div class="callout tip small"><b>المتوقع رقم مكتوب</b> من حالتك اليدوية. لو كان صيغة لورث خطأ النموذج ونجح دائمًا.</div>
+    <div class="callout note small"><b>الاختبار يبقى في الملف.</b> من يغيّر النموذج بعدك يرى فورًا ما كسره.</div>
+  </div>
+  <aside class="notes"><p>القيم المتوقعة من الحالات اليدوية في حل المختبر 1.4. الفكرة مأخوذة من اختبار البرمجيات، وتصلح لأي نموذج في جدول: حالة معروفة الناتج تُحفظ بجانب النموذج. دليل الناتج الثالث في توصيف المقرر: نموذج مُصلَح مع اختبار لكل إصلاح.</p></aside>
+</section>
+
+<section class="slide" id="run-all-tests-each-time" data-lo="LO3" data-label="كل الاختبارات" data-n="10" data-session="1">
+  <div class="kicker">بعد كل إصلاح</div>
+  <h2>أصلح خطأ واحدًا، ثم انظر إلى كل الاختبارات</h2>
+  <div class="flow">
+    <div class="step c-navy"><b>1 · إصلاح واحد</b>خلية أو عمود من القائمة</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>2 · اختباره</b>صار ناجحًا؟</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>3 · بقية الاختبارات</b>هل انكسر ما كان ناجحًا؟</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>4 · السجل</b>سطر في سجل التغييرات</div>
+  </div>
+  <div class="callout warn mt"><b>اختبار الإجمالي لا ينجح إلا في الآخر:</b> هو يعتمد على الإصلاحات الخمسة كلها. اختبار فاشل بعد الإصلاح الثالث معلومة، لا عطل.</div>
+  <aside class="notes"><p>لماذا إصلاح واحد في كل مرة؟ لأن خمسة تغييرات معًا ثم اختبار فاشل لا يقول لك أي تغيير هو السبب. المشاركون يستعجلون: ذكّرهم أن المختبر عشر دقائق للإصلاح وتسع للاختبارات، والاختبارات هي الدليل.</p></aside>
+</section>
+
+<section class="slide" id="change-log" data-lo="LO3" data-label="سجل التغييرات" data-n="11" data-session="1">
+  <div class="kicker">ورقة سجل التغييرات</div>
+  <h2>من يفتح الملف بعد سنة يعرف ما تغيّر ولماذا</h2>
+  <table class="t small">
+    <tr><th>الخلية</th><th>قبل</th><th>بعد</th><th>السبب</th><th>الاختبار</th></tr>
+    <tr><td><span class="ltr">Budget!J7</span></td><td>الرقم 400,000 مكتوبًا</td><td><span class="ltr">=I7*(1+Assumptions!$B$4)</span></td><td>رقم 2026 كُتب فوق الصيغة</td><td>3</td></tr>
+    <tr><td><span class="ltr">Budget!L15</span></td><td><span class="ltr">SUM(L3:L13)</span></td><td><span class="ltr">SUM(L3:L14)</span></td><td>النطاق لم يشمل آخر مركز</td><td>5</td></tr>
+  </table>
+  <div class="callout note mt"><b>هذا أثر الاستخدام للنموذج:</b> التاريخ، ومن غيّر، وهل استُعين بمساعد في الشرح. سجل التشغيل للدفاتر، وسجل التغييرات للجداول.</div>
+  <aside class="notes"><p>السطران من سجل التغييرات في الملف المرجعي المُصلَح. اسأل: من عنده في عمله نموذج لا يعرف أحد من غيّر فيه ماذا؟ سجل التغييرات لا يحتاج إلى أداة: ورقة في الملف نفسه.</p></aside>
+</section>
+
+<section class="slide" id="a-control-that-stays" data-lo="LO3" data-label="فحص دائم" data-n="12" data-session="1">
+  <div class="kicker">فحص لا يحتاج إلى حالة يدوية</div>
+  <h2>إجمالي الموازنة ناقص مجموع القطاعات يساوي صفرًا</h2>
+  <div class="cols cols-2 mid">
+    <table class="t">
+      <tr><th></th><th class="num">قبل الإصلاح</th><th class="num">بعده</th></tr>
+      <tr><td>إجمالي الموازنة</td><td class="num">23,296,196</td><td class="num">33,759,380.64</td></tr>
+      <tr><td>مجموع القطاعات</td><td class="num">25,186,996</td><td class="num">33,759,380.64</td></tr>
+      <tr class="hl"><td>الفرق</td><td class="num">1,890,800</td><td class="num">0</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>مجموع رقابي داخل النموذج: رقم واحد محسوب بطريقين.</li>
+      <li>كان سيكشف الخطأ الخامس يوم وقع.</li>
+      <li>لا يكشف الأخطاء الأربعة الأخرى: هي تصيب الطريقين معًا.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>هذه المهمة الإضافية في المختبر. اربطها بالأمس: المجموع الرقابي يثبت الاكتمال ولا يثبت صحة كل رقم. هنا أيضًا: الفحص يلتقط صفًّا ناقصًا، ولا يلتقط قاعدة خاطئة طُبّقت على كل الصفوف. لذلك نحتاج إلى الاثنين: فحص رقابي وحالات يدوية.</p></aside>
+</section>
+
+<section class="slide" id="check-fix-breaks-total" data-lo="LO3" data-n="13" data-session="1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>إصلاح ناجح، وإجمالي غريب</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-fix-breaks-total-q1">
+    <p class="lead">أصلحت عمود الاشتراكات، ونجح اختباره مقابل حالتك اليدوية. ثم لاحظت أن إجمالي الموازنة قفز بأكثر مما توقعت. ما الخطوة التالية؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يتخذ الرقم المألوف مرجعًا: الإجمالي القديم كان خاطئًا، والمرجع هو المواصفة والحالات اليدوية" data-k="أ">تعيد الصيغة القديمة، فالإجمالي كان أقرب إلى المعتاد</div>
+      <div class="opt" data-ok data-k="ب">تنظر إلى كل الاختبارات، وتحسب القفزة المتوقعة من الإصلاح</div>
+      <div class="opt" data-why="يستبدل الاختبار بالشرح: تفسير المساعد نص مولَّد، والقفزة رقم يُحسب من عشرة صفوف كانت اشتراكاتها صفرًا" data-k="ج">تسأل المساعد عن سبب القفزة وتكتب جوابه في السجل</div>
+      <div class="opt" data-why="يكتفي باختبار الإصلاح نفسه: اختبار واحد ناجح لا يقول شيئًا عن بقية النموذج" data-k="د">تسجّل الإصلاح وتنتقل إلى الخطأ التالي</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> القفزة قد تكون صحيحة: عشرة مراكز كانت اشتراكاتها صفرًا. تعرف ذلك حين تحسبها، وحين ترى أن لا اختبار آخر انكسر.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الثاني. الفكرة أن «رقم غريب» ليس دليلًا في أي اتجاه. الدليل اختبار وحساب.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-1" data-auto="lab" data-lab="2.1" data-label="المختبر 2.1" data-n="14" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.1 · 30 دقيقة</div><h2>إصلاح نموذج الموازنة</h2><p class="lead small">تبدأ من قائمة الأخطاء الخمسة الجاهزة، فتصلح نموذج موازنة 2027 بيدك والمساعد يشرح، وتكتب اختبارًا لكل إصلاح وسجل تغييرات. النموذج المُصلَح مع اختبار لكل إصلاح هو دليل ناتج التعلم الثالث.</p><a class="nb" href="../labs/D2_1_repair.html">D2_1_repair.html</a></div><ul class="checklist"><li>اطلب من المساعد شرح صيغة كل خلية معيبة، دون أن يصلحها <span class="min">6 د</span></li><li>أصلح الأخطاء الخمسة بيدك واحدًا واحدًا <span class="min">10 د</span></li><li>اكتب في ورقة <span class="ltr" dir="ltr">Tests</span> اختبارًا لكل إصلاح من حالاتك اليدوية <span class="min">9 د</span></li><li>املأ سجل التغييرات: الخلية، وقبل، وبعد، والسبب، والاختبار <span class="min">5 د</span></li><li class="stretch">✱ إضافي: أضف فحصًا رقابيًا دائمًا في النموذج: إجمالي الموازنة ناقص مجموع القطاعات يساوي صفرًا</li></ul></div>
+  <aside class="notes"><p>يبدأ المختبر من قائمة الأخطاء والحالات المحلولة في مجلد <span class="ltr">start</span>، فلا يتأثر من لم يُنهِ مختبر أمس. الإجمالي بعد الإصلاحات الخمسة 33,759,380.64. راقب: من ينسخ إصلاح عمود الاشتراكات دون علامتَي التثبيت، ومن يكتب القيمة المتوقعة صيغة. أمر الخطوة 1 لم يُجرَّب على مساعد حقيقي عند بناء المقرر: بعض المساعدات تكتب التصحيح مع أنك طلبت ألا تفعل، وهذا نقاش جيد للقاعة.</p></aside>
+</section>
+
+<!-- الجلسة 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="15">
+  <div class="kicker">الجلسة 2</div>
+  <h1>تعليق مرتبط بالخلايا</h1>
+  <ul class="bullets outcomes"><li>يصوغ تعليقًا على الانحرافات يحمل كل رقم فيه عنوان خليته</li><li>يفحص مسودة كتبها المساعد رقمًا رقمًا مقابل الخلايا</li><li>يفصل السبب الموثق بمستند عن السبب الذي يُسأل عنه صاحب المركز</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="numbers-from-cells" data-lo="LO4" data-label="قسمة العمل" data-n="16" data-session="2">
+  <div class="kicker">تعليق الانحرافات</div>
+  <h2>الأرقام من الخلايا، والكلمات من المساعد، والأسباب من الناس</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الورقة تحسب</h4><p class="small mb0">الانحراف ونسبته صيغتان فوق الموازنة والفعلي. لا يُحسبان مرة ثانية في أي مكان.</p></div>
+    <div class="card c-cyan"><h4>المساعد يصوغ</h4><p class="small mb0">جملة واضحة حول رقم أعطيته إياه، بالنبرة والطول اللذين تطلبهما.</p></div>
+    <div class="card c-coral"><h4>الإنسان يفسّر</h4><p class="small mb0">لماذا تجاوز المركز موازنته؟ صاحب المركز يعرف، وعنده المستند.</p></div>
+  </div>
+  <div class="callout warn mt"><b>الخطر في هذه المهمة بالذات:</b> المساعد بارع في كتابة سبب يبدو صحيحًا لأي رقم.</div>
+  <aside class="notes"><p>هذه أكثر مهمة يفوّضها الماليون للمساعد اليوم، لأنها كتابة. وهي أخطر مما تبدو: فيها أرقام تُنقل، ونسب تُحسب، وأسباب تُخترع. القاعدة نفسها تحلها: الرقم من خلية، والسبب من مستند.</p></aside>
+</section>
+
+<section class="slide" id="every-figure-carries-its-cell" data-lo="LO4" data-label="قاعدة الخلية" data-n="17" data-session="2">
+  <div class="kicker">قاعدة الكتابة</div>
+  <h2>كل رقم في التعليق يتبعه عنوان خليته</h2>
+  <div class="card c-teal">
+    <p class="mb0">الصيانة الميدانية: تجاوز بمبلغ 41,300 ريال <span class="ltr">[Variance!E7]</span>، بنسبة 17.5% <span class="ltr">[Variance!F7]</span>.</p>
+  </div>
+  <div class="cols cols-3 mt">
+    <div class="callout tip small"><b>للقارئ:</b> يفتح الخلية ويرى الرقم وصيغته.</div>
+    <div class="callout tip small"><b>للفحص:</b> رموز بسيطة تقارن كل رقم بخليته في ثوانٍ.</div>
+    <div class="callout tip small"><b>للشهر القادم:</b> القالب نفسه، والخلايا نفسها، وأرقام جديدة.</div>
+  </div>
+  <p class="small muted mt-s">في النسخة التي تُرفع للإدارة تُحذف العناوين إن شئت. تبقى في نسخة العمل.</p>
+  <aside class="notes"><p>الأرقام من ورقة الانحرافات في ملفات المختبر. القاعدة تبدو متشددة، وهي ما يجعل الفحص ممكنًا: رقم بلا خلية لا يُعرف مصدره. الدفتر المعدّ يقرأ النص ويستخرج كل رقم يتبعه عنوان ويقارنه. وتوصيف المقرر يسمّي الدليل: تعليقات مطابقة للخلايا.</p></aside>
+</section>
+
+<section class="slide" id="draft-against-cells" data-lo="LO4" data-label="المسودة" data-n="18" data-session="2">
+  <div class="kicker">مسودة المساعد أمام الخلايا</div>
+  <h2>عشرة أرقام لها خلية: سبعة تطابقها، وثلاثة لا</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>في المسودة</th><th>في الخلية</th><th>ما حدث</th></tr>
+      <tr><td>43,100 <span class="ltr">[E7]</span></td><td>41,300</td><td>خانتان متبادلتان</td></tr>
+      <tr><td>11.8% <span class="ltr">[F10]</span></td><td>13.3%</td><td>قُسم على الفعلي لا الموازنة</td></tr>
+      <tr><td>28,300 <span class="ltr">[D13]</span></td><td>89,700</td><td>الرقم صحيح والخلية غيرها</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>ورقم واحد بلا خلية: إجمالي الفعلي.</li>
+      <li>الأخطاء الثلاثة من ثلاثة أنواع، وكلها تمر في قراءة سريعة.</li>
+      <li>النسبة الخاطئة «حسبها» المساعد نصًّا مع أنها موجودة في الورقة.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>المسودة مكتوبة باليد في ملفات المختبر لتمثّل ما تكتبه المساعدات، والأرقام من تشغيل حل المختبر 2.2. لا تعرض الشريحة قبل الخطوة 1 من المختبر إن أردت أن يكتشفها المشاركون: انتقل إلى الشريحة التالية وعد إليها بعد المختبر.</p></aside>
+</section>
+
+<section class="slide" id="the-rule-decides-who-is-commented" data-lo="LO4" data-label="قاعدة التعليق" data-n="19" data-session="2">
+  <div class="kicker">أي المراكز يُعلَّق عليها</div>
+  <h2>القاعدة مكتوبة في الورقة، وتُطبَّق على كل الصفوف</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>المركز</th><th class="num">الانحراف</th><th class="num">النسبة</th><th>يُعلَّق؟</th></tr>
+      <tr><td><span class="en">CC-107</span></td><td class="num">53,600</td><td class="num">13.3%</td><td>نعم</td></tr>
+      <tr><td><span class="en">CC-109</span></td><td class="num">22,400</td><td class="num">31.5%</td><td>نعم</td></tr>
+      <tr class="hl"><td><span class="en">CC-101</span></td><td class="num">24,800</td><td class="num">8.0%</td><td>لا</td></tr>
+      <tr><td><span class="en">CC-110</span></td><td class="num"><span class="ltr">-28,300</span></td><td class="num"><span class="ltr">-24.0%</span></td><td>نعم</td></tr>
+    </table>
+    <div class="stack">
+      <div class="card c-teal flat"><h4>القاعدة</h4><p class="small mb0">20,000 ريال و10% من الموازنة معًا. خمسة مراكز من اثني عشر.</p></div>
+      <div class="card c-coral flat"><h4>ما فعلته المسودة</h4><p class="small mb0">علّقت على مركز دون القاعدة، وأغفلت مركزًا فوقها. الوفر انحراف أيضًا.</p></div>
+    </div>
+  </div>
+  <aside class="notes"><p>الاكتمال فحص مثل المطابقة: كم مركزًا تقول القاعدة، وكم مركزًا في النص؟ المسودة أغفلت المركز الذي نسبته أعلى، لأن مبلغه أصغر. والقاعدة نفسها قرار إدارة، ليست من عند المساعد ولا من عند المحلل.</p></aside>
+</section>
+
+<section class="slide" id="causes-need-evidence" data-lo="LO4" data-label="الأسباب" data-n="20" data-session="2">
+  <div class="kicker">السبب ليس رقمًا</div>
+  <h2>سبب بلا مستند يُكتب: «غير موثق، يُسأل صاحب المركز»</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>موثق: ثلاثة مراكز</h4>
+      <ul class="bullets small tight">
+        <li>الصيانة الميدانية: أوامر عمل لإصلاح طارئ.</li>
+        <li>الحراسات: عقد جديد بدأ في منتصف الشهر.</li>
+        <li>الأسطول: مذكرة بتأجيل استلام مركبتين.</li>
+      </ul>
+    </div>
+    <div class="card c-coral"><h4>غير موثق: مركزان</h4>
+      <ul class="bullets small tight">
+        <li>نظافة المجمعات التجارية: المسودة كتبت «ارتفاع أسعار المواد». لا أحد قال ذلك.</li>
+        <li>المشتريات والمستودعات: لا ملاحظة.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout warn mt"><b>السبب المختلق أخطر من الرقم الخاطئ:</b> لا خلية تكذّبه، ويبني عليه قارئ التقرير قرارًا.</div>
+  <aside class="notes"><p>توصيف المقرر يقول: يترك تقدير الأسباب لحكم الإنسان. اسأل القاعة: كم مرة قرأتم في تقرير سببًا من نوع «ارتفاع الأسعار» ولم يسأل أحد من قاله؟ والسبب الموثق يُكتب معه رقم مستنده، كما يُكتب مع الرقم عنوان خليته.</p></aside>
+</section>
+
+<section class="slide" id="a-prompt-that-forbids-calculating" data-lo="LO4" data-label="الأمر" data-n="21" data-session="2">
+  <div class="kicker">كيف تطلب المسودة</div>
+  <h2>أعطه الأرقام وعناوينها، وامنعه من الحساب ومن التفسير</h2>
+  <div class="prompt" data-tool="مساعد محادثة">
+    <span class="seg c-teal">اكتب تعليقًا على انحرافات الشهر للمراكز الآتية فقط.</span>
+    <span class="seg c-cyan">سأعطيك لكل مركز الانحراف ونسبته وعنوان خليتيهما.</span>
+    <span class="seg c-coral">اكتب كل رقم كما أعطيته لك حرفيًّا، وبعده عنوان خليته بين قوسين مربعين. لا تحسب أي رقم ولا نسبة.</span>
+    <span class="seg c-purple">لا تكتب سببًا لأي انحراف: اترك مكانه فارغًا وسأملؤه أنا.</span>
+  </div>
+  <div class="legend"><span class="c-teal">المهمة والنطاق</span><span class="c-cyan">المدخلات</span><span class="c-coral">لا حساب</span><span class="c-purple">لا تفسير</span></div>
+  <div class="callout note mt"><b>ثم تفحص على أي حال.</b> الأمر الجيد يقلل الأخطاء، والفحص هو ما يثبت أنها لم تقع.</div>
+  <aside class="notes"><p>هذا أمر الخطوة 3 في المختبر. لم يُجرَّب على مساعد حقيقي عند بناء المقرر. المساعدات تخالف «لا تحسب» أحيانًا، خصوصًا بإضافة مجموع أو نسبة من عندها: لذلك يُشغَّل الفحص على كل مسودة مهما كان الأمر محكمًا.</p></aside>
+</section>
+
+<section class="slide" id="check-fluent-cause" data-lo="LO4" data-n="22" data-session="2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>سبب سلس بلا دليل</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="check-fluent-cause-q1">
+    <p class="lead">في المسودة: «تجاوز مركز النظافة موازنته بسبب ارتفاع أسعار المواد لدى الموردين خلال الربع». الرقم يطابق خليته. لا ملاحظة من صاحب المركز. ماذا يدخل التعليق النهائي؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقبل المعقول مكان الموثق: المساعد لا يعرف ما حدث في المركز، وصاغ أرجح جملة" data-k="أ">الجملة كما هي، فالسبب معقول والرقم صحيح</div>
+      <div class="opt" data-why="يخفي الانحراف مع سببه: الرقم محسوب ويستوجب التعليق، والناقص هو السبب فقط" data-k="ب">لا شيء: يُحذف المركز حتى يُعرف السبب</div>
+      <div class="opt" data-why="يطلب دليلًا ممن لا دليل عنده: جواب المساعد عن مصدره نص مولَّد آخر" data-k="ج">الجملة، بعد أن تسأل المساعد عن مصدر السبب</div>
+      <div class="opt" data-ok data-k="د">الرقم بخليته، و«السبب غير موثق: يُسأل صاحب المركز»</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الرقم صحيح فيبقى. السبب لا مستند له، فيُكتب أنه غير موثق، ويُسأل عنه من يعرف قبل الإقفال.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الرابع. إن اختار كثيرون الأول فاسأل: لو كان السبب الحقيقي تسعير خاطئ في عقد، فمن كان سيبحث عنه بعد أن قرأ «ارتفاع الأسعار»؟</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-2" data-auto="lab" data-lab="2.2" data-label="المختبر 2.2" data-n="23" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.2 · 30 دقيقة</div><h2>تعليق مرتبط بالخلايا</h2><p class="lead small">تفحص مسودة تعليق كتبها المساعد على انحرافات 12 مركز تكلفة، وتصحح أرقامها، ثم تكتب تعليقًا كل رقم فيه بخليته، وتترك الأسباب غير الموثقة لصاحب المركز.</p><a class="nb" href="../labs/D2_2_commentary.html">D2_2_commentary.html</a></div><ul class="checklist"><li>افحص مسودة المساعد رقمًا رقمًا مقابل الخلايا، بيدك أو بالدفتر المعدّ <span class="min">8 د</span></li><li>حدّد بالقاعدة المراكز التي تستوجب التعليق <span class="min">4 د</span></li><li>اكتب تعليقك: كل رقم يتبعه عنوان خليته <span class="min">10 د</span></li><li>صنّف كل سبب: موثق بمستند، أم يُسأل عنه صاحب المركز <span class="min">5 د</span></li><li>شغّل الفحص على تعليقك حتى يطابق كل رقم خليته <span class="min">3 د</span></li><li class="stretch">✱ إضافي: اطلب من مساعدك مسودة جديدة بأمر يفرض قاعدة الخلايا، وافحصها بالطريقة نفسها</li></ul></div>
+  <aside class="notes"><p>المفتاح: في المسودة ثلاثة أرقام لا تطابق خلاياها ورقم بلا خلية؛ المراكز التي تستوجب التعليق 102 و104 و107 و109 و110؛ الموثقة أسبابها 104 و107 و110. النتيجة المطلوبة في الخطوة 5: كل الأرقام مطابقة ولا رقم بلا خلية ولا مركز غائب. من لا يشغّل الدفتر يفحص يدويًا: ثلاثة عشر رقمًا في تعليق كامل.</p></aside>
+</section>
+
+<!-- الجلسة 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="24">
+  <div class="kicker">الجلسة 3</div>
+  <h1>عينة يستطيع غيرك إعادة سحبها</h1>
+  <ul class="bullets outcomes"><li>يشرح لماذا لا تُعدّ قائمة «عشوائية» يكتبها المساعد نصًّا عينة تدقيق</li><li>يسحب عينة باختيار منتظم ببداية عشوائية من بذرة مسجَّلة</li><li>يوثق في ملف المعاينة الطريقة والبذرة ومجاميع المجتمع والبنود التي للنظر</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide dark" id="sixty-random-in-prose" data-lo="LO4" data-label="قائمة نثرية" data-n="25" data-session="3">
+  <div class="kicker">«اختر لي 60 فاتورة عشوائية»</div>
+  <h2>ثلاث من الفواتير الستين لا وجود لها في الملف</h2>
+  <div class="cols cols-2 mid">
+    <div class="stat center"><div class="big">41</div><div class="lbl">من الستين تقع بين أول ألف فاتورة من خمسة آلاف</div></div>
+    <ul class="bullets">
+      <li>لا بذرة ولا طريقة: لا أحد يعيد سحبها.</li>
+      <li>الطلب نفسه في محادثة جديدة أعطى قائمة أخرى.</li>
+      <li>والرد يقول إنها «تمثّل الموردين والأشهر تمثيلًا متوازنًا».</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>القائمة مكتوبة باليد في ملفات المختبر لتمثّل ما يحدث حين يُطلب من مساعد محادثة «اختيار عشوائي» دون رموز: قل ذلك. الأعداد من تشغيل حل المختبر 2.3. قائمة يكتبها نموذج لغوي نص متوقَّع مثل الأرقام أمس: تشبه العشوائي ولا تكونه. والجملة الأخيرة في الرد ادعاء لا يسنده شيء.</p></aside>
+</section>
+
+<section class="slide" id="what-makes-a-sample-documented" data-lo="LO4" data-label="عينة موثقة" data-n="26" data-session="3">
+  <div class="kicker">ما الذي يجعلها عينة تدقيق</div>
+  <h2>العينة الموثقة يعيد سحبها غيرك ويحصل على الفواتير نفسها</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-navy"><h4>المجتمع</h4><p class="small mb0">عدده ومجموعه، مطابقَين لدفتر الأستاذ قبل السحب.</p></div>
+    <div class="card c-teal"><h4>الطريقة</h4><p class="small mb0">مكتوبة في الخطة قبل النظر إلى البيانات.</p></div>
+    <div class="card c-cyan"><h4>البذرة</h4><p class="small mb0">رقم مسجَّل يجعل «العشوائي» قابلًا للإعادة.</p></div>
+    <div class="card c-coral"><h4>الأثر</h4><p class="small mb0">ملف معاينة فيه كل ما سبق، والبنود التي للنظر.</p></div>
+  </div>
+  <div class="callout tip mt"><b>الشك المهني يبدأ هنا:</b> لا تسأل «هل تبدو العينة جيدة؟» بل «هل أستطيع أن أثبت كيف اختيرت؟»</div>
+  <aside class="notes"><p>لا نذكر معايير التدقيق بأرقامها: المشاركون يعرفون معايير جهاتهم، والمبدأ واحد فيها كلها. دليل الناتج الرابع في توصيف المقرر: ملف معاينة يبيّن الطريقة والبذرة العشوائية والاستثناءات.</p></aside>
+</section>
+
+<section class="slide" id="key-items-first" data-lo="LO4" data-label="البنود الرئيسة" data-n="27" data-session="3">
+  <div class="kicker">قبل السحب</div>
+  <h2>38 فاتورة تحمل ربع المبلغ: تُفحص كلها ولا تدخل السحب</h2>
+  <div class="cols cols-2 mid">
+    <table class="t">
+      <tr><th></th><th class="num">العدد</th><th class="num">المجموع، ريال</th></tr>
+      <tr><td>المجتمع</td><td class="num">5,000</td><td class="num">39,569,567.37</td></tr>
+      <tr><td>البنود الرئيسة، 100,000 فأكثر</td><td class="num">38</td><td class="num">10,390,750.49</td></tr>
+      <tr class="hl"><td>الباقي، ومنه العينة</td><td class="num">4,962</td><td class="num">29,178,816.88</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>مجموع رقابي من جديد: الرئيسة والباقي يساويان المجتمع.</li>
+      <li>الحد قرار في الخطة، يضعه مدير المراجعة.</li>
+      <li>الرموز تنفذ الحد. لا تختاره.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل حل المختبر 2.3. البنود الرئيسة 26% من مبلغ المجتمع. هذه الخطوة 2 في المختبر، ويحسبها المشارك بعدّ شرطي وجمع شرطي أو يقرؤها من الدفتر.</p></aside>
+</section>
+
+<section class="slide" id="seed-start-interval" data-lo="LO4" data-label="بذرة وبداية وفترة" data-n="28" data-session="3">
+  <div class="kicker">الاختيار المنتظم ببداية عشوائية</div>
+  <h2>ثلاثة أرقام تعيد العينة: البذرة، والفترة، والبداية</h2>
+  <div class="flow">
+    <div class="step c-navy"><b>الفترة</b>4,962 ÷ 60 مع إهمال الكسر = 82</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>البداية</b>أول عدد عشوائي من البذرة <span class="ltr">20261031</span> يعطي الموضع 26</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>المواضع</b>26 ثم 108 ثم 190، حتى 60 فاتورة</div>
+  </div>
+  <div class="cols cols-2 mt">
+    <div class="callout tip small"><b>العشوائية في رقم واحد:</b> البداية. والباقي عدّ يعيده أي زميل في جدول بيانات.</div>
+    <div class="callout note small"><b>الترتيب جزء من الطريقة:</b> الباقي يُرتَّب برقم الفاتورة قبل الترقيم، ويُكتب ذلك في الخطة.</div>
+  </div>
+  <aside class="notes"><p>الأرقام من تشغيل حل المختبر: الفترة 82 والبداية 26، وأول فاتورة <span class="ltr">INV-000026</span>. لماذا هذه الطريقة لا «عينة عشوائية» من مكتبة؟ لأن العدد العشوائي الأول من بذرة معيّنة مضمون أن يبقى هو نفسه بين إصدارات بايثون، وأما دوال الاختيار فقد يتغير تنفيذها. وعيب الاختيار المنتظم المعروف: نمط دوري في ترتيب المجتمع يحرف العينة.</p><p>المصادر: <span class="en">Python documentation, random: Notes on Reproducibility</span>.</p></aside>
+</section>
+
+<section class="slide" id="run-it-twice" data-lo="LO4" data-label="مرتان" data-n="29" data-session="3">
+  <div class="kicker">الفحص الذي لا تجتازه القائمة النثرية</div>
+  <h2>شغّل السحب مرتين: الفواتير نفسها في المرتين</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>في سجل تشغيل الدفتر</h4><p class="small mb0"><span class="ltr">population 5000/39569567.37; key 38; seed 20261031; start 26; interval 82; sample 60/431650.95; to_look_at 5</span></p></div>
+    <ul class="bullets">
+      <li>سطران متطابقان في السجل، إلا وقت التشغيل.</li>
+      <li>بصمة الملف في السجل تثبت أن المجتمع لم يتغير بين المرتين.</li>
+      <li>مجموع مبالغ العينة مجموع رقابي صغير لها.</li>
+    </ul>
+  </div>
+  <div class="callout tip mt"><b>وإن ولّد مساعدك الرموز:</b> اطلب أن تطبع البذرة والفترة والبداية، وقارنها بهذه الثلاثة.</div>
+  <aside class="notes"><p>السطر من تشغيل حل المختبر 2.3، والدفتر شُغّل فيه مرتين. توصيف المقرر يقول إن الدفاتر تحفظ سجلات تشغيل. من يولّد الرموز بمساعده ويحصل على بداية غير 26: يقرأ كيف حُسبت البداية في رموزه، فالخطة تحددها بدقة.</p></aside>
+</section>
+
+<section class="slide" id="tests-flag-the-auditor-judges" data-lo="LO4" data-label="بنود للنظر" data-n="30" data-session="3">
+  <div class="kicker">بعد السحب</div>
+  <h2>الاختبارات تُظهر بنودًا للنظر. الاستثناء حكم المدقق</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>الاختبار</th><th class="num">بين 98 مفحوصة</th></tr>
+      <tr><td>بلا أمر شراء</td><td class="num">2</td></tr>
+      <tr><td>لها فاتورة مطابقة في المجتمع</td><td class="num">1</td></tr>
+      <tr><td>تجزئة دون حد الاعتماد</td><td class="num">1</td></tr>
+      <tr><td>تاريخها بعد فترة الترحيل</td><td class="num">1</td></tr>
+    </table>
+    <div class="stack">
+      <div class="card c-teal flat"><h4>ما يقوله الاختبار</h4><p class="small mb0">الحقل فارغ. المبلغ مكرر. التاريخ متأخر.</p></div>
+      <div class="card c-coral flat"><h4>ما لا يقوله</h4><p class="small mb0">هل الشراء معفى من أمر الشراء؟ هل الفاتورتان توريدان فعليان؟ من وافق؟</p></div>
+    </div>
+  </div>
+  <div class="callout note mt"><b>في ملف المعاينة</b> عمود «حكم المدقق» يتركه الدفتر فارغًا عمدًا.</div>
+  <aside class="notes"><p>الأعداد من تشغيل حل المختبر. توصيف المقرر: يترك تقدير الاستثناءات لحكم الإنسان. المساعد يستطيع أن يلخّص سياسة المشتريات، ويستطيع أن يصوغ طلب المستندات. الحكم بأن بندًا استثناء يوقّع عليه المدقق.</p></aside>
+</section>
+
+<section class="slide" id="computed-tests-on-everything" data-lo="LO4" data-label="المجتمع كله" data-n="31" data-session="3">
+  <div class="kicker">سؤال يغيّر خطة العمل</div>
+  <h2>الاختبار المحسوب يُشغَّل على الخمسة آلاف كلها</h2>
+  <div class="cols cols-2 mid">
+    <table class="t">
+      <tr><th>الاختبار</th><th class="num">في المجتمع</th><th class="num">بين المفحوصة</th></tr>
+      <tr><td>لها فاتورة مطابقة</td><td class="num">12</td><td class="num">1</td></tr>
+      <tr><td>بلا أمر شراء</td><td class="num">9</td><td class="num">2</td></tr>
+      <tr><td>تجزئة دون الحد</td><td class="num">9</td><td class="num">1</td></tr>
+      <tr><td>بعد فترة الترحيل</td><td class="num">5</td><td class="num">1</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>ما يُحسب من الملف لا يحتاج إلى عينة: يُحسب على الكل.</li>
+      <li>العينة تبقى لما يحتاج إلى قراءة مستند.</li>
+      <li>هذا مكان الوقت الذي وفّرته الرموز.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>الأعداد من تشغيل حل المختبر 2.3 على المجتمع كله، وهي المهمة الإضافية فيه. الفواتير الاثنتا عشرة ستة أزواج. هذه أهم فكرة للمدققين في القاعة: الرموز المولَّدة تجعل الفحص الشامل رخيصًا، فتتغير وظيفة العينة.</p></aside>
+</section>
+
+<section class="slide" id="check-random-in-prose" data-lo="LO4" data-n="32" data-session="3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ستون رقمًا في رد</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="check-random-in-prose-q1">
+    <p class="lead">رفعت ملف الفواتير إلى مساعد وطلبت 60 فاتورة عشوائية. رد بقائمة من 60 رقمًا دون رموز. تأكدت أن الأرقام كلها موجودة في الملف. هل تصلح عينة تدقيق؟</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="أ">لا: تسحبها من جديد بطريقة مكتوبة وبذرة مسجَّلة</div>
+      <div class="opt" data-why="يكتفي بوجود الأرقام: الوجود لا يثبت كيف اختيرت، ولا يتيح لأحد أن يعيد سحبها" data-k="ب">نعم، ما دامت الأرقام كلها موجودة</div>
+      <div class="opt" data-why="يظن أن التوثيق اللاحق يصنع الطريقة: كتابة «اختارها المساعد» تسجّل ما حدث ولا تجعله قابلًا للإعادة" data-k="ج">نعم، إذا كتبت في الملف أن المساعد اختارها</div>
+      <div class="opt" data-why="يعالج التمثيل بالعين: توزيع يبدو متوازنًا لا يجعل الاختيار عشوائيًّا ولا موثقًا" data-k="د">نعم، إذا بدت موزعة على الأشهر والموردين</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> عينة التدقيق تُعرَّف بطريقتها. قائمة لا يعيد أحد سحبها لا تُدافع عنها أمام مراجع، مهما بدت جيدة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الأول. المساعد نفسه يصلح للمهمة إن طُلب منه أن يكتب رموز السحب ويشغّلها ببذرة: الفرق بين محسوب ومولَّد، كما في الجلسة الأولى أمس.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-3" data-auto="lab" data-lab="2.3" data-label="المختبر 2.3" data-n="33" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.3 · 30 دقيقة</div><h2>عينة فواتير يعاد سحبها</h2><p class="lead small">تسحب من 5,000 فاتورة مورد عينة تدقيق قابلة لإعادة الإنتاج: مجاميع المجتمع، ثم البنود الرئيسة، ثم 60 فاتورة ببذرة مسجَّلة. وتملأ ملف معاينة فيه الطريقة والبذرة والبنود التي للنظر، وتترك الحكم بالاستثناء للمدقق.</p><a class="nb" href="../labs/D2_3_sample.html">D2_3_sample.html</a></div><ul class="checklist"><li>افحص رد المساعد النثري: هل فواتيره موجودة؟ هل يعاد سحبه؟ <span class="min">5 د</span></li><li>سجّل مجاميع المجتمع والبنود الرئيسة والباقي <span class="min">6 د</span></li><li>اسحب العينة بالبذرة والبداية والفترة، بالدفتر المعدّ أو بجدول البيانات <span class="min">9 د</span></li><li>املأ ملف المعاينة: الطريقة، والبذرة، والبنود التي للنظر، وحكمك <span class="min">10 د</span></li><li class="stretch">✱ إضافي: شغّل الاختبارات الأربعة على المجتمع كله، وقارن ما وجدته بما التقطته العينة</li></ul></div>
+  <aside class="notes"><p>الأرقام المرجعية: المجتمع 5,000 فاتورة مجموعها 39,569,567.37؛ البنود الرئيسة 38؛ الفترة 82 والبداية 26؛ مجموع العينة 431,650.95؛ خمسة بنود للنظر. من يسحب بجدول البيانات يأخذ منك البداية 26. راقب الخطوة 4: من يكتب «استثناء» أمام كل بند يُسأل عن المستند الذي بنى عليه.</p></aside>
+</section>
+
+<!-- الجلسة 4 -->
+
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="34">
+  <div class="kicker">الجلسة 4</div>
+  <h1>قواعد البيانات وإعادة التصميم المقيسة</h1>
+  <ul class="bullets outcomes"><li>يحدد لكل ملف مالي الأداة المسموح بها من تصنيفه ومن وجود بيانات شخصية فيه</li><li>يعيد تصميم مهمة متكررة بحيث يُحسب كل رقم فيها وله مجموع رقابي</li><li>يقيس الوقت والأخطاء مقابل خط الأساس ويذكر ما لا يقوله القياس</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="which-file-which-tool" data-lo="LO5" data-label="الملف والأداة" data-n="35" data-session="4">
+  <div class="kicker">قبل أن تعيد تصميم أي مهمة</div>
+  <h2>تصنيف الملف، وهل فيه بيانات شخصية، يحددان الأداة</h2>
+  <table class="t small">
+    <tr><th>الأداة في سجل شركة ظِلال، وهي جهة خاصة</th><th>ما يدخلها</th></tr>
+    <tr><td>مساعد عام خارج حسابات الشركة</td><td>بيانات «عام» فقط</td></tr>
+    <tr><td>«رقيم»، المساعد المعتمد الذي يشغّل الرموز</td><td>«عام» و«مقيد»، دون بيانات شخصية</td></tr>
+    <tr><td>جدول البيانات والدفتر المعدّ على جهاز الشركة</td><td>كل ما يحق للموظف الاطلاع عليه</td></tr>
+  </table>
+  <div class="cols cols-2 mt">
+    <div class="callout note small"><b>المستويات أربعة</b> في سياسة تصنيف البيانات الوطنية: عام، ومقيد، وسري، وسري للغاية.</div>
+    <div class="callout warn small"><b>في جهة حكومية القاعدة أشد:</b> لا يدخل أداة ذكاء اصطناعي توليدي إلا «عام»، كما تنص المبادئ الوطنية. وسجل جهتك هو ما يحكم عملك.</div>
+  </div>
+  <aside class="notes"><p>ملفات الإقفال في حالتنا: ميزان المراجعة وكشف البنك والفواتير ونموذج الموازنة «مقيد»، ومسير الرواتب وملف التحقيق «سري» وفيهما بيانات شخصية. من لا يعرف سجل أدوات جهته: هذا أول ما يسأل عنه بعد الورشة.</p><p>المصادر: سياسة تصنيف البيانات، مكتب إدارة البيانات الوطنية.</p></aside>
+</section>
+
+<section class="slide" id="what-the-references-say" data-lo="LO5" data-label="المرجعيات" data-n="36" data-session="4">
+  <div class="kicker">المرجعيات الوطنية</div>
+  <h2>ما تقوله النصوص عن البيانات التي تدخل أدوات الذكاء الاصطناعي</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>نظام حماية البيانات الشخصية</h4><p class="small mb0">البيانات الشخصية كل ما يؤدي إلى معرفة الفرد: منها الاسم، ورقم الهوية، وأرقام الحسابات البنكية.</p></div>
+    <div class="card c-cyan"><h4>سياسة تصنيف البيانات</h4><p class="small mb0">أربعة مستويات حسب أثر الإفصاح غير المصرح به: عام، ومقيد، وسري، وسري للغاية. تسري على بيانات الجهات العامة.</p></div>
+    <div class="card c-coral"><h4>مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية</h4><p class="small mb0">على العاملين في الجهات الحكومية ألا يدخلوا في هذه الأدوات بيانات مصنفة «مقيد» فأعلى، وأن يقتصر استخدامها على بيانات «عام».</p></div>
+  </div>
+  <div class="callout note mt"><b>مسير الرواتب يجمع الاثنين:</b> بيانات شخصية وتصنيف مرتفع. وتصنيف كل ملف تقرره جهتك وفق سياستها، لا أنت ولا المساعد.</div>
+  <aside class="notes"><p>لا تفسّر النصوص بأكثر مما فيها: هذه ثلاث نقاط منها، ولكل جهة مسؤول حماية بيانات ومكتب بيانات يُسألان. سياسة التصنيف تسري على الجهات العامة، وشركة ظِلال جهة خاصة افتراضية اختارت أن تعتمد مستوياتها، وأن تسمح لمساعدها الداخلي ببيانات «مقيد». هذا لا يصح في جهة حكومية: المبادئ تقصر أدوات الذكاء الاصطناعي التوليدي فيها على بيانات «عام». قل ذلك صراحة، فأغلب القاعة قد يكون من جهات حكومية.</p><p>المصادر: نظام حماية البيانات الشخصية؛ سياسة تصنيف البيانات؛ مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية. الثلاثة من موقع الهيئة السعودية للبيانات والذكاء الاصطناعي.</p></aside>
+</section>
+
+<section class="slide" id="the-payroll-file" data-lo="LO5" data-label="مسير الرواتب" data-n="37" data-session="4">
+  <div class="kicker">ملف واحد، ثلاث صور</div>
+  <h2>مسير الرواتب لا يدخل المساعد المعتمد. مجاميعه تدخل</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>كما هو</h4><p class="small">أسماء، وهويات، وحسابات بنكية، ورواتب.</p><span class="pill c-coral">الأدوات المحلية فقط</span></div>
+    <div class="card c-amber"><h4>بعد حذف الاسم وحده</h4><p class="small">الهوية والحساب البنكي ما زالا يدلان على الشخص.</p><span class="pill c-amber">الأدوات المحلية فقط</span></div>
+    <div class="card c-teal"><h4>مجمَّعًا حسب مركز التكلفة</h4><p class="small">مجاميع بلا أسماء ولا هويات ولا حسابات.</p><span class="pill c-teal">يدخل «رقيم»</span></div>
+  </div>
+  <div class="callout tip mt"><b>إعادة التصميم تبدأ من هنا:</b> ما أقل صورة من الملف تكفي الخطوة التي تريد من المساعد أن ينفذها؟</div>
+  <aside class="notes"><p>المسير في ملفات المختبر وهمي كله، وأرقام هوياته وحساباته مكتوب فيها أنها اختبارية. اسأل: مركز تكلفة فيه موظف واحد، هل مجموعه «مجمَّع»؟ لا: المجموع يدل على راتبه. التجميع يحتاج إلى حكم أيضًا.</p></aside>
+</section>
+
+<section class="slide" id="a-trail-of-use" data-lo="LO5" data-label="أثر الاستخدام" data-n="38" data-session="4">
+  <div class="kicker">أثر استخدام الذكاء الاصطناعي</div>
+  <h2>ثلاثة سجلات صغيرة تجيب عن سؤال المراجع: كيف خرج هذا الرقم؟</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>سجل التشغيل</h4><p class="small mb0">للدفاتر والرموز: متى، وعلى أي ملفات، وبأي مجاميع رقابية.</p></div>
+    <div class="card c-cyan"><h4>سجل التغييرات</h4><p class="small mb0">للجداول: الخلية، وقبل، وبعد، والسبب، والاختبار.</p></div>
+    <div class="card c-coral"><h4>سجل الاستخدام</h4><p class="small mb0">للمساعد: المهمة، والملفات التي أُعطيت، وما لم يُعطَ، ومن راجع الناتج.</p></div>
+  </div>
+  <div class="callout note mt"><b>الأولان كتبتهما أمس واليوم.</b> الثالث سطر في ملف الإقفال، وله خانة في بطاقة إعادة التصميم.</div>
+  <aside class="notes"><p>توصيف المقرر يطلب أثرًا لاستخدام الذكاء الاصطناعي. الأثر ليس اعتذارًا عن استخدامه: هو ما يسمح لمن بعدك أن يعيد العمل ويثق فيه. وهو امتداد لإشعار الإفصاح الذي كتبه المشاركون في المقرر السابق.</p></aside>
+</section>
+
+<section class="slide" id="the-redesign-card" data-lo="LO5" data-label="البطاقة" data-n="39" data-session="4">
+  <div class="kicker">بطاقة إعادة التصميم</div>
+  <h2>مهمة واحدة متكررة من عملك، في ستة أقسام</h2>
+  <div class="cols cols-3">
+    <div class="card c-navy"><h4>1 · البيانات والأداة</h4><p class="small mb0">التصنيف، والبيانات الشخصية، والأداة المسموح بها.</p></div>
+    <div class="card c-teal"><h4>2 · الخطوات</h4><p class="small mb0">لكل خطوة من ينفذها: رموز أو صيغة، أو المساعد نصًّا، أو أنت.</p></div>
+    <div class="card c-cyan"><h4>3 · المجاميع الرقابية</h4><p class="small mb0">ما يُسجَّل قبل، وما يجب أن يساويه بعد.</p></div>
+    <div class="card c-coral"><h4>4 · ما يبقى لحكمك</h4><p class="small mb0">القرار الذي لا يُفوَّض.</p></div>
+    <div class="card c-purple"><h4>5 · القياس</h4><p class="small mb0">الوقت والأخطاء: خط الأساس وتنفيذان.</p></div>
+    <div class="card c-amber"><h4>6 · السجل</h4><p class="small mb0">أين يُحفظ أثر الاستخدام.</p></div>
+  </div>
+  <aside class="notes"><p>البطاقة هي ما يُدافَع عنه في المراجعة المباشرة. اختبار سريع للقسم 2: هل بقي رقم يدخل تقريرًا ومصدره نص كتبه المساعد؟ والمثال المحلول في ملفات المختبر لمطابقة كشف مورد.</p></aside>
+</section>
+
+<section class="slide" id="measure-time-and-errors" data-lo="LO5" data-label="القياس" data-n="40" data-session="4">
+  <div class="kicker">قياس قبل وبعد</div>
+  <h2>الوقت وحده لا يكفي: تُعدّ الأخطاء أيضًا</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>خط أساس شركة ظِلال، يدوي</th><th class="num">الدقائق</th><th class="num">الأخطاء</th></tr>
+      <tr><td>التنفيذ 1</td><td class="num">44</td><td class="num">2</td></tr>
+      <tr><td>التنفيذ 2</td><td class="num">49</td><td class="num">1</td></tr>
+      <tr><td>التنفيذ 3</td><td class="num">46</td><td class="num">3</td></tr>
+      <tr class="hl"><td>المتوسط</td><td class="num">46</td><td class="num">2</td></tr>
+    </table>
+    <ul class="bullets">
+      <li><b>الخطأ يُعرَّف قبل القياس:</b> فرق فاتك، أو فرق أشرت إليه وليس فرقًا.</li>
+      <li>الساعة تتوقف بعد فحص المجموع الرقابي، لا قبله.</li>
+      <li>أسرع وبأخطاء أكثر ليس تحسّنًا.</li>
+    </ul>
+  </div>
+  <div class="callout note mt"><b>أرقام خط الأساس هنا اصطناعية</b> لحالة افتراضية. قياسك أنت هو ما يدخل بطاقتك.</div>
+  <aside class="notes"><p>مهمة خط الأساس مطابقة كشف مورد، وفي الكشف أربعة فروق مزروعة. دليل الناتج الخامس: يقيس الوقت والأخطاء قبل إعادة التصميم وبعدها، من خط أساس وتنفيذين. التنفيذ الأول في المختبر الآن، والثاني على مهمة المشارك قبل جلسة المراجعة.</p></aside>
+</section>
+
+<section class="slide" id="what-the-numbers-do-not-say" data-lo="LO5" data-label="حدود القياس" data-n="41" data-session="4">
+  <div class="kicker">القياس الصادق يذكر حدوده</div>
+  <h2>ثلاثة تنفيذات وشخص واحد: مؤشر، لا برهان</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>التنفيذ الأول بطريقة جديدة أبطأ غالبًا من الثاني.</li>
+      <li>أنت تعرف الآن أين الفروق: مهمة جديدة قياس أعدل.</li>
+      <li>الوقت الموفَّر أين ذهب؟ إن ذهب إلى البنود التي تحتاج إلى حكم فهذا هو الغرض.</li>
+    </ul>
+    <div class="card c-teal"><h4>في البطاقة سطر اسمه</h4><p class="mb0">«ما الذي لا تقوله هذه الأرقام»</p><p class="small mb0">من يملؤه بصدق يُسأل في المراجعة أسئلة أسهل.</p></div>
+  </div>
+  <div class="callout warn mt"><b>لا تعمّم من بطاقتك على الإدارة كلها.</b> اعرضها تجربة لها قياس، واطلب من زميل أن يكررها.</div>
+  <aside class="notes"><p>الغرض ليس التشكيك في الفائدة، بل أن يخرج المشارك بعادة قياس يمكن الدفاع عنها. من جاء تنفيذه الأول أبطأ من خط الأساس يكتب ذلك كما هو: هذا متوقع ويُقدَّر في سلم التقدير.</p></aside>
+</section>
+
+<section class="slide" id="check-which-file-which-tool" data-lo="LO5" data-n="42" data-session="4">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي ملف يدخل أي أداة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-which-file-which-tool-q1">
+    <p class="lead">في شركة ظِلال تريد من المساعد المعتمد أن يكتب رموزًا تقارن رواتب كل مركز تكلفة بموازنته. سجل أدوات الشركة يسمح له ببيانات «مقيد» دون بيانات شخصية. المسير فيه أسماء وهويات وحسابات بنكية. ما التصميم المقبول؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقرأ «معتمد» إذنًا مطلقًا: الاعتماد له حدود مكتوبة في السجل، والبيانات الشخصية خارجها" data-k="أ">ترفع المسير كما هو، فالمساعد معتمد</div>
+      <div class="opt" data-why="يظن أن حذف الاسم يزيل الصفة الشخصية: الهوية والحساب البنكي يدلان على الشخص" data-k="ب">ترفع المسير بعد حذف عمود الأسماء</div>
+      <div class="opt" data-ok data-k="ج">تجمّع الرواتب حسب المركز محليًّا، وترفع المجاميع</div>
+      <div class="opt" data-why="يختار أداة أضعف ضبطًا لملف أشد حساسية: المساعد العام لبيانات «عام» فقط" data-k="د">ترفع المسير إلى مساعد عام لأن المهمة بسيطة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الخطوة تحتاج إلى مجموع لكل مركز، لا إلى أسماء. المجاميع «مقيد» بلا بيانات شخصية، فتدخل المساعد المعتمد، والتجميع نفسه صيغة في جدول محلي.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الخيار الثالث. هذه البطاقة الثامنة في ملف المختبر. نبّه إلى الاستثناء: مركز فيه موظف واحد.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-4" data-auto="lab" data-lab="2.4" data-label="المختبر 2.4" data-n="43" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.4 · 30 دقيقة</div><h2>بطاقة إعادة التصميم</h2><p class="lead small">تصنّف ملفات المهمة وتختار أداتها، وتكتب خطواتها بعد إعادة التصميم، وتنفذها مرة واحدة موقّتة على مطابقة كشف مورد، وتقيس الوقت والأخطاء مقابل خط الأساس. البطاقة تُستكمل بتنفيذ ثانٍ على مهمتك قبل جلسة المراجعة.</p><a class="nb" href="../labs/D2_4_redesign.html">D2_4_redesign.html</a></div><ul class="checklist"><li>صنّف الملفات الثمانية وحدّد لكل منها الأداة المسموح بها <span class="min">6 د</span></li><li>اكتب خطوات المهمة بعد إعادة التصميم ومجاميعها الرقابية <span class="min">8 د</span></li><li>نفّذ المهمة المعاد تصميمها مرة واحدة: وقّتها وعُدّ الأخطاء <span class="min">12 د</span></li><li>املأ جدول القياس مقابل خط الأساس <span class="min">4 د</span></li><li class="stretch">✱ إضافي: اكتب ما الذي لا تقوله ثلاثة قياسات لشخص واحد، وما القياس الرابع الذي تحتاج إليه</li></ul></div>
+  <aside class="notes"><p>المفتاح: المساعد العام للبطاقة <span class="ltr">F6</span> فقط؛ «رقيم» لكل البطاقات إلا <span class="ltr">F3</span> و<span class="ltr">F7</span>. كشف المورد 58 سطرًا والدفتر 57، والفرق بين الرصيدين 28,673.48 تفسّره أربعة فروق. أعطِ المفتاح بعد أن يوقف المشارك ساعته، لا قبل. ذكّر في آخر المختبر بالتنفيذ الثاني: على مهمة المشارك من عمله، قبل جلسة المراجعة، ويُسجَّل في جدول القياس.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-label="خلاصة الورشة" data-n="44" data-session="4">
+  <div class="kicker">خلاصة اليومين</div>
+  <h2>أربع عادات تبقى حين تتغير الأدوات</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal"><h4>احسب ولا تولّد</h4><p class="small mb0">الرقم من صيغة أو رموز يعاد تشغيلها.</p></div>
+    <div class="card c-cyan"><h4>مجموع رقابي</h4><p class="small mb0">لكل معالجة، بأرقام حسبتها أنت.</p></div>
+    <div class="card c-coral"><h4>اختبار لكل إصلاح</h4><p class="small mb0">من حالة محسوبة يدويًا، ويبقى في الملف.</p></div>
+    <div class="card c-purple"><h4>عينة يعاد سحبها</h4><p class="small mb0">طريقة مكتوبة وبذرة مسجَّلة.</p></div>
+  </div>
+  <div class="callout tip mt"><b>وفي الأربع:</b> السبب والاستثناء والاعتماد لإنسان يوقّع.</div>
+  <aside class="notes"><p>ما سيتغير قبل الدفعة القادمة: أسماء مزايا تنفيذ الرموز، ودوال الذكاء الاصطناعي في الجداول، وخدمات الدفاتر. هذه الأربع لا تتغير. اطلب من كل مشارك أن يسمّي العادة التي سيبدأ بها في إقفال هذا الشهر.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="قبل المراجعة" data-n="45" data-session="4">
+  <div class="kicker">قبل جلسة المراجعة</div>
+  <h1>نفّذ مهمتك مرة ثانية، وأكمل البطاقة</h1>
+  <ul class="bullets">
+    <li>التنفيذ الثاني على مهمتك من عملك، موقّتًا، مع عدّ الأخطاء.</li>
+    <li>في مجلدك: البطاقة، وجدول القياس، وقائمة المطابقة وسجل التشغيل، والنموذج المُصلَح، والتعليق، وملف المعاينة.</li>
+    <li>تأكد أن دفتر المطابقة يعمل على جهازك: ستعيد تشغيله أمام المراجع.</li>
+    <li>لا ملف من جهة عملك في المجلد: الأوقات وعدد الأخطاء فقط.</li>
+  </ul>
+  <aside class="notes"><p>جلسة المراجعة: ساعة لفحص فردي تحت الإشراف دون ذكاء اصطناعي، يعيد فيه المشارك حساب ثلاثة أرقام في إجابة من الذكاء الاصطناعي، ثم مراجعة مباشرة من عشر دقائق لكل مشارك. التدريب على الفحص هو الخطوة 3 من المختبر 1.1.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T14:16:28Z","version":"2027.1.0","commit":"3a4946b"},"course":{"id":"use-pro-203","code":"USE-PRO-203","title":"الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-203/","repo":"SDAIAAcademy/use-pro-203","home":"../index.html"},"deck":{"id":"day2","kind":"day","day":2,"label":"اليوم 2","title":"التعليق والعينة وإعادة التصميم","prev":"day1.html","next":"capstone.html","md":"day2.md","alt":{}},"sessions":[{"n":1,"label":"الجلسة 1","title":"اختبار لكل إصلاح","slide":"s1","outcomes":["يستخدم المساعد لشرح صيغة واقتراح إصلاحها دون أن يسلّمه النموذج","يكتب لكل إصلاح اختبارًا من حالة محسوبة يدويًا","يوثق كل تغيير في سجل تغييرات: الخلية وما كان وما صار والسبب"],"minutes":55,"lab":{"id":"2.1","title":"إصلاح نموذج الموازنة","minutes":30,"href":"../labs/D2_1_repair.html"}},{"n":2,"label":"الجلسة 2","title":"تعليق مرتبط بالخلايا","slide":"s2","outcomes":["يصوغ تعليقًا على الانحرافات يحمل كل رقم فيه عنوان خليته","يفحص مسودة كتبها المساعد رقمًا رقمًا مقابل الخلايا","يفصل السبب الموثق بمستند عن السبب الذي يُسأل عنه صاحب المركز"],"minutes":55,"lab":{"id":"2.2","title":"تعليق مرتبط بالخلايا","minutes":30,"href":"../labs/D2_2_commentary.html"}},{"n":3,"label":"الجلسة 3","title":"عينة يستطيع غيرك إعادة سحبها","slide":"s3","outcomes":["يشرح لماذا لا تُعدّ قائمة «عشوائية» يكتبها المساعد نصًّا عينة تدقيق","يسحب عينة باختيار منتظم ببداية عشوائية من بذرة مسجَّلة","يوثق في ملف المعاينة الطريقة والبذرة ومجاميع المجتمع والبنود التي للنظر"],"minutes":55,"lab":{"id":"2.3","title":"عينة فواتير يعاد سحبها","minutes":30,"href":"../labs/D2_3_sample.html"}},{"n":4,"label":"الجلسة 4","title":"قواعد البيانات وإعادة التصميم المقيسة","slide":"s4","outcomes":["يحدد لكل ملف مالي الأداة المسموح بها من تصنيفه ومن وجود بيانات شخصية فيه","يعيد تصميم مهمة متكررة بحيث يُحسب كل رقم فيها وله مجموع رقابي","يقيس الوقت والأخطاء مقابل خط الأساس ويذكر ما لا يقوله القياس"],"minutes":55,"lab":{"id":"2.4","title":"بطاقة إعادة التصميم","minutes":30,"href":"../labs/D2_4_redesign.html"}}],"slides":[{"id":"title","n":1,"title":"التعليق والعينة وإعادة التصميم","kind":"title","session":0,"hash":"eceb2a87","md":"#### [day2#title] التعليق والعينة وإعادة التصميم\n\n*أكاديمية سدايا · الذكاء الاصطناعي في أعمال المالية والمحاسبة والتدقيق*\n\nاليوم 2: اختبار لكل إصلاح، وتعليق مرتبط بالخلايا، وعينة يعاد سحبها، ومهمة معاد تصميمها ومقيسة\n\nمسار الطلاقة في البيانات والذكاء الاصطناعي · يومان تدريبيان + يوم للمشروع الختامي · 4 جلسات · 4 مختبرات · USE-PRO-203","notes":"اسأل برفع اليد: من عنده حالاته اليدوية وقائمة الأخطاء؟ من قاس خط الأساس؟ من لم يُنهِ مختبرات أمس يبدأ اليوم من ملفات البداية الجاهزة: لا أحد يتأخر بسبب أمس.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"التعليق والعينة وإعادة التصميم","kind":"content","session":0,"hash":"00716a42","md":"#### [day2#agenda] التعليق والعينة وإعادة التصميم\n\n*اليوم*\n\n- **الجلسة 1 · اختبار لكل إصلاح**: المساعد معلّمًا عند الإصلاح، واختبار لكل إصلاح من حالة محسوبة يدويًا، وسجل التغييرات\n- **الجلسة 2 · تعليق مرتبط بالخلايا**: تعليقات الانحرافات التي يحمل كل رقم فيها عنوان خليته، والأسباب التي تبقى لحكم الإنسان ودليله\n- **الجلسة 3 · عينة يستطيع غيرك إعادة سحبها**: المعاينة الموثقة ببذرة مسجَّلة، ومجاميع المجتمع، والشك المهني في مخرجات الذكاء الاصطناعي\n- **الجلسة 4 · قواعد البيانات وإعادة التصميم المقيسة**: البيانات السرية وبيانات الرواتب في الأدوات المعتمدة، وأثر الاستخدام، وقياس الوقت والأخطاء قبل إعادة التصميم وبعدها","notes":"أربع جلسات من 55 دقيقة، وفي كل منها مختبر من 30 دقيقة. الجلسة الأخيرة تنتهي ببطاقة إعادة التصميم التي تُستكمل قبل جلسة المراجعة.","minutes":null,"lo":[]},{"id":"review-day-1","n":3,"title":"ماذا يثبت المجموع الرقابي؟","kind":"quiz","session":0,"hash":"6ecf447d","md":"#### [day2#review-day-1] ماذا يثبت المجموع الرقابي؟\n\n*مراجعة اليوم الأول*\n\n**سؤال:** طابقت ملفين برموز ولّدها المساعد. المتطابق وغير المتطابق يساويان كل ملف، عددًا ومبلغًا. ما الذي ثبت بذلك؟\n\n- أ. أن كل زوج متطابق هو الزوج الصحيح\n- ب. أن الملفين صحيحان وليس فيهما خطأ\n- ج. أن كل سطر حُسب مرة واحدة: لا ضائع ولا مكرر\n- د. أن المطابقة انتهت ولا بنود تحتاج إلى نظر","notes":"الإجابة: الخيار الثالث. دقيقتان. اربطها بما فعلوه أمس: البرنامج الأول كُشف بالمجموع، والمراجع الثمانية كُشفت بقراءة المفتاح.","minutes":null,"lo":["LO2"]},{"id":"today-four-outputs","n":4,"title":"أربعة مخرجات، والقاعدة نفسها في كل منها","kind":"content","session":0,"hash":"25da7ec3","md":"#### [day2#today-four-outputs] أربعة مخرجات، والقاعدة نفسها في كل منها\n\n*اليوم*\n\n- **نموذج مُصلَح.** اختبار لكل إصلاح، وسجل تغييرات.\n- **تعليق.** كل رقم يحمل عنوان خليته.\n- **عينة.** بذرة مسجَّلة، يعيد سحبها أي زميل.\n- **بطاقة.** مهمة معاد تصميمها ومقيسة مقابل خط الأساس.\n\n> **في كل منها:** الرقم يُحسب ويعاد تشغيله، والمساعد يكتب رموزًا أو كلمات، والحكم لك.","notes":"سياسة اليوم: المساعد معلّم في المختبر الأول، ومسموح كاملًا في الثلاثة الباقية مع إعادة حساب كل رقم.","minutes":null,"lo":[]},{"id":"s1","n":5,"title":"اختبار لكل إصلاح","kind":"section","session":1,"hash":"94112379","md":"#### [day2#s1] اختبار لكل إصلاح\n\n*الجلسة 1*\n\n- يستخدم المساعد لشرح صيغة واقتراح إصلاحها دون أن يسلّمه النموذج\n- يكتب لكل إصلاح اختبارًا من حالة محسوبة يدويًا\n- يوثق كل تغيير في سجل تغييرات: الخلية وما كان وما صار والسبب","notes":"","minutes":null,"lo":["LO3"]},{"id":"five-faults-found","n":6,"title":"خمسة أخطاء، والإجمالي ينقص أكثر من عشرة ملايين ريال","kind":"content","session":1,"hash":"439c7a12","md":"#### [day2#five-faults-found] خمسة أخطاء، والإجمالي ينقص أكثر من عشرة ملايين ريال\n\n*ما وجدته حالاتك اليدوية أمس*\n\n| # | أين | ما الخطأ |\n| --- | --- | --- |\n| 1 | F3:F14 | دالة البحث تعيد الراتب الأساسي لا الشامل |\n| 2 | H4:H14 | مرجع نسبة الاشتراكات ينزلق عند النسخ |\n| 3 | J7 | رقم مكتوب باليد فوق الصيغة |\n| 4 | L3:L14 | المبالغ المستردة تُجمع ولا تُطرح |\n| 5 | L15 | الجمع يترك آخر مركز |\n\n- **النموذج يعرض.** 23,296,196 ريالًا\n- **المواصفة تعطي.** 33,759,380.64 ريالًا","notes":"الأرقام من تشغيل حل المختبرين 1.4 و2.1 بمحرك صيغ. من لم يجد الخمسة أمس يجد القائمة في مجلد start. اسأل: أي خطأ من الخمسة كان أصعب أن يُرى؟ غالبًا الأول: الصيغة سليمة الشكل وتنفذ قاعدة غير المواصفة.","minutes":null,"lo":["LO3"]},{"id":"tutor-not-repairman","n":7,"title":"المساعد يشرح ويقترح. التغيير في الخلية بيدك","kind":"content","session":1,"hash":"77043780","md":"#### [day2#tutor-not-repairman] المساعد يشرح ويقترح. التغيير في الخلية بيدك\n\n*سياسة هذا المختبر*\n\n- **يشرح.** ما الذي تفعله هذه الصيغة خطوة خطوة، وأين تخالف القاعدة.\n- **يقترح.** بعد أن تكتب إصلاحك: هل يرى فيه ما فاتك؟\n- **لا يطبّق.** لا يستلم الملف ليعيده «مُصلَحًا». ملف غيّره المساعد نموذج جديد لم يختبره أحد.\n\n> **لماذا؟** لأن من يوقّع على الموازنة يجب أن يعرف كل خلية تغيّرت ولماذا. والشرح يعلّمك، والنسخة الجاهزة لا تعلّمك شيئًا.","notes":"هذه السياسة من توصيف المقرر: المساعد معلّم أثناء إصلاح النموذج. بعض المساعدات تعدّل ملفات الجداول مباشرة اليوم. القدرة موجودة، والسؤال من يعرف ما تغيّر. من يرفع الملف ويأخذ نسخة مُصلَحة: اطلب منه سجل تغييرات لها.","minutes":null,"lo":["LO3"]},{"id":"ask-to-explain","n":8,"title":"تعطيه الصيغة والقاعدة، وتطلب الفرق بينهما","kind":"content","session":1,"hash":"0f7aeb9c","md":"#### [day2#ask-to-explain] تعطيه الصيغة والقاعدة، وتطلب الفرق بينهما\n\n*مثال من المختبر*\n\n**أنت:** الصيغة: =G4\\*Assumptions!B4. القاعدة: الاشتراكات تساوي الرواتب في نسبة واحدة لكل المراكز، وهي في B3. اشرح ما تفعله الصيغة، ولا تكتب التصحيح.\n\n**المساعد (مثال جيد):** الصيغة تضرب رواتب الصف 4 في الخلية B4، وهي تضخم العقود لا نسبة الاشتراكات. يبدو أن المرجع كُتب نسبيًّا في الصف 3 ثم نُسخ إلى أسفل فنزل معه.\n\n> **ثم تكتب أنت:** =G4\\*Assumptions!$B$3، وتنسخها إلى آخر صف.","notes":"الحوار مثال مكتوب باليد، وليس مخرج نموذج: قل ذلك. الشرح الجيد يسمّي الخلية ومعناها، وهذا ما تطلبه. وشرح المساعد نص مولَّد: تتحقق منه بسهم السوابق، وهو يؤكد أن المرجع يشير إلى B4.","minutes":null,"lo":["LO3"]},{"id":"a-test-per-fix","n":9,"title":"الاختبار ثلاثة أشياء: متوقع مكتوب، وفعلي بصيغة، وخلية تحكم","kind":"content","session":1,"hash":"ccf4fb1f","md":"#### [day2#a-test-per-fix] الاختبار ثلاثة أشياء: متوقع مكتوب، وفعلي بصيغة، وخلية تحكم\n\n*ورقة الاختبارات*\n\n| الاختبار | الخلية | المتوقع | الفعلي | ناجح؟ |\n| --- | --- | --- | --- | --- |\n| الراتب الشامل لمركز CC-101 | F3 | 5,200 | `=Budget!F3` | `=ABS(D2-C2)\u003c0.5` |\n| اشتراكات CC-105 | H7 | 258,785.28 | `=Budget!H7` | `=ABS(D3-C3)\u003c0.5` |\n| إجمالي CC-105 | L7 | 2,787,329.28 | `=Budget!L7` | `=ABS(D5-C5)\u003c0.5` |\n\n> **المتوقع رقم مكتوب** من حالتك اليدوية. لو كان صيغة لورث خطأ النموذج ونجح دائمًا.\n\n> **الاختبار يبقى في الملف.** من يغيّر النموذج بعدك يرى فورًا ما كسره.","notes":"القيم المتوقعة من الحالات اليدوية في حل المختبر 1.4. الفكرة مأخوذة من اختبار البرمجيات، وتصلح لأي نموذج في جدول: حالة معروفة الناتج تُحفظ بجانب النموذج. دليل الناتج الثالث في توصيف المقرر: نموذج مُصلَح مع اختبار لكل إصلاح.","minutes":null,"lo":["LO3"]},{"id":"run-all-tests-each-time","n":10,"title":"أصلح خطأ واحدًا، ثم انظر إلى كل الاختبارات","kind":"content","session":1,"hash":"1ba0b58d","md":"#### [day2#run-all-tests-each-time] أصلح خطأ واحدًا، ثم انظر إلى كل الاختبارات\n\n*بعد كل إصلاح*\n\n1. **1 · إصلاح واحد** خلية أو عمود من القائمة\n2. **2 · اختباره** صار ناجحًا؟\n3. **3 · بقية الاختبارات** هل انكسر ما كان ناجحًا؟\n4. **4 · السجل** سطر في سجل التغييرات\n\n> **اختبار الإجمالي لا ينجح إلا في الآخر:** هو يعتمد على الإصلاحات الخمسة كلها. اختبار فاشل بعد الإصلاح الثالث معلومة، لا عطل.","notes":"لماذا إصلاح واحد في كل مرة؟ لأن خمسة تغييرات معًا ثم اختبار فاشل لا يقول لك أي تغيير هو السبب. المشاركون يستعجلون: ذكّرهم أن المختبر عشر دقائق للإصلاح وتسع للاختبارات، والاختبارات هي الدليل.","minutes":null,"lo":["LO3"]},{"id":"change-log","n":11,"title":"من يفتح الملف بعد سنة يعرف ما تغيّر ولماذا","kind":"content","session":1,"hash":"d669fb6a","md":"#### [day2#change-log] من يفتح الملف بعد سنة يعرف ما تغيّر ولماذا\n\n*ورقة سجل التغييرات*\n\n| الخلية | قبل | بعد | السبب | الاختبار |\n| --- | --- | --- | --- | --- |\n| Budget!J7 | الرقم 400,000 مكتوبًا | =I7\\*(1+Assumptions!$B$4) | رقم 2026 كُتب فوق الصيغة | 3 |\n| Budget!L15 | SUM(L3:L13) | SUM(L3:L14) | النطاق لم يشمل آخر مركز | 5 |\n\n> **هذا أثر الاستخدام للنموذج:** التاريخ، ومن غيّر، وهل استُعين بمساعد في الشرح. سجل التشغيل للدفاتر، وسجل التغييرات للجداول.","notes":"السطران من سجل التغييرات في الملف المرجعي المُصلَح. اسأل: من عنده في عمله نموذج لا يعرف أحد من غيّر فيه ماذا؟ سجل التغييرات لا يحتاج إلى أداة: ورقة في الملف نفسه.","minutes":null,"lo":["LO3"]},{"id":"a-control-that-stays","n":12,"title":"إجمالي الموازنة ناقص مجموع القطاعات يساوي صفرًا","kind":"content","session":1,"hash":"ae5b197b","md":"#### [day2#a-control-that-stays] إجمالي الموازنة ناقص مجموع القطاعات يساوي صفرًا\n\n*فحص لا يحتاج إلى حالة يدوية*\n\n|  | قبل الإصلاح | بعده |\n| --- | --- | --- |\n| إجمالي الموازنة | 23,296,196 | 33,759,380.64 |\n| مجموع القطاعات | 25,186,996 | 33,759,380.64 |\n| الفرق | 1,890,800 | 0 |\n\n- مجموع رقابي داخل النموذج: رقم واحد محسوب بطريقين.\n- كان سيكشف الخطأ الخامس يوم وقع.\n- لا يكشف الأخطاء الأربعة الأخرى: هي تصيب الطريقين معًا.","notes":"هذه المهمة الإضافية في المختبر. اربطها بالأمس: المجموع الرقابي يثبت الاكتمال ولا يثبت صحة كل رقم. هنا أيضًا: الفحص يلتقط صفًّا ناقصًا، ولا يلتقط قاعدة خاطئة طُبّقت على كل الصفوف. لذلك نحتاج إلى الاثنين: فحص رقابي وحالات يدوية.","minutes":null,"lo":["LO3"]},{"id":"check-fix-breaks-total","n":13,"title":"إصلاح ناجح، وإجمالي غريب","kind":"quiz","session":1,"hash":"46548fce","md":"#### [day2#check-fix-breaks-total] إصلاح ناجح، وإجمالي غريب\n\n*نقطة تحقق*\n\n**سؤال:** أصلحت عمود الاشتراكات، ونجح اختباره مقابل حالتك اليدوية. ثم لاحظت أن إجمالي الموازنة قفز بأكثر مما توقعت. ما الخطوة التالية؟\n\n- أ. تعيد الصيغة القديمة، فالإجمالي كان أقرب إلى المعتاد\n- ب. تنظر إلى كل الاختبارات، وتحسب القفزة المتوقعة من الإصلاح\n- ج. تسأل المساعد عن سبب القفزة وتكتب جوابه في السجل\n- د. تسجّل الإصلاح وتنتقل إلى الخطأ التالي","notes":"الإجابة: الخيار الثاني. الفكرة أن «رقم غريب» ليس دليلًا في أي اتجاه. الدليل اختبار وحساب.","minutes":null,"lo":["LO3"]},{"id":"lab-2-1","n":14,"title":"إصلاح نموذج الموازنة","kind":"lab","session":1,"hash":"df0ecb32","md":"#### [day2#lab-2-1] إصلاح نموذج الموازنة\n\nالمختبر 2.1 · 30 دقيقة\n\nتبدأ من قائمة الأخطاء الخمسة الجاهزة، فتصلح نموذج موازنة 2027 بيدك والمساعد يشرح، وتكتب اختبارًا لكل إصلاح وسجل تغييرات. النموذج المُصلَح مع اختبار لكل إصلاح هو دليل ناتج التعلم الثالث.\n\n[D2_1_repair.html](https://sdaiaacademy.github.io/use-pro-203/labs/D2_1_repair.html)\n\n- [ ] اطلب من المساعد شرح صيغة كل خلية معيبة، دون أن يصلحها (6 د)\n- [ ] أصلح الأخطاء الخمسة بيدك واحدًا واحدًا (10 د)\n- [ ] اكتب في ورقة Tests اختبارًا لكل إصلاح من حالاتك اليدوية (9 د)\n- [ ] املأ سجل التغييرات: الخلية، وقبل، وبعد، والسبب، والاختبار (5 د)\n- [ ] ✱ إضافي: أضف فحصًا رقابيًا دائمًا في النموذج: إجمالي الموازنة ناقص مجموع القطاعات يساوي صفرًا","notes":"يبدأ المختبر من قائمة الأخطاء والحالات المحلولة في مجلد start، فلا يتأثر من لم يُنهِ مختبر أمس. الإجمالي بعد الإصلاحات الخمسة 33,759,380.64. راقب: من ينسخ إصلاح عمود الاشتراكات دون علامتَي التثبيت، ومن يكتب القيمة المتوقعة صيغة. أمر الخطوة 1 لم يُجرَّب على مساعد حقيقي عند بناء المقرر: بعض المساعدات تكتب التصحيح مع أنك طلبت ألا تفعل، وهذا نقاش جيد للقاعة.","minutes":null,"lo":[]},{"id":"s2","n":15,"title":"تعليق مرتبط بالخلايا","kind":"section","session":2,"hash":"1b652613","md":"#### [day2#s2] تعليق مرتبط بالخلايا\n\n*الجلسة 2*\n\n- يصوغ تعليقًا على الانحرافات يحمل كل رقم فيه عنوان خليته\n- يفحص مسودة كتبها المساعد رقمًا رقمًا مقابل الخلايا\n- يفصل السبب الموثق بمستند عن السبب الذي يُسأل عنه صاحب المركز","notes":"","minutes":null,"lo":["LO4"]},{"id":"numbers-from-cells","n":16,"title":"الأرقام من الخلايا، والكلمات من المساعد، والأسباب من الناس","kind":"content","session":2,"hash":"5410baf9","md":"#### [day2#numbers-from-cells] الأرقام من الخلايا، والكلمات من المساعد، والأسباب من الناس\n\n*تعليق الانحرافات*\n\n- **الورقة تحسب.** الانحراف ونسبته صيغتان فوق الموازنة والفعلي. لا يُحسبان مرة ثانية في أي مكان.\n- **المساعد يصوغ.** جملة واضحة حول رقم أعطيته إياه، بالنبرة والطول اللذين تطلبهما.\n- **الإنسان يفسّر.** لماذا تجاوز المركز موازنته؟ صاحب المركز يعرف، وعنده المستند.\n\n> **الخطر في هذه المهمة بالذات:** المساعد بارع في كتابة سبب يبدو صحيحًا لأي رقم.","notes":"هذه أكثر مهمة يفوّضها الماليون للمساعد اليوم، لأنها كتابة. وهي أخطر مما تبدو: فيها أرقام تُنقل، ونسب تُحسب، وأسباب تُخترع. القاعدة نفسها تحلها: الرقم من خلية، والسبب من مستند.","minutes":null,"lo":["LO4"]},{"id":"every-figure-carries-its-cell","n":17,"title":"كل رقم في التعليق يتبعه عنوان خليته","kind":"content","session":2,"hash":"375b5aee","md":"#### [day2#every-figure-carries-its-cell] كل رقم في التعليق يتبعه عنوان خليته\n\n*قاعدة الكتابة*\n\n- الصيانة الميدانية: تجاوز بمبلغ 41,300 ريال [Variance!E7]، بنسبة 17.5% [Variance!F7].\n\n> **للقارئ:** يفتح الخلية ويرى الرقم وصيغته.\n\n> **للفحص:** رموز بسيطة تقارن كل رقم بخليته في ثوانٍ.\n\n> **للشهر القادم:** القالب نفسه، والخلايا نفسها، وأرقام جديدة.\n\nفي النسخة التي تُرفع للإدارة تُحذف العناوين إن شئت. تبقى في نسخة العمل.","notes":"الأرقام من ورقة الانحرافات في ملفات المختبر. القاعدة تبدو متشددة، وهي ما يجعل الفحص ممكنًا: رقم بلا خلية لا يُعرف مصدره. الدفتر المعدّ يقرأ النص ويستخرج كل رقم يتبعه عنوان ويقارنه. وتوصيف المقرر يسمّي الدليل: تعليقات مطابقة للخلايا.","minutes":null,"lo":["LO4"]},{"id":"draft-against-cells","n":18,"title":"عشرة أرقام لها خلية: سبعة تطابقها، وثلاثة لا","kind":"content","session":2,"hash":"458617f5","md":"#### [day2#draft-against-cells] عشرة أرقام لها خلية: سبعة تطابقها، وثلاثة لا\n\n*مسودة المساعد أمام الخلايا*\n\n| في المسودة | في الخلية | ما حدث |\n| --- | --- | --- |\n| 43,100 [E7] | 41,300 | خانتان متبادلتان |\n| 11.8% [F10] | 13.3% | قُسم على الفعلي لا الموازنة |\n| 28,300 [D13] | 89,700 | الرقم صحيح والخلية غيرها |\n\n- ورقم واحد بلا خلية: إجمالي الفعلي.\n- الأخطاء الثلاثة من ثلاثة أنواع، وكلها تمر في قراءة سريعة.\n- النسبة الخاطئة «حسبها» المساعد نصًّا مع أنها موجودة في الورقة.","notes":"المسودة مكتوبة باليد في ملفات المختبر لتمثّل ما تكتبه المساعدات، والأرقام من تشغيل حل المختبر 2.2. لا تعرض الشريحة قبل الخطوة 1 من المختبر إن أردت أن يكتشفها المشاركون: انتقل إلى الشريحة التالية وعد إليها بعد المختبر.","minutes":null,"lo":["LO4"]},{"id":"the-rule-decides-who-is-commented","n":19,"title":"القاعدة مكتوبة في الورقة، وتُطبَّق على كل الصفوف","kind":"content","session":2,"hash":"e41399e8","md":"#### [day2#the-rule-decides-who-is-commented] القاعدة مكتوبة في الورقة، وتُطبَّق على كل الصفوف\n\n*أي المراكز يُعلَّق عليها*\n\n| المركز | الانحراف | النسبة | يُعلَّق؟ |\n| --- | --- | --- | --- |\n| CC-107 | 53,600 | 13.3% | نعم |\n| CC-109 | 22,400 | 31.5% | نعم |\n| CC-101 | 24,800 | 8.0% | لا |\n| CC-110 | -28,300 | -24.0% | نعم |\n\n- **القاعدة.** 20,000 ريال و10% من الموازنة معًا. خمسة مراكز من اثني عشر.\n- **ما فعلته المسودة.** علّقت على مركز دون القاعدة، وأغفلت مركزًا فوقها. الوفر انحراف أيضًا.","notes":"الاكتمال فحص مثل المطابقة: كم مركزًا تقول القاعدة، وكم مركزًا في النص؟ المسودة أغفلت المركز الذي نسبته أعلى، لأن مبلغه أصغر. والقاعدة نفسها قرار إدارة، ليست من عند المساعد ولا من عند المحلل.","minutes":null,"lo":["LO4"]},{"id":"causes-need-evidence","n":20,"title":"سبب بلا مستند يُكتب: «غير موثق، يُسأل صاحب المركز»","kind":"content","session":2,"hash":"b743ea00","md":"#### [day2#causes-need-evidence] سبب بلا مستند يُكتب: «غير موثق، يُسأل صاحب المركز»\n\n*السبب ليس رقمًا*\n\n- **موثق: ثلاثة مراكز.**\n  - الصيانة الميدانية: أوامر عمل لإصلاح طارئ.\n  - الحراسات: عقد جديد بدأ في منتصف الشهر.\n  - الأسطول: مذكرة بتأجيل استلام مركبتين.\n- **غير موثق: مركزان.**\n  - نظافة المجمعات التجارية: المسودة كتبت «ارتفاع أسعار المواد». لا أحد قال ذلك.\n  - المشتريات والمستودعات: لا ملاحظة.\n\n> **السبب المختلق أخطر من الرقم الخاطئ:** لا خلية تكذّبه، ويبني عليه قارئ التقرير قرارًا.","notes":"توصيف المقرر يقول: يترك تقدير الأسباب لحكم الإنسان. اسأل القاعة: كم مرة قرأتم في تقرير سببًا من نوع «ارتفاع الأسعار» ولم يسأل أحد من قاله؟ والسبب الموثق يُكتب معه رقم مستنده، كما يُكتب مع الرقم عنوان خليته.","minutes":null,"lo":["LO4"]},{"id":"a-prompt-that-forbids-calculating","n":21,"title":"أعطه الأرقام وعناوينها، وامنعه من الحساب ومن التفسير","kind":"content","session":2,"hash":"f4d97f65","md":"#### [day2#a-prompt-that-forbids-calculating] أعطه الأرقام وعناوينها، وامنعه من الحساب ومن التفسير\n\n*كيف تطلب المسودة*\n\nأمر لـ مساعد محادثة:\n\n```text\nاكتب تعليقًا على انحرافات الشهر للمراكز الآتية فقط.\nسأعطيك لكل مركز الانحراف ونسبته وعنوان خليتيهما.\nاكتب كل رقم كما أعطيته لك حرفيًّا، وبعده عنوان خليته بين قوسين مربعين. لا تحسب أي رقم ولا نسبة.\nلا تكتب سببًا لأي انحراف: اترك مكانه فارغًا وسأملؤه أنا.\n```\n\nالمهمة والنطاق · المدخلات · لا حساب · لا تفسير\n\n> **ثم تفحص على أي حال.** الأمر الجيد يقلل الأخطاء، والفحص هو ما يثبت أنها لم تقع.","notes":"هذا أمر الخطوة 3 في المختبر. لم يُجرَّب على مساعد حقيقي عند بناء المقرر. المساعدات تخالف «لا تحسب» أحيانًا، خصوصًا بإضافة مجموع أو نسبة من عندها: لذلك يُشغَّل الفحص على كل مسودة مهما كان الأمر محكمًا.","minutes":null,"lo":["LO4"]},{"id":"check-fluent-cause","n":22,"title":"سبب سلس بلا دليل","kind":"quiz","session":2,"hash":"7995d02c","md":"#### [day2#check-fluent-cause] سبب سلس بلا دليل\n\n*نقطة تحقق*\n\n**سؤال:** في المسودة: «تجاوز مركز النظافة موازنته بسبب ارتفاع أسعار المواد لدى الموردين خلال الربع». الرقم يطابق خليته. لا ملاحظة من صاحب المركز. ماذا يدخل التعليق النهائي؟\n\n- أ. الجملة كما هي، فالسبب معقول والرقم صحيح\n- ب. لا شيء: يُحذف المركز حتى يُعرف السبب\n- ج. الجملة، بعد أن تسأل المساعد عن مصدر السبب\n- د. الرقم بخليته، و«السبب غير موثق: يُسأل صاحب المركز»","notes":"الإجابة: الخيار الرابع. إن اختار كثيرون الأول فاسأل: لو كان السبب الحقيقي تسعير خاطئ في عقد، فمن كان سيبحث عنه بعد أن قرأ «ارتفاع الأسعار»؟","minutes":null,"lo":["LO4"]},{"id":"lab-2-2","n":23,"title":"تعليق مرتبط بالخلايا","kind":"lab","session":2,"hash":"262dc32a","md":"#### [day2#lab-2-2] تعليق مرتبط بالخلايا\n\nالمختبر 2.2 · 30 دقيقة\n\nتفحص مسودة تعليق كتبها المساعد على انحرافات 12 مركز تكلفة، وتصحح أرقامها، ثم تكتب تعليقًا كل رقم فيه بخليته، وتترك الأسباب غير الموثقة لصاحب المركز.\n\n[D2_2_commentary.html](https://sdaiaacademy.github.io/use-pro-203/labs/D2_2_commentary.html)\n\n- [ ] افحص مسودة المساعد رقمًا رقمًا مقابل الخلايا، بيدك أو بالدفتر المعدّ (8 د)\n- [ ] حدّد بالقاعدة المراكز التي تستوجب التعليق (4 د)\n- [ ] اكتب تعليقك: كل رقم يتبعه عنوان خليته (10 د)\n- [ ] صنّف كل سبب: موثق بمستند، أم يُسأل عنه صاحب المركز (5 د)\n- [ ] شغّل الفحص على تعليقك حتى يطابق كل رقم خليته (3 د)\n- [ ] ✱ إضافي: اطلب من مساعدك مسودة جديدة بأمر يفرض قاعدة الخلايا، وافحصها بالطريقة نفسها","notes":"المفتاح: في المسودة ثلاثة أرقام لا تطابق خلاياها ورقم بلا خلية؛ المراكز التي تستوجب التعليق 102 و104 و107 و109 و110؛ الموثقة أسبابها 104 و107 و110. النتيجة المطلوبة في الخطوة 5: كل الأرقام مطابقة ولا رقم بلا خلية ولا مركز غائب. من لا يشغّل الدفتر يفحص يدويًا: ثلاثة عشر رقمًا في تعليق كامل.","minutes":null,"lo":[]},{"id":"s3","n":24,"title":"عينة يستطيع غيرك إعادة سحبها","kind":"section","session":3,"hash":"ceb759d0","md":"#### [day2#s3] عينة يستطيع غيرك إعادة سحبها\n\n*الجلسة 3*\n\n- يشرح لماذا لا تُعدّ قائمة «عشوائية» يكتبها المساعد نصًّا عينة تدقيق\n- يسحب عينة باختيار منتظم ببداية عشوائية من بذرة مسجَّلة\n- يوثق في ملف المعاينة الطريقة والبذرة ومجاميع المجتمع والبنود التي للنظر","notes":"","minutes":null,"lo":["LO4"]},{"id":"sixty-random-in-prose","n":25,"title":"ثلاث من الفواتير الستين لا وجود لها في الملف","kind":"content","session":3,"hash":"178d8a31","md":"#### [day2#sixty-random-in-prose] ثلاث من الفواتير الستين لا وجود لها في الملف\n\n*«اختر لي 60 فاتورة عشوائية»*\n\n**41** من الستين تقع بين أول ألف فاتورة من خمسة آلاف\n\n- لا بذرة ولا طريقة: لا أحد يعيد سحبها.\n- الطلب نفسه في محادثة جديدة أعطى قائمة أخرى.\n- والرد يقول إنها «تمثّل الموردين والأشهر تمثيلًا متوازنًا».","notes":"القائمة مكتوبة باليد في ملفات المختبر لتمثّل ما يحدث حين يُطلب من مساعد محادثة «اختيار عشوائي» دون رموز: قل ذلك. الأعداد من تشغيل حل المختبر 2.3. قائمة يكتبها نموذج لغوي نص متوقَّع مثل الأرقام أمس: تشبه العشوائي ولا تكونه. والجملة الأخيرة في الرد ادعاء لا يسنده شيء.","minutes":null,"lo":["LO4"]},{"id":"what-makes-a-sample-documented","n":26,"title":"العينة الموثقة يعيد سحبها غيرك ويحصل على الفواتير نفسها","kind":"content","session":3,"hash":"c973942f","md":"#### [day2#what-makes-a-sample-documented] العينة الموثقة يعيد سحبها غيرك ويحصل على الفواتير نفسها\n\n*ما الذي يجعلها عينة تدقيق*\n\n- **المجتمع.** عدده ومجموعه، مطابقَين لدفتر الأستاذ قبل السحب.\n- **الطريقة.** مكتوبة في الخطة قبل النظر إلى البيانات.\n- **البذرة.** رقم مسجَّل يجعل «العشوائي» قابلًا للإعادة.\n- **الأثر.** ملف معاينة فيه كل ما سبق، والبنود التي للنظر.\n\n> **الشك المهني يبدأ هنا:** لا تسأل «هل تبدو العينة جيدة؟» بل «هل أستطيع أن أثبت كيف اختيرت؟»","notes":"لا نذكر معايير التدقيق بأرقامها: المشاركون يعرفون معايير جهاتهم، والمبدأ واحد فيها كلها. دليل الناتج الرابع في توصيف المقرر: ملف معاينة يبيّن الطريقة والبذرة العشوائية والاستثناءات.","minutes":null,"lo":["LO4"]},{"id":"key-items-first","n":27,"title":"38 فاتورة تحمل ربع المبلغ: تُفحص كلها ولا تدخل السحب","kind":"content","session":3,"hash":"fac73222","md":"#### [day2#key-items-first] 38 فاتورة تحمل ربع المبلغ: تُفحص كلها ولا تدخل السحب\n\n*قبل السحب*\n\n|  | العدد | المجموع، ريال |\n| --- | --- | --- |\n| المجتمع | 5,000 | 39,569,567.37 |\n| البنود الرئيسة، 100,000 فأكثر | 38 | 10,390,750.49 |\n| الباقي، ومنه العينة | 4,962 | 29,178,816.88 |\n\n- مجموع رقابي من جديد: الرئيسة والباقي يساويان المجتمع.\n- الحد قرار في الخطة، يضعه مدير المراجعة.\n- الرموز تنفذ الحد. لا تختاره.","notes":"الأرقام من تشغيل حل المختبر 2.3. البنود الرئيسة 26% من مبلغ المجتمع. هذه الخطوة 2 في المختبر، ويحسبها المشارك بعدّ شرطي وجمع شرطي أو يقرؤها من الدفتر.","minutes":null,"lo":["LO4"]},{"id":"seed-start-interval","n":28,"title":"ثلاثة أرقام تعيد العينة: البذرة، والفترة، والبداية","kind":"content","session":3,"hash":"f5719d38","md":"#### [day2#seed-start-interval] ثلاثة أرقام تعيد العينة: البذرة، والفترة، والبداية\n\n*الاختيار المنتظم ببداية عشوائية*\n\n1. **الفترة** 4,962 ÷ 60 مع إهمال الكسر = 82\n2. **البداية** أول عدد عشوائي من البذرة 20261031 يعطي الموضع 26\n3. **المواضع** 26 ثم 108 ثم 190، حتى 60 فاتورة\n\n> **العشوائية في رقم واحد:** البداية. والباقي عدّ يعيده أي زميل في جدول بيانات.\n\n> **الترتيب جزء من الطريقة:** الباقي يُرتَّب برقم الفاتورة قبل الترقيم، ويُكتب ذلك في الخطة.","notes":"الأرقام من تشغيل حل المختبر: الفترة 82 والبداية 26، وأول فاتورة INV-000026. لماذا هذه الطريقة لا «عينة عشوائية» من مكتبة؟ لأن العدد العشوائي الأول من بذرة معيّنة مضمون أن يبقى هو نفسه بين إصدارات بايثون، وأما دوال الاختيار فقد يتغير تنفيذها. وعيب الاختيار المنتظم المعروف: نمط دوري في ترتيب المجتمع يحرف العينة.\n\nالمصادر: Python documentation, random: Notes on Reproducibility.","minutes":null,"lo":["LO4"]},{"id":"run-it-twice","n":29,"title":"شغّل السحب مرتين: الفواتير نفسها في المرتين","kind":"content","session":3,"hash":"dc3ef5b1","md":"#### [day2#run-it-twice] شغّل السحب مرتين: الفواتير نفسها في المرتين\n\n*الفحص الذي لا تجتازه القائمة النثرية*\n\n- **في سجل تشغيل الدفتر.** population 5000/39569567.37; key 38; seed 20261031; start 26; interval 82; sample 60/431650.95; to_look_at 5\n\n- سطران متطابقان في السجل، إلا وقت التشغيل.\n- بصمة الملف في السجل تثبت أن المجتمع لم يتغير بين المرتين.\n- مجموع مبالغ العينة مجموع رقابي صغير لها.\n\n> **وإن ولّد مساعدك الرموز:** اطلب أن تطبع البذرة والفترة والبداية، وقارنها بهذه الثلاثة.","notes":"السطر من تشغيل حل المختبر 2.3، والدفتر شُغّل فيه مرتين. توصيف المقرر يقول إن الدفاتر تحفظ سجلات تشغيل. من يولّد الرموز بمساعده ويحصل على بداية غير 26: يقرأ كيف حُسبت البداية في رموزه، فالخطة تحددها بدقة.","minutes":null,"lo":["LO4"]},{"id":"tests-flag-the-auditor-judges","n":30,"title":"الاختبارات تُظهر بنودًا للنظر. الاستثناء حكم المدقق","kind":"content","session":3,"hash":"ca874fb4","md":"#### [day2#tests-flag-the-auditor-judges] الاختبارات تُظهر بنودًا للنظر. الاستثناء حكم المدقق\n\n*بعد السحب*\n\n| الاختبار | بين 98 مفحوصة |\n| --- | --- |\n| بلا أمر شراء | 2 |\n| لها فاتورة مطابقة في المجتمع | 1 |\n| تجزئة دون حد الاعتماد | 1 |\n| تاريخها بعد فترة الترحيل | 1 |\n\n- **ما يقوله الاختبار.** الحقل فارغ. المبلغ مكرر. التاريخ متأخر.\n- **ما لا يقوله.** هل الشراء معفى من أمر الشراء؟ هل الفاتورتان توريدان فعليان؟ من وافق؟\n\n> **في ملف المعاينة** عمود «حكم المدقق» يتركه الدفتر فارغًا عمدًا.","notes":"الأعداد من تشغيل حل المختبر. توصيف المقرر: يترك تقدير الاستثناءات لحكم الإنسان. المساعد يستطيع أن يلخّص سياسة المشتريات، ويستطيع أن يصوغ طلب المستندات. الحكم بأن بندًا استثناء يوقّع عليه المدقق.","minutes":null,"lo":["LO4"]},{"id":"computed-tests-on-everything","n":31,"title":"الاختبار المحسوب يُشغَّل على الخمسة آلاف كلها","kind":"content","session":3,"hash":"e26bc663","md":"#### [day2#computed-tests-on-everything] الاختبار المحسوب يُشغَّل على الخمسة آلاف كلها\n\n*سؤال يغيّر خطة العمل*\n\n| الاختبار | في المجتمع | بين المفحوصة |\n| --- | --- | --- |\n| لها فاتورة مطابقة | 12 | 1 |\n| بلا أمر شراء | 9 | 2 |\n| تجزئة دون الحد | 9 | 1 |\n| بعد فترة الترحيل | 5 | 1 |\n\n- ما يُحسب من الملف لا يحتاج إلى عينة: يُحسب على الكل.\n- العينة تبقى لما يحتاج إلى قراءة مستند.\n- هذا مكان الوقت الذي وفّرته الرموز.","notes":"الأعداد من تشغيل حل المختبر 2.3 على المجتمع كله، وهي المهمة الإضافية فيه. الفواتير الاثنتا عشرة ستة أزواج. هذه أهم فكرة للمدققين في القاعة: الرموز المولَّدة تجعل الفحص الشامل رخيصًا، فتتغير وظيفة العينة.","minutes":null,"lo":["LO4"]},{"id":"check-random-in-prose","n":32,"title":"ستون رقمًا في رد","kind":"quiz","session":3,"hash":"83b84eb1","md":"#### [day2#check-random-in-prose] ستون رقمًا في رد\n\n*نقطة تحقق*\n\n**سؤال:** رفعت ملف الفواتير إلى مساعد وطلبت 60 فاتورة عشوائية. رد بقائمة من 60 رقمًا دون رموز. تأكدت أن الأرقام كلها موجودة في الملف. هل تصلح عينة تدقيق؟\n\n- أ. لا: تسحبها من جديد بطريقة مكتوبة وبذرة مسجَّلة\n- ب. نعم، ما دامت الأرقام كلها موجودة\n- ج. نعم، إذا كتبت في الملف أن المساعد اختارها\n- د. نعم، إذا بدت موزعة على الأشهر والموردين","notes":"الإجابة: الخيار الأول. المساعد نفسه يصلح للمهمة إن طُلب منه أن يكتب رموز السحب ويشغّلها ببذرة: الفرق بين محسوب ومولَّد، كما في الجلسة الأولى أمس.","minutes":null,"lo":["LO4"]},{"id":"lab-2-3","n":33,"title":"عينة فواتير يعاد سحبها","kind":"lab","session":3,"hash":"b144cea2","md":"#### [day2#lab-2-3] عينة فواتير يعاد سحبها\n\nالمختبر 2.3 · 30 دقيقة\n\nتسحب من 5,000 فاتورة مورد عينة تدقيق قابلة لإعادة الإنتاج: مجاميع المجتمع، ثم البنود الرئيسة، ثم 60 فاتورة ببذرة مسجَّلة. وتملأ ملف معاينة فيه الطريقة والبذرة والبنود التي للنظر، وتترك الحكم بالاستثناء للمدقق.\n\n[D2_3_sample.html](https://sdaiaacademy.github.io/use-pro-203/labs/D2_3_sample.html)\n\n- [ ] افحص رد المساعد النثري: هل فواتيره موجودة؟ هل يعاد سحبه؟ (5 د)\n- [ ] سجّل مجاميع المجتمع والبنود الرئيسة والباقي (6 د)\n- [ ] اسحب العينة بالبذرة والبداية والفترة، بالدفتر المعدّ أو بجدول البيانات (9 د)\n- [ ] املأ ملف المعاينة: الطريقة، والبذرة، والبنود التي للنظر، وحكمك (10 د)\n- [ ] ✱ إضافي: شغّل الاختبارات الأربعة على المجتمع كله، وقارن ما وجدته بما التقطته العينة","notes":"الأرقام المرجعية: المجتمع 5,000 فاتورة مجموعها 39,569,567.37؛ البنود الرئيسة 38؛ الفترة 82 والبداية 26؛ مجموع العينة 431,650.95؛ خمسة بنود للنظر. من يسحب بجدول البيانات يأخذ منك البداية 26. راقب الخطوة 4: من يكتب «استثناء» أمام كل بند يُسأل عن المستند الذي بنى عليه.","minutes":null,"lo":[]},{"id":"s4","n":34,"title":"قواعد البيانات وإعادة التصميم المقيسة","kind":"section","session":4,"hash":"24144ac6","md":"#### [day2#s4] قواعد البيانات وإعادة التصميم المقيسة\n\n*الجلسة 4*\n\n- يحدد لكل ملف مالي الأداة المسموح بها من تصنيفه ومن وجود بيانات شخصية فيه\n- يعيد تصميم مهمة متكررة بحيث يُحسب كل رقم فيها وله مجموع رقابي\n- يقيس الوقت والأخطاء مقابل خط الأساس ويذكر ما لا يقوله القياس","notes":"","minutes":null,"lo":["LO5"]},{"id":"which-file-which-tool","n":35,"title":"تصنيف الملف، وهل فيه بيانات شخصية، يحددان الأداة","kind":"content","session":4,"hash":"e6f45e81","md":"#### [day2#which-file-which-tool] تصنيف الملف، وهل فيه بيانات شخصية، يحددان الأداة\n\n*قبل أن تعيد تصميم أي مهمة*\n\n| الأداة في سجل شركة ظِلال، وهي جهة خاصة | ما يدخلها |\n| --- | --- |\n| مساعد عام خارج حسابات الشركة | بيانات «عام» فقط |\n| «رقيم»، المساعد المعتمد الذي يشغّل الرموز | «عام» و«مقيد»، دون بيانات شخصية |\n| جدول البيانات والدفتر المعدّ على جهاز الشركة | كل ما يحق للموظف الاطلاع عليه |\n\n> **المستويات أربعة** في سياسة تصنيف البيانات الوطنية: عام، ومقيد، وسري، وسري للغاية.\n\n> **في جهة حكومية القاعدة أشد:** لا يدخل أداة ذكاء اصطناعي توليدي إلا «عام»، كما تنص المبادئ الوطنية. وسجل جهتك هو ما يحكم عملك.","notes":"ملفات الإقفال في حالتنا: ميزان المراجعة وكشف البنك والفواتير ونموذج الموازنة «مقيد»، ومسير الرواتب وملف التحقيق «سري» وفيهما بيانات شخصية. من لا يعرف سجل أدوات جهته: هذا أول ما يسأل عنه بعد الورشة.\n\nالمصادر: سياسة تصنيف البيانات، مكتب إدارة البيانات الوطنية.","minutes":null,"lo":["LO5"]},{"id":"what-the-references-say","n":36,"title":"ما تقوله النصوص عن البيانات التي تدخل أدوات الذكاء الاصطناعي","kind":"content","session":4,"hash":"06e4e473","md":"#### [day2#what-the-references-say] ما تقوله النصوص عن البيانات التي تدخل أدوات الذكاء الاصطناعي\n\n*المرجعيات الوطنية*\n\n- **نظام حماية البيانات الشخصية.** البيانات الشخصية كل ما يؤدي إلى معرفة الفرد: منها الاسم، ورقم الهوية، وأرقام الحسابات البنكية.\n- **سياسة تصنيف البيانات.** أربعة مستويات حسب أثر الإفصاح غير المصرح به: عام، ومقيد، وسري، وسري للغاية. تسري على بيانات الجهات العامة.\n- **مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية.** على العاملين في الجهات الحكومية ألا يدخلوا في هذه الأدوات بيانات مصنفة «مقيد» فأعلى، وأن يقتصر استخدامها على بيانات «عام».\n\n> **مسير الرواتب يجمع الاثنين:** بيانات شخصية وتصنيف مرتفع. وتصنيف كل ملف تقرره جهتك وفق سياستها، لا أنت ولا المساعد.","notes":"لا تفسّر النصوص بأكثر مما فيها: هذه ثلاث نقاط منها، ولكل جهة مسؤول حماية بيانات ومكتب بيانات يُسألان. سياسة التصنيف تسري على الجهات العامة، وشركة ظِلال جهة خاصة افتراضية اختارت أن تعتمد مستوياتها، وأن تسمح لمساعدها الداخلي ببيانات «مقيد». هذا لا يصح في جهة حكومية: المبادئ تقصر أدوات الذكاء الاصطناعي التوليدي فيها على بيانات «عام». قل ذلك صراحة، فأغلب القاعة قد يكون من جهات حكومية.\n\nالمصادر: نظام حماية البيانات الشخصية؛ سياسة تصنيف البيانات؛ مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية. الثلاثة من موقع الهيئة السعودية للبيانات والذكاء الاصطناعي.","minutes":null,"lo":["LO5"]},{"id":"the-payroll-file","n":37,"title":"مسير الرواتب لا يدخل المساعد المعتمد. مجاميعه تدخل","kind":"content","session":4,"hash":"4ddb7b51","md":"#### [day2#the-payroll-file] مسير الرواتب لا يدخل المساعد المعتمد. مجاميعه تدخل\n\n*ملف واحد، ثلاث صور*\n\n- **كما هو.** أسماء، وهويات، وحسابات بنكية، ورواتب. الأدوات المحلية فقط\n- **بعد حذف الاسم وحده.** الهوية والحساب البنكي ما زالا يدلان على الشخص. الأدوات المحلية فقط\n- **مجمَّعًا حسب مركز التكلفة.** مجاميع بلا أسماء ولا هويات ولا حسابات. يدخل «رقيم»\n\n> **إعادة التصميم تبدأ من هنا:** ما أقل صورة من الملف تكفي الخطوة التي تريد من المساعد أن ينفذها؟","notes":"المسير في ملفات المختبر وهمي كله، وأرقام هوياته وحساباته مكتوب فيها أنها اختبارية. اسأل: مركز تكلفة فيه موظف واحد، هل مجموعه «مجمَّع»؟ لا: المجموع يدل على راتبه. التجميع يحتاج إلى حكم أيضًا.","minutes":null,"lo":["LO5"]},{"id":"a-trail-of-use","n":38,"title":"ثلاثة سجلات صغيرة تجيب عن سؤال المراجع: كيف خرج هذا الرقم؟","kind":"content","session":4,"hash":"0178e62a","md":"#### [day2#a-trail-of-use] ثلاثة سجلات صغيرة تجيب عن سؤال المراجع: كيف خرج هذا الرقم؟\n\n*أثر استخدام الذكاء الاصطناعي*\n\n- **سجل التشغيل.** للدفاتر والرموز: متى، وعلى أي ملفات، وبأي مجاميع رقابية.\n- **سجل التغييرات.** للجداول: الخلية، وقبل، وبعد، والسبب، والاختبار.\n- **سجل الاستخدام.** للمساعد: المهمة، والملفات التي أُعطيت، وما لم يُعطَ، ومن راجع الناتج.\n\n> **الأولان كتبتهما أمس واليوم.** الثالث سطر في ملف الإقفال، وله خانة في بطاقة إعادة التصميم.","notes":"توصيف المقرر يطلب أثرًا لاستخدام الذكاء الاصطناعي. الأثر ليس اعتذارًا عن استخدامه: هو ما يسمح لمن بعدك أن يعيد العمل ويثق فيه. وهو امتداد لإشعار الإفصاح الذي كتبه المشاركون في المقرر السابق.","minutes":null,"lo":["LO5"]},{"id":"the-redesign-card","n":39,"title":"مهمة واحدة متكررة من عملك، في ستة أقسام","kind":"content","session":4,"hash":"7154de65","md":"#### [day2#the-redesign-card] مهمة واحدة متكررة من عملك، في ستة أقسام\n\n*بطاقة إعادة التصميم*\n\n- **1 · البيانات والأداة.** التصنيف، والبيانات الشخصية، والأداة المسموح بها.\n- **2 · الخطوات.** لكل خطوة من ينفذها: رموز أو صيغة، أو المساعد نصًّا، أو أنت.\n- **3 · المجاميع الرقابية.** ما يُسجَّل قبل، وما يجب أن يساويه بعد.\n- **4 · ما يبقى لحكمك.** القرار الذي لا يُفوَّض.\n- **5 · القياس.** الوقت والأخطاء: خط الأساس وتنفيذان.\n- **6 · السجل.** أين يُحفظ أثر الاستخدام.","notes":"البطاقة هي ما يُدافَع عنه في المراجعة المباشرة. اختبار سريع للقسم 2: هل بقي رقم يدخل تقريرًا ومصدره نص كتبه المساعد؟ والمثال المحلول في ملفات المختبر لمطابقة كشف مورد.","minutes":null,"lo":["LO5"]},{"id":"measure-time-and-errors","n":40,"title":"الوقت وحده لا يكفي: تُعدّ الأخطاء أيضًا","kind":"content","session":4,"hash":"9c785f14","md":"#### [day2#measure-time-and-errors] الوقت وحده لا يكفي: تُعدّ الأخطاء أيضًا\n\n*قياس قبل وبعد*\n\n| خط أساس شركة ظِلال، يدوي | الدقائق | الأخطاء |\n| --- | --- | --- |\n| التنفيذ 1 | 44 | 2 |\n| التنفيذ 2 | 49 | 1 |\n| التنفيذ 3 | 46 | 3 |\n| المتوسط | 46 | 2 |\n\n- **الخطأ يُعرَّف قبل القياس:** فرق فاتك، أو فرق أشرت إليه وليس فرقًا.\n- الساعة تتوقف بعد فحص المجموع الرقابي، لا قبله.\n- أسرع وبأخطاء أكثر ليس تحسّنًا.\n\n> **أرقام خط الأساس هنا اصطناعية** لحالة افتراضية. قياسك أنت هو ما يدخل بطاقتك.","notes":"مهمة خط الأساس مطابقة كشف مورد، وفي الكشف أربعة فروق مزروعة. دليل الناتج الخامس: يقيس الوقت والأخطاء قبل إعادة التصميم وبعدها، من خط أساس وتنفيذين. التنفيذ الأول في المختبر الآن، والثاني على مهمة المشارك قبل جلسة المراجعة.","minutes":null,"lo":["LO5"]},{"id":"what-the-numbers-do-not-say","n":41,"title":"ثلاثة تنفيذات وشخص واحد: مؤشر، لا برهان","kind":"content","session":4,"hash":"5f0bab76","md":"#### [day2#what-the-numbers-do-not-say] ثلاثة تنفيذات وشخص واحد: مؤشر، لا برهان\n\n*القياس الصادق يذكر حدوده*\n\n- التنفيذ الأول بطريقة جديدة أبطأ غالبًا من الثاني.\n- أنت تعرف الآن أين الفروق: مهمة جديدة قياس أعدل.\n- الوقت الموفَّر أين ذهب؟ إن ذهب إلى البنود التي تحتاج إلى حكم فهذا هو الغرض.\n\n- **في البطاقة سطر اسمه.** «ما الذي لا تقوله هذه الأرقام» من يملؤه بصدق يُسأل في المراجعة أسئلة أسهل.\n\n> **لا تعمّم من بطاقتك على الإدارة كلها.** اعرضها تجربة لها قياس، واطلب من زميل أن يكررها.","notes":"الغرض ليس التشكيك في الفائدة، بل أن يخرج المشارك بعادة قياس يمكن الدفاع عنها. من جاء تنفيذه الأول أبطأ من خط الأساس يكتب ذلك كما هو: هذا متوقع ويُقدَّر في سلم التقدير.","minutes":null,"lo":["LO5"]},{"id":"check-which-file-which-tool","n":42,"title":"أي ملف يدخل أي أداة؟","kind":"quiz","session":4,"hash":"f1d2c941","md":"#### [day2#check-which-file-which-tool] أي ملف يدخل أي أداة؟\n\n*نقطة تحقق*\n\n**سؤال:** في شركة ظِلال تريد من المساعد المعتمد أن يكتب رموزًا تقارن رواتب كل مركز تكلفة بموازنته. سجل أدوات الشركة يسمح له ببيانات «مقيد» دون بيانات شخصية. المسير فيه أسماء وهويات وحسابات بنكية. ما التصميم المقبول؟\n\n- أ. ترفع المسير كما هو، فالمساعد معتمد\n- ب. ترفع المسير بعد حذف عمود الأسماء\n- ج. تجمّع الرواتب حسب المركز محليًّا، وترفع المجاميع\n- د. ترفع المسير إلى مساعد عام لأن المهمة بسيطة","notes":"الإجابة: الخيار الثالث. هذه البطاقة الثامنة في ملف المختبر. نبّه إلى الاستثناء: مركز فيه موظف واحد.","minutes":null,"lo":["LO5"]},{"id":"lab-2-4","n":43,"title":"بطاقة إعادة التصميم","kind":"lab","session":4,"hash":"13c3c811","md":"#### [day2#lab-2-4] بطاقة إعادة التصميم\n\nالمختبر 2.4 · 30 دقيقة\n\nتصنّف ملفات المهمة وتختار أداتها، وتكتب خطواتها بعد إعادة التصميم، وتنفذها مرة واحدة موقّتة على مطابقة كشف مورد، وتقيس الوقت والأخطاء مقابل خط الأساس. البطاقة تُستكمل بتنفيذ ثانٍ على مهمتك قبل جلسة المراجعة.\n\n[D2_4_redesign.html](https://sdaiaacademy.github.io/use-pro-203/labs/D2_4_redesign.html)\n\n- [ ] صنّف الملفات الثمانية وحدّد لكل منها الأداة المسموح بها (6 د)\n- [ ] اكتب خطوات المهمة بعد إعادة التصميم ومجاميعها الرقابية (8 د)\n- [ ] نفّذ المهمة المعاد تصميمها مرة واحدة: وقّتها وعُدّ الأخطاء (12 د)\n- [ ] املأ جدول القياس مقابل خط الأساس (4 د)\n- [ ] ✱ إضافي: اكتب ما الذي لا تقوله ثلاثة قياسات لشخص واحد، وما القياس الرابع الذي تحتاج إليه","notes":"المفتاح: المساعد العام للبطاقة F6 فقط؛ «رقيم» لكل البطاقات إلا F3 وF7. كشف المورد 58 سطرًا والدفتر 57، والفرق بين الرصيدين 28,673.48 تفسّره أربعة فروق. أعطِ المفتاح بعد أن يوقف المشارك ساعته، لا قبل. ذكّر في آخر المختبر بالتنفيذ الثاني: على مهمة المشارك من عمله، قبل جلسة المراجعة، ويُسجَّل في جدول القياس.","minutes":null,"lo":[]},{"id":"wrap-up","n":44,"title":"أربع عادات تبقى حين تتغير الأدوات","kind":"content","session":4,"hash":"6cad88ca","md":"#### [day2#wrap-up] أربع عادات تبقى حين تتغير الأدوات\n\n*خلاصة اليومين*\n\n- **احسب ولا تولّد.** الرقم من صيغة أو رموز يعاد تشغيلها.\n- **مجموع رقابي.** لكل معالجة، بأرقام حسبتها أنت.\n- **اختبار لكل إصلاح.** من حالة محسوبة يدويًا، ويبقى في الملف.\n- **عينة يعاد سحبها.** طريقة مكتوبة وبذرة مسجَّلة.\n\n> **وفي الأربع:** السبب والاستثناء والاعتماد لإنسان يوقّع.","notes":"ما سيتغير قبل الدفعة القادمة: أسماء مزايا تنفيذ الرموز، ودوال الذكاء الاصطناعي في الجداول، وخدمات الدفاتر. هذه الأربع لا تتغير. اطلب من كل مشارك أن يسمّي العادة التي سيبدأ بها في إقفال هذا الشهر.","minutes":null,"lo":[]},{"id":"next","n":45,"title":"نفّذ مهمتك مرة ثانية، وأكمل البطاقة","kind":"content","session":4,"hash":"984cc413","md":"#### [day2#next] نفّذ مهمتك مرة ثانية، وأكمل البطاقة\n\n*قبل جلسة المراجعة*\n\n- التنفيذ الثاني على مهمتك من عملك، موقّتًا، مع عدّ الأخطاء.\n- في مجلدك: البطاقة، وجدول القياس، وقائمة المطابقة وسجل التشغيل، والنموذج المُصلَح، والتعليق، وملف المعاينة.\n- تأكد أن دفتر المطابقة يعمل على جهازك: ستعيد تشغيله أمام المراجع.\n- لا ملف من جهة عملك في المجلد: الأوقات وعدد الأخطاء فقط.","notes":"جلسة المراجعة: ساعة لفحص فردي تحت الإشراف دون ذكاء اصطناعي، يعيد فيه المشارك حساب ثلاثة أرقام في إجابة من الذكاء الاصطناعي، ثم مراجعة مباشرة من عشر دقائق لكل مشارك. التدريب على الفحص هو الخطوة 3 من المختبر 1.1.","minutes":null,"lo":[]}],"activities":[{"id":"review-day-1-q1","slide":"review-day-1","type":"single","prompt":"طابقت ملفين برموز ولّدها المساعد. المتطابق وغير المتطابق يساويان كل ملف، عددًا ومبلغًا. ما الذي ثبت بذلك؟","options":[{"key":"أ","text":"أن كل زوج متطابق هو الزوج الصحيح"},{"key":"ب","text":"أن الملفين صحيحان وليس فيهما خطأ"},{"key":"ج","text":"أن كل سطر حُسب مرة واحدة: لا ضائع ولا مكرر"},{"key":"د","text":"أن المطابقة انتهت ولا بنود تحتاج إلى نظر"}],"correct":[2],"explanation":"المجموع الرقابي يثبت الاكتمال. صحة الربط تأتي من مفتاح الربط، والحكم على البنود يأتي من المستندات.","misconceptions":["يمدّ الفحص إلى ما لا يقيسه: مبلغان متساويان لمرجعين مختلفين يتبادلان دون أن يتحرك أي مجموع","يخلط اكتمال المعالجة بصحة المدخلات: الملف نفسه قد يكون ناقصًا أو فيه قيد خاطئ","","يعامل اتفاق المجاميع نهاية العمل: البنود غير المتطابقة ما زالت تحتاج إلى تصنيف وحكم"],"lo":["LO2"]},{"id":"check-fix-breaks-total-q1","slide":"check-fix-breaks-total","type":"single","prompt":"أصلحت عمود الاشتراكات، ونجح اختباره مقابل حالتك اليدوية. ثم لاحظت أن إجمالي الموازنة قفز بأكثر مما توقعت. ما الخطوة التالية؟","options":[{"key":"أ","text":"تعيد الصيغة القديمة، فالإجمالي كان أقرب إلى المعتاد"},{"key":"ب","text":"تنظر إلى كل الاختبارات، وتحسب القفزة المتوقعة من الإصلاح"},{"key":"ج","text":"تسأل المساعد عن سبب القفزة وتكتب جوابه في السجل"},{"key":"د","text":"تسجّل الإصلاح وتنتقل إلى الخطأ التالي"}],"correct":[1],"explanation":"القفزة قد تكون صحيحة: عشرة مراكز كانت اشتراكاتها صفرًا. تعرف ذلك حين تحسبها، وحين ترى أن لا اختبار آخر انكسر.","misconceptions":["يتخذ الرقم المألوف مرجعًا: الإجمالي القديم كان خاطئًا، والمرجع هو المواصفة والحالات اليدوية","","يستبدل الاختبار بالشرح: تفسير المساعد نص مولَّد، والقفزة رقم يُحسب من عشرة صفوف كانت اشتراكاتها صفرًا","يكتفي باختبار الإصلاح نفسه: اختبار واحد ناجح لا يقول شيئًا عن بقية النموذج"],"lo":["LO3"]},{"id":"check-fluent-cause-q1","slide":"check-fluent-cause","type":"single","prompt":"في المسودة: «تجاوز مركز النظافة موازنته بسبب ارتفاع أسعار المواد لدى الموردين خلال الربع». الرقم يطابق خليته. لا ملاحظة من صاحب المركز. ماذا يدخل التعليق النهائي؟","options":[{"key":"أ","text":"الجملة كما هي، فالسبب معقول والرقم صحيح"},{"key":"ب","text":"لا شيء: يُحذف المركز حتى يُعرف السبب"},{"key":"ج","text":"الجملة، بعد أن تسأل المساعد عن مصدر السبب"},{"key":"د","text":"الرقم بخليته، و«السبب غير موثق: يُسأل صاحب المركز»"}],"correct":[3],"explanation":"الرقم صحيح فيبقى. السبب لا مستند له، فيُكتب أنه غير موثق، ويُسأل عنه من يعرف قبل الإقفال.","misconceptions":["يقبل المعقول مكان الموثق: المساعد لا يعرف ما حدث في المركز، وصاغ أرجح جملة","يخفي الانحراف مع سببه: الرقم محسوب ويستوجب التعليق، والناقص هو السبب فقط","يطلب دليلًا ممن لا دليل عنده: جواب المساعد عن مصدره نص مولَّد آخر",""],"lo":["LO4"]},{"id":"check-random-in-prose-q1","slide":"check-random-in-prose","type":"single","prompt":"رفعت ملف الفواتير إلى مساعد وطلبت 60 فاتورة عشوائية. رد بقائمة من 60 رقمًا دون رموز. تأكدت أن الأرقام كلها موجودة في الملف. هل تصلح عينة تدقيق؟","options":[{"key":"أ","text":"لا: تسحبها من جديد بطريقة مكتوبة وبذرة مسجَّلة"},{"key":"ب","text":"نعم، ما دامت الأرقام كلها موجودة"},{"key":"ج","text":"نعم، إذا كتبت في الملف أن المساعد اختارها"},{"key":"د","text":"نعم، إذا بدت موزعة على الأشهر والموردين"}],"correct":[0],"explanation":"عينة التدقيق تُعرَّف بطريقتها. قائمة لا يعيد أحد سحبها لا تُدافع عنها أمام مراجع، مهما بدت جيدة.","misconceptions":["","يكتفي بوجود الأرقام: الوجود لا يثبت كيف اختيرت، ولا يتيح لأحد أن يعيد سحبها","يظن أن التوثيق اللاحق يصنع الطريقة: كتابة «اختارها المساعد» تسجّل ما حدث ولا تجعله قابلًا للإعادة","يعالج التمثيل بالعين: توزيع يبدو متوازنًا لا يجعل الاختيار عشوائيًّا ولا موثقًا"],"lo":["LO4"]},{"id":"check-which-file-which-tool-q1","slide":"check-which-file-which-tool","type":"single","prompt":"في شركة ظِلال تريد من المساعد المعتمد أن يكتب رموزًا تقارن رواتب كل مركز تكلفة بموازنته. سجل أدوات الشركة يسمح له ببيانات «مقيد» دون بيانات شخصية. المسير فيه أسماء وهويات وحسابات بنكية. ما التصميم المقبول؟","options":[{"key":"أ","text":"ترفع المسير كما هو، فالمساعد معتمد"},{"key":"ب","text":"ترفع المسير بعد حذف عمود الأسماء"},{"key":"ج","text":"تجمّع الرواتب حسب المركز محليًّا، وترفع المجاميع"},{"key":"د","text":"ترفع المسير إلى مساعد عام لأن المهمة بسيطة"}],"correct":[2],"explanation":"الخطوة تحتاج إلى مجموع لكل مركز، لا إلى أسماء. المجاميع «مقيد» بلا بيانات شخصية، فتدخل المساعد المعتمد، والتجميع نفسه صيغة في جدول محلي.","misconceptions":["يقرأ «معتمد» إذنًا مطلقًا: الاعتماد له حدود مكتوبة في السجل، والبيانات الشخصية خارجها","يظن أن حذف الاسم يزيل الصفة الشخصية: الهوية والحساب البنكي يدلان على الشخص","","يختار أداة أضعف ضبطًا لملف أشد حساسية: المساعد العام لبيانات «عام» فقط"],"lo":["LO5"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day2.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
